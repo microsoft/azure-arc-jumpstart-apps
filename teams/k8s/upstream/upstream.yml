@@ -1,0 +1,103 @@
+version: 2.0
+subscriptionId: 940f88ce-a64b-4e73-a258-9931349b9789
+resourceGroup: k8sbuildci
+registry: upstreamk8sci
+onboardingNotification: az-upstream-k8s-rel
+dependencyNotification: az-upstream-k8s-rel
+
+repos:
+  - name: public/k8s/core/pause
+    displayName: K8s Core Pause Image
+    readme: README.pause.md
+    description: Kubernetes pause image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/k8s/aad-pod-identity/mic
+    displayName: K8s Aad Pod Identity Mic
+    readme: README.aad-pod-identity.md
+    description: Assign AAD Identities to kubernetes applications - Managed Identity Controller(MIC) image.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/aad-pod-identity-mic
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.6.2
+
+  - name: public/k8s/aad-pod-identity/nmi
+    displayName: K8s Aad Pod Identity Nmi
+    readme: README.aad-pod-identity.md
+    description: Assign AAD Identities to kubernetes applications - Node Managed Identity(NMI) image.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/aad-pod-identity-nmi
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.6.2
+
+  - name: public/k8s/aad-pod-identity/demo
+    displayName: K8s Aad Pod Identity Demo
+    readme: README.aad-pod-identity.md
+    description: Assign AAD Identities to kubernetes applications - demo app image.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/aad-pod-identity-demo
+        imageUpdate: false
+
+  - name: public/k8s/flexvolume/keyvault-flexvolume
+    displayName: K8s Keyvault Flexvolume
+    readme: README.keyvault-flexvolume.md
+    description: Azure Key Vault FlexVolume for Kubernetes - access secrets, keys, and certs from Azure Key Vault.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/k8s/kms/keyvault
+    displayName: Azure Key Vault K8s KMS plugin
+    readme: README.kms-encryption.md
+    description: Enable etcd data encryption in Kubernetes using Azure Key Vault.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/k8s/aad-pod-identity/identityvalidator
+    displayName: K8s Aad Pod Identity IdentityValidator
+    readme: README.aad-pod-identity.md
+    description: Identity validation for e2e - IdentityValidator image.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/k8s/core/azure-cloud-controller-manager
+    displayName: Azure Cloud Provider Controller Manager
+    readme: README.azure-cloud-controller-manager.md
+    description: Out of tree cloud provider
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/k8s/core/azure-cloud-node-manager
+    displayName: Azure Cloud Provider Node Manager
+    readme: README.azure-cloud-node-manager.md
+    description: Out of tree cloud provider
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

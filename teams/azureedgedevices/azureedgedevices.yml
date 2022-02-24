@@ -1,0 +1,93 @@
+version: 2.0
+subscriptionId: abcb23f7-54bb-4a79-9952-cba0b887c203
+resourceGroup: azureedgedevices_resourcegroup
+registry: azureedgedevices
+onboardingNotification: aedmcrnotifications
+dependencyNotification: aedmcrnotifications
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: redmond\AEDPT                                                                      # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+repos:
+  - name: public/azureedgedevices/imagecapturingmodule
+    displayName: Image Capturing Module 
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/imagecapturingmodule
+    displayName: Image Capturing Module (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/hostipmodule
+    displayName: Host IP Module 
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/hostipmodule
+    displayName: Host IP Module (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/webstreammodule
+    displayName:  Web Stream Module
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/webstreammodule
+    displayName: Web Stream Module (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/azureearspeechclientmodule
+    displayName:  Azure Ear Speech Client Module
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/azureearspeechclientmodule
+    displayName: Azure Ear Speech Client Module (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/azureeyebase
+    displayName:  Azure Eye Base
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/azureeyebase
+    displayName: Azure Eye Base (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/azureeyemodule
+    displayName:  Azure Eye Module
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/azureeyemodule
+    displayName: Azure Eye Module (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/devmmclientmodule
+    displayName: Dev MM Client Module
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/devmmclientmodule
+    displayName: Dev MM Client Module (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/azureeyeonvifmodule
+    displayName: Azure Eye Onvif Module
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/azureeyeonvifmodule
+    displayName: Azure Eye Onvif Module (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/azureperceptservicesmodule
+    displayName: Azure Percept Services Module 
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/azureperceptservicesmodule
+    displayName: Azure Percept Services Module
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/azurehcilvaextmodule
+    displayName: Azure HCI LVA Extension
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/azurehcilvaextmodule
+    displayName: Azure HCI LVA Extension (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/certificationtestcontainer
+    displayName: Secured Core Certification Test Container
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/certificationtestcontainer
+    displayName: Secured Core Certification Test container (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureedgedevices/perceptonhciaimodule
+    displayName: AI Pipeline Container for HCI
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg    
+  - name: internal/azureedgedevices/perceptonhciaimodule
+    displayName: AI Pipeline Container for HCI (internal)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  - name: public/azureedgedevices/perceptagentmodule
+    displayName: Azure Percept Agent Module
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: internal/azureedgedevices/perceptagentmodule
+    displayName: Azure Percept Agent Module (internal)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b

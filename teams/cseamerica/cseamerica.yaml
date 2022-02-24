@@ -1,0 +1,25 @@
+version: 2.0
+subscriptionId: 3fee811e-11bf-4b5c-9c62-a2f28b517724
+resourceGroup: cseamerica
+registry: cseamerica
+onboardingNotification: cseamerica-mcr-onboard
+dependencyNotification: cseamerica-mcr-depends
+
+repos:
+  - name: public/cseamerica/hello-world
+    displayName: Base hello-world
+    description: simple hello world in docker
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+      - type: dockerhub
+        repository: microsoft/cseamerica
+        imageUpdate: true
+  - name: public/cseamerica/mysql_proxy
+    displayName: Proxy for MY SQL
+    description: Nginx proxy
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+      - type: dockerhub
+        repository: microsoft/cseamerica
+        imageUpdate: true
+

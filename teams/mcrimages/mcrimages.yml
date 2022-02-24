@@ -1,0 +1,17 @@
+version: 2.0
+subscriptionId: 6953448e-53d8-4c88-aaf7-d6b261b51326
+resourceGroup: Partners
+registry: mcrtools
+onboardingNotification: mcreng
+dependencyNotification: mcreng
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: redmond\mcrdev                                                                         # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+repos:
+  - name: internal/mcr/cmd
+    description: cmd tool for onboarding repositories

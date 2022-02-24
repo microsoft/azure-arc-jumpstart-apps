@@ -1,0 +1,29 @@
+version: 2.0
+subscriptionId: 00c06639-6ee4-454e-8058-8d8b1703bd87
+resourceGroup: proj-onnxruntime-dev
+registry: onnxruntimeregistry
+onboardingNotification: mcr-onnxruntime
+
+ownership:
+  securityGroups: 
+  - groupName: redmond\ai_infra_build_admin
+    permissions:                                                                         
+    - read
+    - write
+
+repos:
+  - name: public/onnxruntime/server
+    displayName: ONNX Runtime Server
+    description: Docker image with ONNX Runtime Server.
+    logoUrl: https://github.com/Microsoft/onnxruntime/raw/master/docs/images/ONNX_Runtime_logo_dark.png
+    documentationLink: https://aka.ms/onnxruntime
+  - name: public/onnxruntime/onnx-converter
+    displayName: ONNX Converter
+    description: Docker image with ONNX converter for ONNX model shipping pipeline.
+    logoUrl: https://github.com/Microsoft/onnxruntime/raw/master/docs/images/ONNX_Runtime_logo_dark.png
+    documentationLink: https://github.com/microsoft/OLive/tree/6a4061ca1c31dea43738b19d8b6f3fee990de5bf/components/onnx-converter
+  - name: public/onnxruntime/perf-tuning
+    displayName: ONNX Runtime Performance Tuning
+    description: Docker image with ONNX Runtime performance tuning for ONNX model shipping pipeline.
+    logoUrl: https://github.com/Microsoft/onnxruntime/raw/master/docs/images/ONNX_Runtime_logo_dark.png
+    documentationLink: https://github.com/microsoft/OLive/tree/6a4061ca1c31dea43738b19d8b6f3fee990de5bf/components/perf-test

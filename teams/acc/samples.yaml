@@ -1,0 +1,41 @@
+version: 2.0
+subscriptionId: c4fdda6e-bfbd-4b8e-9703-037b3a45bf37
+resourceGroup: acc_samples_mcr-rg
+registry: accsamplesmcr
+onboardingNotification: acc_samples_mcr
+
+ownership:
+  securityGroups:
+  - groupName: redmond\ostcalldev
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/acc/samples/helloworld
+    displayName: ACC hello world
+    description: No description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/attested-tls-inproc
+    displayName: In proc atttested-tls
+    description: No description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/attested-tls-outproc
+    displayName: Out of proc attested-tls
+    description: No description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/layered-attested-tls-outproc
+    displayName: Icelake layered attestation
+    description: No description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

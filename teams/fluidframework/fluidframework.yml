@@ -1,0 +1,70 @@
+version: 2.0
+subscriptionId: f512d215-3984-4778-8938-8d73f65119f6                                                  # REQUIRED. The id of the Azure subscription where the registry lives
+resourceGroup: FluidBuild                                                                             # REQUIRED. The Azure resource group where the registry lives
+registry: fluidcr                                                                                     # REQUIRED. The private ACR where the container image lives
+onboardingNotification: ffmcrnot                                                                      # REQUIRED. An @microsoft.com distribution group for onboarding notifications that include image scanning results. Can be the same DG used for dependencyNotification.
+dependencyNotification: ffmcrnot                                                                      # OPTIONAL. An @microsoft.com distribution group for onboarding notifications without image scanning results. Can be the same DG used for onboardingNotification.
+
+productFamily:                                                                                        # OPTIONAL. Product family for all below defined repositories. 
+  name: routerlicious                                                                                 # REQUIRED. Name of productfamily
+  shortDescription: Fluid Framework Reference Service Implementation                                  # REQUIRED. Short description for productfamily
+  readMe: README.fluid-routerlicious.md                                                               # REQUIRED. Read me description for product family (Must be >140 characters)
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                     # REQUIRED. Logo url
+  supportLink: https://github.com/microsoft/FluidFramework/issues                                     # OPTIONAL. Support link for product family
+  documentationLink: https://FluidFramework.com                                                       # OPTIONAL. Documentation link for product family
+  syndications:                                                                                       # OPTIONAL. Syndication for productfamily
+    - type: dockerhub                                                                                 # REQUIRED. The type of syndication. Only dockerhub is currently allowed
+      enabled: True                                                                                   # OPTIONAL. Default value is true if not defined
+
+repos:                                                                                                # REQUIRED. The collection of onboarded repositories
+  - name: public/fluidframework/routerlicious/server                                                  # REQUIRED. Repository name. Must include public/ or internal/ somewhere in the repository name
+    displayName: Fluid Framework Reference Service - Server Core                                      # REQUIRED. The displayname of the product, will get displayed on syndicationtype i.e on docker store product name
+    readme: README.fluid-server.md                                                                    # REQUIRED. Markdown file that describes how customers can use the image. Required unless contentUpdate = false for a syndication type. Should be a minimum of 140 char
+    description: Fluid Framework Reference Service Core Implementation. Known as Routerlicious.       # OPTIONAL. Contents for the short description shown in the Docker Hub page. Used unless contentUpdate = false for a syndication type. Should be < 100 char
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   # REQUIRED. Logo url
+    supportLink: https://github.com/microsoft/FluidFramework/issues                                   # OPTIONAL. Support link for product
+    documentationLink: https://FluidFramework.com                                                     # OPTIONAL. Documentation link for product
+    checkSyncStateBeforeContentUpdate: false                                                          # OPTIONAL. False, set it to true to block any content update in syndication until all tags are in sync between MCR and ACR
+    syndications:                                                                                     # OPTIONAL. Used to enable syndication beyond MCR. Not available for internal images
+      - type: dockerhub                                                                               # REQUIRED. The type of syndication. Only dockerhub is currently allowed
+        imageUpdate: false                                                                            # REQUIRED. True if container images should be syndicated; false, otherwise
+        contentUpdate: true                                                                           # REQUIRED. True if the README should be syndicated; false, otherwise
+
+  - name: public/fluidframework/routerlicious/historian                                               # REQUIRED. Repository name. Must include public/ or internal/ somewhere in the repository name
+    displayName: Fluid Framework Reference Service - Historian                                        # REQUIRED. The displayname of the product, will get displayed on syndicationtype i.e on docker store product name
+    readme: README.fluid-historian.md                                                                 # REQUIRED. Markdown file that describes how customers can use the image. Required unless contentUpdate = false for a syndication type. Should be a minimum of 140 char
+    description: Fluid Framework Reference Service Summary API Endpoint. Known as Historian.          # OPTIONAL. Contents for the short description shown in the Docker Hub page. Used unless contentUpdate = false for a syndication type. Should be < 100 char
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   # REQUIRED. Logo url
+    supportLink: https://github.com/microsoft/FluidFramework/issues                                   # OPTIONAL. Support link for product
+    documentationLink: https://FluidFramework.com                                                     # OPTIONAL. Documentation link for product
+    checkSyncStateBeforeContentUpdate: false                                                          # OPTIONAL. False, set it to true to block any content update in syndication until all tags are in sync between MCR and ACR
+    syndications:                                                                                     # OPTIONAL. Used to enable syndication beyond MCR. Not available for internal images
+      - type: dockerhub                                                                               # REQUIRED. The type of syndication. Only dockerhub is currently allowed
+        imageUpdate: false                                                                            # REQUIRED. True if container images should be syndicated; false, otherwise
+        contentUpdate: true                                                                           # REQUIRED. True if the README should be syndicated; false, otherwise
+
+  - name: public/fluidframework/routerlicious/gitssh                                                  # REQUIRED. Repository name. Must include public/ or internal/ somewhere in the repository name
+    displayName: Fluid Framework Reference Service - Git SSH                                          # REQUIRED. The displayname of the product, will get displayed on syndicationtype i.e on docker store product name
+    readme: README.fluid-gitssh.md                                                                    # REQUIRED. Markdown file that describes how customers can use the image. Required unless contentUpdate = false for a syndication type. Should be a minimum of 140 char
+    description: Fluid Framework Reference Service Git SSH Endpoint for Summary Storage               # OPTIONAL. Contents for the short description shown in the Docker Hub page. Used unless contentUpdate = false for a syndication type. Should be < 100 char
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   # REQUIRED. Logo url
+    supportLink: https://github.com/microsoft/FluidFramework/issues                                   # OPTIONAL. Support link for product
+    documentationLink: https://FluidFramework.com                                                     # OPTIONAL. Documentation link for product
+    checkSyncStateBeforeContentUpdate: false                                                          # OPTIONAL. False, set it to true to block any content update in syndication until all tags are in sync between MCR and ACR
+    syndications:                                                                                     # OPTIONAL. Used to enable syndication beyond MCR. Not available for internal images
+      - type: dockerhub                                                                               # REQUIRED. The type of syndication. Only dockerhub is currently allowed
+        imageUpdate: false                                                                            # REQUIRED. True if container images should be syndicated; false, otherwise
+        contentUpdate: true                                                                           # REQUIRED. True if the README should be syndicated; false, otherwise
+
+  - name: public/fluidframework/routerlicious/gitrest                                                 # REQUIRED. Repository name. Must include public/ or internal/ somewhere in the repository name
+    displayName: Fluid Framework Reference Service - Git Rest Endpoint                                # REQUIRED. The displayname of the product, will get displayed on syndicationtype i.e on docker store product name
+    readme: README.fluid-gitrest.md                                                                   # REQUIRED. Markdown file that describes how customers can use the image. Required unless contentUpdate = false for a syndication type. Should be a minimum of 140 char
+    description: Fluid Framework Reference Service Git REST API for Summary Storage                   # OPTIONAL. Contents for the short description shown in the Docker Hub page. Used unless contentUpdate = false for a syndication type. Should be < 100 char
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   # REQUIRED. Logo url
+    supportLink: https://github.com/microsoft/FluidFramework/issues                                   # OPTIONAL. Support link for product
+    documentationLink: https://FluidFramework.com                                                     # OPTIONAL. Documentation link for product
+    checkSyncStateBeforeContentUpdate: false                                                          # OPTIONAL. False, set it to true to block any content update in syndication until all tags are in sync between MCR and ACR
+    syndications:                                                                                     # OPTIONAL. Used to enable syndication beyond MCR. Not available for internal images
+      - type: dockerhub                                                                               # REQUIRED. The type of syndication. Only dockerhub is currently allowed
+        imageUpdate: false                                                                            # REQUIRED. True if container images should be syndicated; false, otherwise
+        contentUpdate: true                                                                           # REQUIRED. True if the README should be syndicated; false, otherwise

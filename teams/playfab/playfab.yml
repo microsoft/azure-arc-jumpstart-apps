@@ -1,0 +1,23 @@
+version: 2.0
+subscriptionId: 03069c96-cc6b-4d73-ba86-5bffb732ea12
+resourceGroup: playfabcontainerregistry
+registry: playfab
+onboardingNotification: playfabmcr
+dependencyNotification: playfabmcr
+
+
+repos:
+
+  - name: public/playfab/multiplayer
+    displayName: Playfab Multiplayer
+    readme: README.playfabmultiplayer.md
+    description: PlayFab Multiplayer platform image for game development and local debugging.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/playfab-multiplayer
+        imageUpdate: false
+
+

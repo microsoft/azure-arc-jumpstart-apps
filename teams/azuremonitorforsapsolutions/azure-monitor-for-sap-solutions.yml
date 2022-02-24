@@ -1,0 +1,14 @@
+version: 2.0
+subscriptionId: 63647b94-ce6e-413e-9079-4cabcc30b387
+resourceGroup: AzureMonitorForSAPSolutions-RG
+registry: azuremonitorforsapsolutions
+onboardingNotification: amfssr
+dependencyNotification: amfssr
+
+repos:
+
+  - name: public/oss/azure/azure-monitor-for-sap-solutions
+    displayName: Azure monitor for SAP Solutions
+    readme: README.v1.0.md
+    description: Azure monitor for SAP Solutions
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

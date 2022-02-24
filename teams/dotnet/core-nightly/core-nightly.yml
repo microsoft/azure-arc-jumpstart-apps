@@ -1,0 +1,89 @@
+version: 2.0
+subscriptionId: 941d4baa-5ef2-462e-b4b1-505791294610
+resourceGroup: DotnetContainers
+registry: dotnetdocker
+onboardingNotification: dotnetdocker-onboard
+dependencyNotification: dotnetdocker-deps
+
+ownership:
+  securityGroups:
+  - groupName: redmond\netcontainers
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: dotnet/core-nightly
+  displayName: .NET Core (Preview)
+  shortDescription: Preview images for .NET Core 3.1 and ASP.NET Core 3.1
+  readMe: README.md
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Application Frameworks, Programming Languages]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    enabled: True
+
+repos:
+- name: public/dotnet/core-nightly/aspnet
+  displayName: ASP.NET Core 3.1 Runtime (Preview)
+  readme: README.aspnet.md
+  description: Preview images for the ASP.NET Core 3.1 runtime
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Application Frameworks]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: public/dotnet/core-nightly/runtime
+  displayName: .NET Core Runtime (Preview)
+  readme: README.runtime.md
+  description: Preview images for the .NET Core 3.1 runtime
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Application Frameworks]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: public/dotnet/core-nightly/runtime-deps
+  displayName: .NET Core Runtime Dependencies (Preview)
+  readme: README.runtime-deps.md
+  description: Preview images for the .NET Core 3.1 runtime dependencies
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Application Frameworks]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: public/dotnet/core-nightly/sdk
+  displayName: .NET Core SDK (Preview)
+  readme: README.sdk.md
+  description: Preview images for the .NET Core 3.1 SDK
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Programming Languages]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true

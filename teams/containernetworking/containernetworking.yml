@@ -1,0 +1,154 @@
+version: 2.0
+subscriptionId: 0895de50-30a3-4b75-aada-5b23ebd4e8bc
+resourceGroup: ProductionACR
+registry: acnprod
+onboardingNotification: connetdevs
+dependencyNotification: connetdevs
+
+ownership:
+  securityGroups:
+  - groupName: redmond\connetdevs
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: containernetworking
+  shortDescription: Product family for all container networking images
+  readMe: README.azure-container-networking.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  supportLink: https://microsoft.com
+  documentationLink: https://microsoft.com
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+repos:
+  # Public repos
+  - name: public/containernetworking/azure-npm
+    displayName: Azure-npm
+    readme: README.azure-container-networking-azure-npm.md
+    description: Azure Network Policy Manager
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/azure-container-networking
+    documentationLink: https://github.com/Azure/azure-container-networking/tree/master/docs/npm.md
+    syndications:
+      - type: dockerhub
+        repository: microsoft/containernetworking-azure-npm
+        imageUpdate: true
+        contentUpdate: true
+        tags:
+          - source: v1.0.23
+            target: v1.0.23
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}(?:_hotfix)?$/
+
+  # Public repos
+  - name: public/containernetworking/azure-vnet-telemetry
+    displayName: Azure-vnet-telemetry
+    readme: README.azure-container-networking-azure-vnet-telemetry.md
+    description: Azure CNI Telemetry
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/azure-container-networking
+    documentationLink: https://github.com/Azure/azure-container-networking
+    syndications:
+      - type: dockerhub
+        repository: microsoft/containernetworking-azure-vnet-telemetry
+        imageUpdate: true
+        contentUpdate: true
+        tags:
+          - source: v1.0.23
+            target: v1.0.23
+
+  - name: public/containernetworking/networkmonitor
+    displayName: Networkmonitor
+    readme: README.azure-container-networking-networkmonitor.md
+    description: Azure CNI Network Monitor
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/azure-container-networking
+    documentationLink: https://github.com/Azure/azure-container-networking
+    syndications:
+      - type: dockerhub
+        repository: microsoft/containernetworking-networkmonitor
+        imageUpdate: true
+        contentUpdate: true
+        tags:
+          - source: latest
+            target: latest
+          - source: v0.0.6
+            target: v0.0.6
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}(?:_hotfix)?$/
+
+  - name: public/containernetworking/azure-cns
+    displayName: Azure-cns
+    readme: README.azure-container-networking-cns.md
+    description: Container Networking Service
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/containernetworking/azure-cni-manager
+    displayName: Azure-cni
+    readme: README.azure-container-networking-cns.md
+    description: Azure CNI Manager, responsible for upgrading Azure CNI and monitoring logs.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/containernetworking/swift-runner
+    displayName: Swift-runner
+    readme: README.azure-container-networking-swift-runner.md
+    description: Swift Datapath Runner
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/containernetworking/swift-nc
+    displayName: Swift-nc
+    readme: README.azure-container-networking-swift-nc.md
+    description: Basic Alpine Linux container that overwrites /etc/resolv.conf
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/containernetworking/swift-lbrunnernc
+    displayName: Swift-lbrunnernc
+    readme: README.azure-container-networking-swift-lbrunnernc.md
+    description: Basic Alpine Linux container with a listener
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/containernetworking/gbc
+    displayName: Bond-compiler
+    readme: README.azure-container-networking-gbc.md
+    description: Bond compiler
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  # Private repos
+  - name: internal/containernetworking/dnc
+    displayName: DNC
+    readme: README.azure-container-networking-dnc.md
+    description: Delegated Network Controller
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: internal/containernetworking/dnc-request-controller
+    displayName: DNC-Request-Controller
+    readme: README.azure-container-networking-dnc-request-controller.md
+    description: Delegated Network Controller Request Controller
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

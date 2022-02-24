@@ -1,0 +1,28 @@
+version: 2.0
+subscriptionId: 23bd34c5-78c9-4a8f-a130-c54588a362ad
+resourceGroup: mcrbusinesscentral
+registry: mcrbusinesscentral
+onboardingNotification: mcrbusinesscentral
+dependencyNotification: mcrbusinesscentral
+disableOnboardingNotifications: true
+
+ownership:
+  securityGroups:
+  - groupName: europe\bcmcrowner
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/businesscentral
+    displayName: Dynamics 365 Business Central Generic image
+    readme: README.businesscentral.md
+    description: Dynamics 365 Business Central Generic image
+    logoUrl: https://bcdocker.blob.core.windows.net/public/BC_Neg_128x.png
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/businesscentral
+        imageUpdate: false
+

@@ -1,0 +1,25 @@
+version: 2.0
+subscriptionId: 6c868b6a-900a-4b5d-8c03-2d5506291b33
+resourceGroup: AzureML-Studio-Docker-Images
+registry: amlstudiomcr
+onboardingNotification: amlstudiomcrnot
+dependencyNotification: amlstudiomcrnot
+
+
+repos:
+
+  - name: public/azureml-studio/base
+    displayName: Azureml Studio Base
+    readme: README.azureml-studio-base.md
+    description: Azure Machine Learning Studio CPU Base Image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    
+  - name: public/azureml-studio/base-gpu
+    displayName: Azureml Studio Base Gpu
+    readme: README.azureml-studio-base-gpu.md
+    description: Azure Machine Learning Studio GPU Base Image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

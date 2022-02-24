@@ -1,0 +1,290 @@
+version: 2.0
+subscriptionId: bbadd2db-f11e-4354-892e-b019ae1ed7ab
+resourceGroup: ACI-Container-Registry
+registry: caasregmcr
+onboardingNotification: acimcronboarding
+dependencyNotification: acimcrdependency
+
+ownership:
+  securityGroups:
+  - groupName: REDMOND\RRD-CCONADM-23738
+    permissions:
+    - read
+    - write
+
+repos:
+
+  - name: public/aci/azure-cns
+    displayName: Aci Azure Cns
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20191001.1
+          - source: master_20201116.1
+          - source: master_20210625.1
+
+  - name: public/aci/logging-agent
+    displayName: Aci Logging Agent
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20200110.1
+
+  - name: public/aci/logging-agent-win
+    displayName: Aci Logging Agent Win
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20181018.1
+
+  - name: public/aci/msi-adapter
+    displayName: Aci Msi Adapter
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20200104.1
+
+  - name: public/aci/device-plugin
+    displayName: Nvidia Device Plugin
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20190316.1
+          - source: master_20201023.1
+
+  - name: public/aci/infra
+    displayName: Aci Infra
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20181129.1
+          - source: master_20190628.2
+          - source: master_20200810.1
+          - source: master_20201007.2
+          - source: master_20210608.1
+          - source: master_20210928.3
+          - source: master_20211104.3
+          - source: master_20211106.1
+          - source: master_20211112.1
+
+  - name: public/aci/sc-proxy
+    displayName: Aci Sc Proxy
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.9.10-master_20180816.1
+
+  - name: public/aci/iptable-rule-injector
+    displayName: Aci IPTableRuleInjector
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20200104.1
+          - source: master_20191002.1
+
+  - name: public/aci/image-builder
+    displayName: Aci ImageBuilder
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20191014.2
+
+  - name: public/aci/registry
+    displayName: Docker Registry
+    description: library/registry image copied from external repo registry.hub.docker.com
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20200104.1
+          - source: master_20191002.1
+
+  - name: public/aci/msi-atlas-adapter
+    displayName: MSI Atlas adapter
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20200212.1
+          - source: master_20201203.1
+
+  - name: public/aci/atlas-netstats
+    displayName: Atlas Netstats Sidecar
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20201203.1
+          - source: master_20210330.2
+
+  - name: public/aci/atlas-mount-azure-file-volume
+    displayName: Atlas mount azure file volume
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20201210.2
+
+  - name: public/aci/atlas-mount-secrets-volume
+    displayName: Atlas mount secrets volume
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20210406.3
+
+  - name: public/aci/atlas-mount-resolv-conf
+    displayName: Atlas mount resolv conf
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20210902.2
+
+  - name: public/aci/atlas-mount-gitrepo-volume
+    displayName: Atlas mount git repo volume
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20211106.1
+          - source: master_20211112.1
+
+  - name: public/aci/shareloggingagent
+    displayName: Aci share logging agent
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20201012.1
+
+  - name: internal/aci/genevamdsd
+    displayName: Geneva MDSD used for shareloggingagent
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+ 
+  - name: public/aci/vk-metrics-sidecar
+    displayName: The real time metrics sidecar for Virtual Kubelet
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: master_20211026.6 

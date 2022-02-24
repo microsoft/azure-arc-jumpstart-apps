@@ -1,0 +1,120 @@
+version: 2.0
+subscriptionId: 941d4baa-5ef2-462e-b4b1-505791294610
+resourceGroup: DotnetContainers
+registry: dotnetdocker
+onboardingNotification: dotnetdocker-onboard
+dependencyNotification: dotnetdocker-deps
+
+ownership:
+  securityGroups:
+  - groupName: redmond\netcontainers
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: dotnet/core
+  displayName: .NET Core
+  shortDescription: Official images for .NET Core 3.1 and ASP.NET Core 3.1
+  readMe: README.md
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Application Frameworks, Programming Languages]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    enabled: True
+
+repos:
+- name: internal/private/dotnet/core/aspnet
+  displayName: ASP.NET Core 3.1 Runtime (Internal)
+  readme: README.aspnetinternal.md
+  description: Internal images for the ASP.NET Core 3.1 runtime
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/core/aspnet
+  displayName: ASP.NET Core 3.1 Runtime
+  readme: README.aspnet.md
+  description: Official images for the ASP.NET Core 3.1 runtime
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Application Frameworks]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: internal/private/dotnet/core/runtime
+  displayName: .NET Core Runtime (Internal)
+  readme: README.runtimeinternal.md
+  description: Internal images for the .NET Core 3.1 runtime
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/core/runtime
+  displayName: .NET Core Runtime
+  readme: README.runtime.md
+  description: Official images for the .NET Core 3.1 runtime
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Application Frameworks]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: internal/private/dotnet/core/runtime-deps
+  displayName: .NET Core Runtime Dependencies (Internal)
+  readme: README.runtime-depsinternal.md
+  description: Internal images for the .NET Core 3.1 runtime dependencies
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/core/runtime-deps
+  displayName: .NET Core Runtime Dependencies
+  readme: README.runtime-deps.md
+  description: Official images for the .NET Core 3.1 runtime dependencies
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Application Frameworks]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: public/dotnet/core/samples
+  displayName: .NET Core Samples
+  description: Sample images illustrating how to containerize .NET Core and ASP.NET Core applications
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+
+- name: internal/private/dotnet/core/sdk
+  displayName: .NET Core SDK (Internal)
+  readme: README.sdkinternal.md
+  description: Internal images for the .NET Core 3.1 SDK
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/core/sdk
+  displayName: .NET Core SDK
+  readme: README.sdk.md
+  description: Official images for the .NET Core 3.1 SDK
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/core/
+  categories: [Programming Languages]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true

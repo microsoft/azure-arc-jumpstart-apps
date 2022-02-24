@@ -1,0 +1,22 @@
+subscriptionId: 941d4baa-5ef2-462e-b4b1-505791294610
+resourceGroup: DotnetContainers
+registry: dotnetdocker
+onboardingNotification: dotnetdocker-onboard
+dependencyNotification: dotnetdocker-deps
+
+ownership:
+  securityGroups:
+  - groupName: redmond\netcontainers
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/dotnet-buildtools/prereqs
+    readme: README.prereqs.md
+    description: Images for building the various components of the https://github.com/dotnet/ project
+
+
+  - name: public/dotnet-buildtools/image-builder
+    readme: README.image-builder.md
+    description: A build tool used for building the Docker images of the https://github.com/dotnet/ project

@@ -1,0 +1,92 @@
+version: 2.0
+subscriptionId: 4aaa645c-5ae2-4ae9-a17a-84b9023bc56a
+resourceGroup: cmaks-m2
+registry: cmaksacr
+onboardingNotification: mlcmk8sdev@microsoft.com
+dependencyNotification: mlcmk8sdev@microsoft.com
+
+repos:
+  - name: public/azureml/cmk8s/agent-setup
+    displayName: Azureml Cmk8s Agent Installer
+    description: Azureml Cmk8s Agent Installer
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/azureml-setup
+    displayName: Azureml Cmk8s Init Container
+    description: Azureml Cmk8s Init Container Used for Jobs
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/compute-exporter
+    displayName: Azureml Cmk8s Compute Exporter
+    description: Used to Export Compute Related Metrics 
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/job-controller
+    displayName: Azureml Cmk8s Job Controller
+    description: Used to Submit Jobs to Cluster and Manage the Job Status in Cmk8s
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/job-exporter
+    displayName: Azureml Cmk8s Job Exporter
+    description: Used to Export Job Related Metrics
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/metric-reporter
+    displayName: Azureml Cmk8s Metric Reporter
+    description: Azureml Cmk8s Metric Reporter
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/pod-monitor
+    displayName: Azureml Cmk8s Pod Monitor
+    description: Sidecar Used to Upload Job's Logs and Artifacts
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/pytorch-operator
+    displayName: Pytorch Operator
+    description: Compiled Pytorch Operator Used in KubeFlow
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/amlop
+    displayName: Azureml Cmk8s Operator
+    description: An Operator Running on Users' Clusters to Submit and Manage the Jobs
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/relay-server
+    displayName: Azureml Cmk8s Relay Server
+    description: Relay Server for Cmk8s Cluster(Deprecated)
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/rest-server
+    displayName: Azureml Cmk8s Rest Server
+    description: Rest Server for Cmk8s Cluster Directly Interacti with AKS Cluster
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/aml-pod-monitor
+    displayName: Azureml Cmk8s Pod Monitor
+    description: Sidecar Used to Upload Job's Logs and Artifacts
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/aml-job-exporter
+    displayName: Azureml Cmk8s Job Exporter
+    description: Used to Export Job Related Metrics
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/aml-relay-server
+    displayName: Azureml Cmk8s Relay Server
+    description: Relay Server for Cmk8s Cluster
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/aml-addon-gateway
+    displayName: Azureml Cmk8s Addon Gateway
+    description: Gateway for Azureml Cmk8s' Addon. Used to Authenticate Requests to Cluster.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/oss-component
+    displayName: Azureml Cmk8s OSS Components
+    description: OSS Components for Cmk8s Cluster. Distinguished by Tags.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+
+  - name: public/azureml/cmk8s/job-cleaner
+    displayName: Azureml Cmk8s Job Cleaner 
+    description: Cleaner for Stale AML Jobs
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b

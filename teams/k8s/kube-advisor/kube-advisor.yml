@@ -1,0 +1,19 @@
+version: 2.0
+subscriptionId: e766d9ee-d3d9-4b63-a912-8963dcfdf655
+resourceGroup: kubeadvisor
+registry: kubeadvisor
+onboardingNotification: kubeadvisor
+dependencyNotification: kubeadvisor
+
+
+repos:
+
+  - name: public/aks/kubeadvisor
+    displayName: Aks Kubeadvisor
+    readme: README.azureiotedge-agent.md
+    description: No Description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+

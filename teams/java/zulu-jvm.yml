@@ -1,0 +1,82 @@
+version: 2.0
+subscriptionId: 2d92bfc8-5035-4e13-b507-b28c2d2145e1
+resourceGroup: Staged-Azul-Images
+registry: azulimages
+onboardingNotification: azul-zulu-images
+disableOnboardingNotifications: true
+dependencyNotification: azul-zulu-images
+
+ownership:
+  securityGroups:
+    - groupName: northamerica\openjdkcontainers
+      permissions:
+        - read
+        - write
+
+productFamily:
+  name: Zulu for Azure build of OpenJDK
+  shortDescription: Product family for Zulu for Azure builds of OpenJDK
+  readMe: README.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  supportLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+  documentationLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+  syndications:
+    - type: dockerhub
+      enabled: true
+
+repos:
+
+  - name: public/java/tomcat
+    displayName: Zulu for Azure Headless JRE with Apache Tomcat
+    readme: README.zulu-tomcat.md
+    description: Zulu for Azure build of OpenJDK
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    documentationLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/java/maven
+    displayName: Zulu for Azure JDK with Apache Maven
+    readme: README.zulu-maven.md
+    description: Zulu for Azure build of OpenJDK
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    documentationLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/java/jdk
+    displayName: Zulu for Azure JDK
+    readme: README.zulu-jdk.md
+    description: Zulu for Azure build of OpenJDK
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    documentationLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/java/jre
+    displayName: Zulu for Azure JRE
+    readme: README.zulu-jre.md
+    description: Zulu for Azure build of OpenJDK
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    documentationLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/java/jre-headless
+    displayName: Zulu for Azure Headless JRE
+    readme: README.zulu-jre-headless.md
+    description: Zulu for Azure build of OpenJDK
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    documentationLink: https://devblogs.microsoft.com/java/end-of-updates-support-and-availability-of-zulu-for-azure/
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true

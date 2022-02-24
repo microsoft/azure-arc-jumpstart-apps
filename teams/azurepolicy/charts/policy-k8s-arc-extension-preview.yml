@@ -1,0 +1,14 @@
+version: 2.0
+subscriptionId: a565f80a-005c-4139-a53f-23e34a6f6c08
+resourceGroup: azgovpolicydataplane
+registry: azurepolicykubernetes
+onboardingNotification: AzDPPolicyAKS
+dependencyNotification: AzDPPolicyAKS
+
+repos:
+  - name: public/azure-policy/charts/policy-k8s-arc-extension-preview
+    displayName: Azure Policy Kubernetes Helm Chart for Arc (Preview)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

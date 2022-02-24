@@ -1,0 +1,91 @@
+version: 2.0
+subscriptionId: 66010356-d8a5-42d3-8593-6aaa3aeb1c11
+resourceGroup: team_sword_acr
+registry: AICommon
+onboardingNotification: mcr-onboarding-ai
+dependencyNotification: mcr-dependency-ai
+
+repos:
+  - name: public/ApplicationInsights/IstioMixerAdapter
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> applicationinsights.azurecr.io/public/applicationinsights/istiomixeradapter:dev
+    # docker push applicationinsights.azurecr.io/public/applicationinsights/istiomixeradapter:dev
+    # docker pull mcr.microsoft.com/applicationinsights/istiomixeradapter:dev
+    displayName: Application Insights Istio Mixer Adapter
+    readme: ""
+    description: Application Insights Istio Mixer Adapter
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Microsoft/Application-Insights-Istio-Adapter/issues
+    documentationLink: https://github.com/Microsoft/Application-Insights-Istio-Adapter/blob/master/SETUP.md
+
+  - name: public/ApplicationInsights/CodelessApmPreview
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> applicationinsights.azurecr.io/public/applicationinsights/codelessapmpreview:dev
+    # docker push applicationinsights.azurecr.io/public/applicationinsights/codelessapmpreview:dev
+    # docker pull mcr.microsoft.com/applicationinsights/codelessapmpreview:dev
+    displayName: Application Insights Codeless Application Monitoring Preview
+    readme: ""
+    description: Application Insights Codeless Application Monitoring Preview
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Microsoft/ApplicationInsights-Home/issues
+    documentationLink: https://github.com/Microsoft/ApplicationInsights-Home
+
+  - name: public/applicationinsights/codeless-attach/mutating-webhook
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> applicationinsights.azurecr.io/public/applicationinsights/codeless-attach/mutating-webhook:dev
+    # docker push applicationinsights.azurecr.io/public/applicationinsights/codeless-attach/mutating-webhook:dev
+    # docker pull mcr.azurecr.io/public/applicationinsights/codeless-attach/mutating-webhook:dev
+    displayName: Application Insights Codeless Attach Webhook
+    readme: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach/blob/master/README.md
+    description: Application Insights Codeless Attach Webhook
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach
+    documentationLink: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach/blob/master/SETUP.md
+
+  - name: public/applicationinsights/codeless-attach/mutating-webhook-agents
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> applicationinsights.azurecr.io/public/applicationinsights/codeless-attach/mutating-webhook-agents:dev
+    # docker push applicationinsights.azurecr.io/public/applicationinsights/codeless-attach/mutating-webhook-agents:dev
+    # docker pull mcr.azurecr.io/public/applicationinsights/codeless-attach/mutating-webhook-agents:dev
+    displayName: Application Insights Codeless Attach Agents
+    readme: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach/blob/master/README.md
+    description: Application Insights Codeless Attach Agents
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach
+    documentationLink: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach/blob/master/SETUP.md
+
+  - name: public/applicationinsights/codeless-attach/inprocagents
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> aicommon.azurecr.io/public/applicationinsights/codeless-attach/inprocagents:<version>
+    # docker push aicommon.azurecr.io/public/applicationinsights/codeless-attach/inprocagents:<version>
+    # docker docker pull mcr.microsoft.com/applicationinsights/codeless-attach/inprocagents:<version>
+    displayName: Application Insights Codeless Attach Inproc Agents
+    readme: https://msazure.visualstudio.com/DefaultCollection/One/_git/Mgmt-AppInsights-StatusMonitor?_a=contents&path=%2FExtensions/Extension/InProcAgents.DockerImage/InProcAgents.DockerImage.md
+    description: Application Insights Codeless Attach Inproc Agents
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/ApplicationInsights-Home
+    documentationLink: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach/blob/master/SETUP.md
+
+  - name: public/applicationinsights/codeless-attach/nodejs-test-app
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> aicommon.azurecr.io/public/applicationinsights/codeless-attach/nodejs-test-app:<version>
+    # docker push aicommon.azurecr.io/public/applicationinsights/codeless-attach/nodejs-test-app:<version>
+    # docker docker pull mcr.microsoft.com/applicationinsights/codeless-attach/nodejs-test-app:<version>
+    displayName: Application Insights Codeless Attach NodeJS Test App
+    readme: https://msazure.visualstudio.com/DefaultCollection/One/_git/Mgmt-AppInsights-StatusMonitor/?_a=contents&path=%2FAutomaticJavaInjection/nodejs-test-app/nodejs-test-app.dockerfile
+    description: Application Insights Codeless Attach NodeJS Test App
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/ApplicationInsights-Home
+    documentationLink: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach/blob/master/SETUP.md
+
+  - name: public/applicationinsights/codeless-attach/local-forwarder
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> applicationinsights.azurecr.io/public/applicationinsights/codeless-attach/mutating-webhook-agents:dev
+    # docker push applicationinsights.azurecr.io/public/applicationinsights/codeless-attach/mutating-webhook-agents:dev
+    # docker pull mcr.azurecr.io/public/applicationinsights/codeless-attach/mutating-webhook-agents:dev
+    displayName: Application Insights Codeless Attach Agents
+    readme: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach/blob/master/README.md
+    description: Application Insights Codeless Attach Agents
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach
+    documentationLink: https://github.com/microsoft/Application-Insights-K8s-Codeless-Attach/blob/master/SETUP.md

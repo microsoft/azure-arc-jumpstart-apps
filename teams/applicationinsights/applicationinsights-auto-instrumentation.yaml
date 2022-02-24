@@ -1,0 +1,52 @@
+version: 2.0
+subscriptionId: 4f80d6c7-3b04-4854-9f1a-2d7c587d4f64
+resourceGroup: applicationinsights-acr
+registry: applicationinsightssdk
+onboardingNotification: aisdk-mcr
+dependencyNotification: aisdk-mcr
+
+ownership:                                 
+  securityGroups:                                                                                     
+  - groupName: redmond\aisdk-mcr
+    permissions:                                                                                     
+    - read
+    - write
+
+repos:
+  - name: public/applicationinsights/auto-instrumentation/dotnet
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> applicationinsightssdk.azurecr.io/public/applicationinsights/auto-instrumentation/dotnet:<version>
+    # docker push applicationinsightssdk.azurecr.io/public/applicationinsights/auto-instrumentation/dotnet:<version>
+    # docker docker pull mcr.microsoft.com/applicationinsights/auto-instrumentation/dotnet:<version>
+    displayName: Application Insights Dotnet Auto-Instrumentation
+    readme: https://msazure.visualstudio.com/DefaultCollection/One/_git/Mgmt-applicationinsights-StatusMonitor?_a=contents&path=%2FExtensions/Extension/InProcAgents.DockerImage/InProcAgents.DockerImage.md
+    description: Application Insights Dotnet Auto-Instrumentation
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/support/create-ticket/
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-monitor/app/asp-net
+
+  - name: public/applicationinsights/auto-instrumentation/java
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> applicationinsightssdk.azurecr.io/public/applicationinsights/auto-instrumentation/java:<version>
+    # docker push applicationinsightssdk.azurecr.io/public/applicationinsights/auto-instrumentation/java:<version>
+    # docker docker pull mcr.microsoft.com/applicationinsights/auto-instrumentation/java:<version>
+    displayName: Application Insights Java Auto-Instrumentation
+    readme: https://msazure.visualstudio.com/One/_git/applicationinsights-RP-Integration?path=%2FExtensions%2FAppServices%2FInProcAgents.DockerImage%2FInProcAgents.DockerImage.md
+    description: Application Insights Java Auto-Instrumentation
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/support/create-ticket/
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-monitor/app/java-in-process-agent
+
+  - name: public/applicationinsights/auto-instrumentation/nodejs
+     # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> applicationinsightssdk.azurecr.io/public/applicationinsights/auto-instrumentation/nodejs:<version>
+    # docker push applicationinsightssdk.azurecr.io/public/applicationinsights/auto-instrumentation/nodejs:<version>
+    # docker docker pull mcr.microsoft.com/applicationinsights/auto-instrumentation/nodejs:<version>
+    displayName: Application Insights NodeJS Auto-Instrumentation
+    readme: https://msazure.visualstudio.com/One/_git/applicationinsights-RP-Integration?path=%2FExtensions%2FAppServices%2FInProcAgents.DockerImage%2FInProcAgents.DockerImage.md
+    description: Application Insights NodeJS Auto-Instrumentation
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/support/create-ticket/
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-monitor/app/nodejs
+
+  

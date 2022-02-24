@@ -1,0 +1,25 @@
+version: 2.0
+subscriptionId: e51231c2-1e1d-4b36-9499-4761c759c21d
+resourceGroup: osa-cli-preview
+registry: openshiftonazure
+onboardingNotification: openshift
+
+productFamily:
+  name: osa
+  shortDescription: OpenShift on Azure Private Preview
+  readMe: README.osa-cli.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/1200px-OpenShift-LogoType.svg.png
+
+repos:
+
+  - name: public/osa/cli
+    displayName: OSA CLI
+    readme: README.osa-cli.md
+    description: The OpenShift on Azure CLI - Preview
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/1200px-OpenShift-LogoType.svg.png
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-osa-cli
+        imageUpdate: false

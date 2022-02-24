@@ -1,0 +1,30 @@
+version: 2.0
+subscriptionId: 7060bca0-7a3c-44bd-b54c-4bb1e9facfac
+resourceGroup: dev-crews-west-public
+registry: devcrewsacr
+onboardingNotification: cseamerica-mcr-onboard
+dependencyNotification: cseamerica-mcr-depends
+
+repos:
+  # MCR Url eg: mcr.microsoft.com/k8s/bedrock/hydrate
+  - name: public/k8s/bedrock/hydrate
+    displayName: Hydrate - Automatically build Fabrikate Components
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  # MCR Url eg: mcr.microsoft.com/k8s/bedrock/spektate
+  - name: public/k8s/bedrock/spektate
+    displayName: Spektate
+    description: Visualizer for Bedrock
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  # MCR Url eg: mcr.microsoft.com/k8s/bedrock/ring-operator
+  - name: public/k8s/bedrock/ring-operator
+    displayName: Ring Operator
+    description: A Kubernetes operator to manage ring deployment
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+      - type: dockerhub
+        # microsoft/ring-operator on dockerhub
+        repository: microsoft/ring-operator
+        contentUpdate: false
+        imageUpdate: false

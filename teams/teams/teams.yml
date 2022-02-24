@@ -1,0 +1,21 @@
+version: 2.0
+subscriptionId: 9dbf403c-532e-4b71-8492-cc5ddc71a406
+resourceGroup: TeamsMCR
+registry: TeamsMCR
+onboardingNotification: mcr-t-notifications
+
+repos:
+  - name: public/teams/tsw/base
+    displayName: Base Teams Development Container Image
+    description: A base development container image for Teams.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+
+  - name: public/teams/tsw/linux
+    displayName: Linux Teams Development Container Image
+    description: Development container image for the Teams Linux Client.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+
+  - name: public/teams/tmp
+    displayName: NorthStar Teams Development Container Image
+    description: Development container image for Teams NorthStar.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg

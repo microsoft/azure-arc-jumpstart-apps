@@ -1,0 +1,52 @@
+version: 2.0
+subscriptionId: cb2d244e-1f99-4d9f-bc6e-8631660e83a5
+resourceGroup: MCR
+registry: cntkMCRDocker
+onboardingNotification: cntk-mcr-notif
+dependencyNotification: cntk-mcr-notif
+
+productFamily:
+  name: cntk
+  displayName: Microsoft Cognitive Toolkit (CNTK)
+  shortDescription: A free, easy-to-use, open-source, commercial-grade deep learning toolkit by Microsoft.
+  readMe: README.cntk-product-family.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  supportLink: https://github.com/Microsoft/CNTK/issues
+  documentationLink: https://docs.microsoft.com/en-us/cognitive-toolkit/index
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+ownership:                                                                                            
+  securityGroups:
+  - groupName: redmond\cntkbuildadmins
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/cntk/release
+    displayName: Microsoft Cognitive Toolkit (Official CNTK release)
+    readme: README.cntk-release.md
+    description: A free, easy-to-use, open-source, commercial-grade deep learning toolkit by Microsoft.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Microsoft/CNTK/issues
+    documentationLink: https://docs.microsoft.com/en-us/cognitive-toolkit/index
+    syndications:
+      - type: dockerhub
+        repository: microsoft/cntk
+        imageUpdate: false
+        contentUpdate: true
+
+  - name: public/cntk/nightly
+    displayName: Microsoft Cognitive Toolkit (Nightly CNTK build)
+    readme: README-cntk-nightly.md
+    description: A free, easy-to-use, open-source, commercial-grade deep learning toolkit by Microsoft.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Microsoft/CNTK/issues
+    documentationLink: https://docs.microsoft.com/en-us/cognitive-toolkit/index
+    syndications:
+      - type: dockerhub
+        repository: microsoft/cntk-nightly
+        imageUpdate: false
+        contentUpdate: true

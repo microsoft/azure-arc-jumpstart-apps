@@ -1,0 +1,41 @@
+version: 2.0
+subscriptionId: a200340d-6b82-494d-9dbf-687ba6e33f9e
+resourceGroup: sputnikdev
+registry: apimdev
+onboardingNotification: apimmcr
+dependencyNotification: apimmcr
+
+ownership:
+  securityGroups:
+  - groupName: redmond\apicore
+    permissions:
+    - read
+    - write
+
+repos:
+
+  - name: public/azure-api-management/gateway
+    displayName: Azure API Management Self-hosted Gateway
+    readme: README.azureapimanagementselfhostedgateway.md
+    description: Azure API Management Self-hosted Gateway image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://azure.microsoft.com/support
+    documentationLink: https://aka.ms/apim/shgw/overview
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-api-management-selfhostedgateway
+        contentUpdate: true
+        imageUpdate: false
+
+  - name: public/azure-api-management/helm/gateway
+    displayName: Azure API Management Self-hosted Gateway HELM chart (preview)
+    description: Helm chart for Azure API Management Self-hosted Gateway
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://azure.microsoft.com/support
+    documentationLink: https://aka.ms/apim/shgw/overview
+
+  - name: public/azure-api-management/samples/monetization
+    displayName: Azure API Management Monetization Sample
+    description: App for Azure API Management Monetization Sample
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    documentationLink: https://aka.ms/apim/monetization/sample

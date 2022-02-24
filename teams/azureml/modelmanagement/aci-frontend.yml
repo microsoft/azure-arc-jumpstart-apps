@@ -1,0 +1,30 @@
+version: 2.0
+subscriptionId: ad203158-bc5d-4e72-b764-2607833a71dc
+resourceGroup: model-management
+registry: mmsint
+onboardingNotification: mms-devs
+dependencyNotification: mms-devs
+
+
+repos:
+
+  - name: public/azureml-aci-frontend
+    displayName: Azureml Aci Frontend
+    description: No Description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azureml-aci-frontend
+        imageUpdate: false
+        contentUpdate: false
+        
+  - name: public/azureml-profiling-loadgenerator
+    displayName: Azureml Profiling LoadGenerator
+    description: No Description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+

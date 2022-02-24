@@ -1,0 +1,371 @@
+version: 2.0
+subscriptionId: d7d4a928-c9b8-4cf0-8d82-f1bdecb001a9
+resourceGroup: BuildResources
+registry: aicpmcr
+onboardingNotification: csmcrnot
+dependencyNotification: csmcrnot
+
+ownership:
+  securityGroups:
+  - groupName: redmond\cscpfteall   
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: Azure Cognitive Services
+  shortDescription: Container support for Azure Cognitive Services.
+  readMe: README.azure-cognitive-services-product-family.md
+  logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+  documentationLink: https://aka.ms/cognitive-services-textanalytics-containers
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+
+repos:
+
+  - name: public/azure-cognitive-services/textanalytics/language
+    displayName: Azure Cognitive Services Text Analytics Language
+    readme: README.azure-cognitive-services-textanalytics-language.md
+    description: Azure Cognitive Services Language Detection Images
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-textanalytics-language
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/textanalytics/sentiment
+    displayName: Azure Cognitive Services Text Analytics Sentiment
+    readme: README.azure-cognitive-services-textanalytics-sentiment.md
+    description: Azure Cognitive Services Sentiment Analysis Images
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-textanalytics-sentiment
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/textanalytics/keyphrase
+    displayName: Azure Cognitive Services Text Analytics Keyphrase
+    readme: README.azure-cognitive-services-textanalytics-keyphrase.md
+    description: Azure Cognitive Services Key Phrase Extraction Images
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-textanalytics-keyphrase
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/textanalytics/healthcare
+    displayName: Azure Cognitive Services Text Analytics Healthcare
+    readme: README.azure-cognitive-services-textanalytics-healthcare.md
+    description: Azure Cognitive Services Healthcare Images
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-textanalytics-healthcare
+        imageUpdate: false
+        
+  - name: public/azure-cognitive-services/language/luis
+    displayName: Azure Cognitive Services Language Understanding
+    description: Azure Cognitive Services Language Understanding Images
+    readme: README.azure-cognitive-services-language-luis.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-language-luis
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/custom-form/labeltool
+    displayName: Azure Cognitive Services Custom Form Recognizer Labeltool
+    description: Azure Cognitive Services Custom Form Recognizer Labeltool Images Images
+    readme: README.azure-cognitive-services-custom-form-labeltool.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-custom-form-labeltool
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/samples/language/frontend
+    displayName: Azure Cognitive Services Language Frontend Sample
+    description: Azure Cognitive Services Language Detection Frontend Sample Images
+    readme: README.azure-cognitive-services-samples-language-frontend.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-samples-language-frontend
+        imageUpdate: false
+         
+  - name: public/azure-cognitive-services/decision/anomaly-detector
+    displayName: Azure Cognitive Services Decision Anomaly Detector
+    description: Azure Cognitive Services Decision Anomaly Detector Images
+    readme: README.azure-cognitive-services-decision-anomaly-detector.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-decision-anomaly-detector
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/vision/read
+    displayName: Azure Cognitive Services Computer Vision Read OCR
+    description: Azure Cognitive Services Computer Vision Read OCR Images
+    readme: README.azure-cognitive-services-vision-read.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-vision-read
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/form-recognizer/layout
+    displayName: Azure Cognitive Services Form Recognizer Layout
+    description: Azure Cognitive Services Form Recognizer Layout Images
+    readme: README.azure-cognitive-services-form-recognizer-layout.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-form-recognizer-layout
+        imageUpdate: false
+        contentUpdate: true
+  
+  - name: public/azure-cognitive-services/form-recognizer/businesscard
+    displayName: Azure Cognitive Services Form Recognizer BusinessCard
+    description: Azure Cognitive Services Form Recognizer BusinessCard Images
+    readme: README.azure-cognitive-services-form-recognizer-businesscard.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-form-recognizer-businesscard
+        imageUpdate: false
+        contentUpdate: true
+  
+  - name: public/azure-cognitive-services/form-recognizer/receipt
+    displayName: Azure Cognitive Services Form Recognizer Receipt
+    description: Azure Cognitive Services Form Recognizer Receipt Images
+    readme: README.azure-cognitive-services-form-recognizer-receipt.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-form-recognizer-receipt
+        imageUpdate: false
+        contentUpdate: true
+  
+  - name: public/azure-cognitive-services/form-recognizer/invoice
+    displayName: Azure Cognitive Services Form Recognizer Invoice
+    description: Azure Cognitive Services Form Recognizer Invoice Images
+    readme: README.azure-cognitive-services-form-recognizer-invoice.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-form-recognizer-invoice
+        imageUpdate: false
+        contentUpdate: true
+
+  - name: public/azure-cognitive-services/form-recognizer/custom-api
+    displayName: Azure Cognitive Services Form Recognizer Custom API
+    description: Azure Cognitive Services Form Recognizer Custom API Images
+    readme: README.azure-cognitive-services-form-recognizer-custom-api.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-form-recognizer-custom-api
+        imageUpdate: false
+        contentUpdate: true
+  
+  - name: public/azure-cognitive-services/form-recognizer/custom-supervised
+    displayName: Azure Cognitive Services Form Recognizer Custom Supervised
+    description: Azure Cognitive Services Form Recognizer Custom Supervised Images
+    readme: README.azure-cognitive-services-form-recognizer-custom-supervised.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-form-recognizer-custom-supervised
+        imageUpdate: false
+        contentUpdate: true
+  
+  - name: public/azure-cognitive-services/form-recognizer/id-document
+    displayName: Azure Cognitive Services Form Recognizer ID Document
+    description: Azure Cognitive Services Form Recognizer ID Document Images
+    readme: README.azure-cognitive-services-form-recognizer-id-document.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-form-recognizer-id-document
+        imageUpdate: false
+        contentUpdate: true
+
+  - name: public/azure-cognitive-services/vision/spatial-analysis
+    displayName: Azure Cognitive Services Computer Vision spatial analysis
+    description: Azure Cognitive Services Computer Vision spatial analysis for video
+    readme: README.azure-cognitive-services-vision-spatial-analysis.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-vision-spatial-analysis
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/vision/custom-image-analysis
+    displayName: Azure Cognitive Services Computer Vision custom image analysis
+    description: Azure Cognitive Services Computer Vision custom image analysis
+    readme: README.azure-cognitive-services-vision-custom-image-analysis.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-vision-custom-image-analysis
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/vision/spatial-analysis/telegraf
+    displayName: Azure Cognitive Services Computer Vision spatial analysis telegraf
+    description: Azure Cognitive Services Computer Vision spatial analysis system health with Telegraf 
+    readme: README.azure-cognitive-services-vision-spatial-analysis-telegraf.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-vision-spatial-analysis-telegraf
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/vision/spatial-analysis/diagnostics
+    displayName: Azure Cognitive Services Computer Vision spatial analysis diagnostics
+    description: Azure Cognitive Services Computer Vision spatial analysis diagnostics with Docker logs
+    readme: README.azure-cognitive-services-vision-spatial-analysis-diagnostics.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-vision-spatial-analysis-diagnostics
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/speechservices/speech-to-text
+    displayName: Azure Cognitive Services Speech To Text
+    description: Azure Cognitive Services Speech To Text Images
+    readme: README.azure-cognitive-services-speechservices-speech-to-text.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-speechservices-speech-to-text
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/speechservices/custom-speech-to-text
+    displayName: Azure Cognitive Services Custom Speech To Text
+    description: Azure Cognitive Services Custom Speech To Text Images
+    readme: README.azure-cognitive-services-speechservices-custom-speech-to-text.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-azure-cognitive-services-speechservices-custom-speech-to-text
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/speechservices/text-to-speech
+    displayName: Azure Cognitive Services Text To Speech
+    description: Azure Cognitive Services Text To Speech Images
+    readme: README.azure-cognitive-services-speechservices-text-to-speech.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-speechservices-text-to-speech
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/speechservices/custom-text-to-speech
+    displayName: Azure Cognitive Services Custom Text To Speech
+    description: Azure Cognitive Services Custom Text To Speech Images
+    readme: README.azure-cognitive-services-speechservices-custom-text-to-speech.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-azure-cognitive-services-speechservices-custom-text-to-speech
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/speechservices/neural-text-to-speech
+    displayName: Azure Cognitive Services Neural Text To Speech
+    description: Azure Cognitive Services Neural Text To Speech Images
+    readme: README.azure-cognitive-services-speechservices-neural-text-to-speech.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-azure-cognitive-services-speechservices-neural-text-to-speech
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/speechservices/language-detection
+    displayName: Azure Cognitive Services Speech Language Detection
+    description: Azure Cognitive Services Speech Language Detection Images
+    readme: README.azure-cognitive-services-speechservices-language-detection.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: azure-cognitive-services-speechservices-language-detection
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/translator/text-translation
+    displayName: Azure Cognitive Services Text Translation
+    description: Azure Cognitive Services Text Translation Images
+    readme: README.azure-cognitive-services-translator-text-translation.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-translator-text-translation
+        imageUpdate: false
+        contentUpdate: true
+
+  - name: public/azure-cognitive-services/diagnostic
+    displayName: Azure Cognitive Services Diagnostic
+    description: Azure Cognitive Services Diagnostic Images
+    readme: README.azure-cognitive-services-diagnostic.md
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-cognitive-services-diagnostic
+        imageUpdate: false

@@ -1,0 +1,21 @@
+version: 2.0
+subscriptionId: 89954b57-27c4-4d64-8594-881007d7ade6
+resourceGroup: DevInfraGlobalResources-prod
+registry: aksdevinfraprodprod
+onboardingNotification: k8sdev
+dependencyNotification: k8sdev
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-Read_Write-CG-23637
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/aks/command/runtime
+    displayName: AKS RunCommand Runtime
+    description: Command runtime container image, provide kubectl, helm.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

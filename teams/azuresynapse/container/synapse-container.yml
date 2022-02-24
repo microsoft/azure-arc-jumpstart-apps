@@ -1,0 +1,13 @@
+version: 2.0
+subscriptionId: 7ee89055-8716-42cb-803d-9539e0ad29ba
+resourceGroup: erfeng-test-aci
+registry: efregistry
+onboardingNotification: synapsemcr
+dependencyNotification: synapsemcr
+
+repos:
+  - name: public/azuresynapse/container/acibackend
+    displayName: Synapse backend container images
+    readme: README.md
+    description: Official image for Synapse on Linux in Containers.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

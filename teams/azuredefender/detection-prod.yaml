@@ -1,0 +1,196 @@
+version: 2.0
+subscriptionId: 2cda8d31-5571-45ac-b137-0c8e6637dce4                                                  # REQUIRED. The id of the Azure subscription where the registry lives
+resourceGroup: AzureDefender-MCR-Prod                                                                 # REQUIRED. The Azure resource group where the registry lives
+registry: azuredefendermcrprod                                                                        # REQUIRED. The private ACR where the container image lives
+onboardingNotification: ascdetectionmcrnotf                                                           # REQUIRED. An @microsoft.com distribution group for onboarding notifications that include image scanning results. Can be the same DG used for dependencyNotification.
+
+ownership:
+  securityGroups:
+  - groupName: middleeast\romedetectioneng
+    permissions:
+    - read
+    - write
+
+repos:                                                                                                # REQUIRED. The collection of onboarded repositories
+  # Arc Helm chart repo
+  - name: public/azuredefender/stable/arc-extension
+    displayName: Microsoft Azure Defender Arc Extension
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - small regions
+  - name: public/azuredefender/stable/arc-extension-small-regions
+    displayName: Microsoft Azure Defender Arc Extension (Small Regions)
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - canary
+  - name: public/azuredefender/stable/arc-extension-canary
+    displayName: Microsoft Azure Defender Arc Extension - Canary
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - west europe
+  - name: public/azuredefender/stable/arc-extension-weu
+    displayName: Microsoft Azure Defender Arc Extension - West Europe
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - east us
+  - name: public/azuredefender/stable/arc-extension-eus
+    displayName: Microsoft Azure Defender Arc Extension - East US
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - west central us
+  - name: public/azuredefender/stable/arc-extension-wcus
+    displayName: Microsoft Azure Defender Arc Extension - West Central US
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - west us 2
+  - name: public/azuredefender/stable/arc-extension-wus2
+    displayName: Microsoft Azure Defender Arc Extension - West US 2
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - south central us
+  - name: public/azuredefender/stable/arc-extension-scus
+    displayName: Microsoft Azure Defender Arc Extension - South Central US
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - uk south
+  - name: public/azuredefender/stable/arc-extension-uks
+    displayName: Microsoft Azure Defender Arc Extension - UK South
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - southeast asia
+  - name: public/azuredefender/stable/arc-extension-sea
+    displayName: Microsoft Azure Defender Arc Extension - Southeast Asia
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - australia east
+  - name: public/azuredefender/stable/arc-extension-ae
+    displayName: Microsoft Azure Defender Arc Extension - Australia East
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - east us 2
+  - name: public/azuredefender/stable/arc-extension-eus2
+    displayName: Microsoft Azure Defender Arc Extension - East US 2
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - north europe
+  - name: public/azuredefender/stable/arc-extension-neu
+    displayName: Microsoft Azure Defender Arc Extension - North Europe
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - fairfax
+  - name: public/azuredefender/stable/arc-extension-ffx
+    displayName: Microsoft Azure Defender Arc Extension (Fairfax)
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - mooncake
+  - name: public/azuredefender/stable/arc-extension-mc
+    displayName: Microsoft Azure Defender Arc Extension (Mooncake)
+    description: Microsoft Azure Defender Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Azure Defender cluster state collector
+  - name: public/azuredefender/stable/cluster-state-collector
+    displayName: Microsoft Azure Defender Cluster State Collector Agent for K8S
+    description: Microsoft Azure Defender Cluster State Collector Agent for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Azure Defender low level collector
+  - name: public/azuredefender/stable/low-level-collector
+    displayName: Microsoft Azure Defender Low Level Collector Agent for K8S
+    description: Microsoft Azure Defender Low Level Collector Agent for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Azure Defender low level collector init container
+  - name: public/azuredefender/stable/low-level-init
+    displayName: Microsoft Azure Defender Low Level Init for K8S
+    description: Microsoft Azure Defender Low Level Init for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Azure Defender pod collector
+  - name: public/azuredefender/stable/pod-collector
+    displayName: Microsoft Azure Defender Pod Collector Agent for K8S
+    description: Microsoft Azure Defender Pod Collector Agent for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Azure Defender Publisher Agent 
+  - name: public/azuredefender/stable/security-publisher
+    displayName: Microsoft Azure Defender Security Publisher Agent for K8S
+    description: Microsoft Azure Defender Security Publisher Agent for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Audit Logs Enabler
+  - name: public/azuredefender/stable/audit-logs-enabler
+    displayName: Microsoft Azure Defender Audit logs enabler for K8S
+    description: Microsoft Azure Defender Audit logs enabler for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Azure Defender Old File Cleaner
+  - name: public/azuredefender/stable/old-file-cleaner
+    displayName: Microsoft Azure Defender File Cleaner for K8S
+    description: Microsoft Azure Defender File Cleaner for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Kernel Headers Enabler
+  - name: public/azuredefender/stable/kernel-headers-enabler
+    displayName: Microsoft Azure Defender kernel headers enabler for K8S
+    description: Microsoft Azure Defender kernel headers enabler for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Azure Defender In Cluster Defense Helm chart repo                                                                                                # REQUIRED. The collection of onboarded repositories
+  - name: public/azuredefender/stable/in-cluster-defense-helm
+    displayName: Microsoft Defender In Cluster Defense for K8S Helm Repo
+    description: Microsoft Defender In Cluster Defense for K8S Helm Repo
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Azure Defender In Cluster Defense
+  - name: public/azuredefender/stable/in-cluster-defense
+    displayName: Microsoft Defender In Cluster Defense for K8S
+    description: Microsoft Defender In Cluster Defense for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Azure Defender In Cluster Defense - Redis Cache
+  - name: public/azuredefender/stable/in-cluster-defense-redis
+    displayName: Microsoft Defender In Cluster Defense for K8S Redis Cache
+    description: Microsoft Defender In Cluster Defense for K8S Redis Cache
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

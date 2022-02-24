@@ -1,0 +1,55 @@
+version: 2.0
+subscriptionId: 00c06639-6ee4-454e-8058-8d8b1703bd87
+resourceGroup: proj-onnxruntime-dev
+registry: onnxruntimeregistry
+onboardingNotification: mcr-onnxruntime
+
+ownership:
+  securityGroups: 
+  - groupName: redmond\ai_infra_build_admin
+    permissions:                                                                         
+    - read
+    - write
+
+productFamily:
+ name: azureml-onnxruntimefamily
+ displayName: ONNX Runtime for Azure ML
+ shortDescription: Container images for ONNX Runtime with different HW execution providers.
+ readMe: README.md
+ logoUrl: https://github.com/Microsoft/onnxruntime/raw/master/docs/images/ONNX_Runtime_logo_dark.png
+ supportLink: https://github.com/Microsoft/onnxruntime/issues/new/choose
+ documentationLink: https://github.com/microsoft/onnxruntime/blob/master/dockerfiles/README.md
+ syndications:
+   - type: dockerhub
+     enabled: True
+
+repos:
+  - name: public/azureml/onnxruntime
+    displayName: ONNX Runtime Inference
+    readme: README.azureml-onnxruntime.md
+    description: Docker image with build flavors of ONNXRuntime (CPU, TensorRT, CUDA, nGraph) for use with AzureML.
+    logoUrl: https://github.com/Microsoft/onnxruntime/raw/master/docs/images/ONNX_Runtime_logo_dark.png
+    documentationLink: https://aka.ms/onnxruntime
+#     syndications:
+#       - type: dockerhub
+#         repository: microsoft/azureml-onnxruntime
+#         imageUpdate: false
+#         contentUpdate: true
+#         tags:
+#         - source: v1.30
+#           target: latest
+
+  - name: public/azureml/onnxruntime-training
+    displayName: ONNX Runtime Training
+    readme: README.azureml-onnxruntime.md
+    description: Docker image with for ONNX Runtime Examples repo
+    logoUrl: https://github.com/Microsoft/onnxruntime/raw/master/docs/images/ONNX_Runtime_logo_dark.png
+    documentationLink: https://github.com/microsoft/onnxruntime-training-examples
+#     syndications:
+#       - type: dockerhub
+#         repository: microsoft/azureml-onnxruntime-training
+#         imageUpdate: false
+#         contentUpdate: true
+#         tags:
+#           - source: 0.1-rc1-openmpi4.0-cuda10.1-cudnn7.6-nccl2.4.8
+#             target: 0.1-rc1-openmpi4.0-cuda10.1-cudnn7.6-nccl2.4.8

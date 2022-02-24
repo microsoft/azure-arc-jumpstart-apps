@@ -1,0 +1,220 @@
+version: 2.0
+subscriptionId: 589c7ae9-223e-45e3-a191-98433e0821a9
+resourceGroup: AML-Docker-Images
+registry: amlmcr
+onboardingNotification: amlmcronboarding
+dependencyNotification: amlmcrdepnot
+
+ownership:
+  securityGroups:
+  - groupName: redmond\amlinferenceimages
+    permissions:
+      - read
+      - write
+  
+productFamily:
+  name: azureml-inference
+  displayName: Azure ML Inference
+  shortDescription: Official Azure Machine Learning Inference images.
+  readMe: README.inference-system-images.md
+  logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b 
+  supportLink: https://github.com/Azure/AzureML-Containers/issues
+  documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/
+  syndications:
+  - type: dockerhub
+    enabled: True
+
+
+repos:
+  # Inference system images
+  - name: public/azureml/minimal-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml Minimal Inference CPU Image
+    readme: README.minimal-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning Inference/Ubuntu 18.04/Python 3.7 CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/pytorch-1.6-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml Pytorch 1.6 Inference CPU Image
+    readme: README.pytorch-1.6-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning Pytorch 1.6/Ubuntu 18.04/Python 3.7 Inference CPU image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/tensorflow-1.15-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml Tensorflow 1.15 Inference CPU Image
+    readme: README.tensorflow-1.15-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning Tensorflow 1.15/Ubuntu 18.04/Python 3.7 Inference CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/xgboost-0.9-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml XGBoost 0.9 Inference CPU Image
+    readme: README.xgboost-0.9-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning XGBoost 0.9/Ubuntu 18.04/Python 3.7 Inference CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/sklearn-0.24.1-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml Scikit-Learn 0.24.1 Inference CPU Image
+    readme: README.sklearn-0.24.1-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning Scikit-Learn 0.24.1/Ubuntu 18.04/Python 3.7 Inference CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/pytorch-1.7-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml Pytorch 1.7 Inference CPU Image
+    readme: README.pytorch-1.7-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning Pytorch 1.7/Ubuntu 18.04/Python 3.7 Inference CPU image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/tensorflow-2.4-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml Tensorflow 2.4 Inference CPU Image
+    readme: README.tensorflow-2.4-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning Tensorflow 2.4/Ubuntu 18.04/Python 3.7 Inference CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/tensorflow-2.4-ubuntu18.04-py37-cuda11.0.3-gpu-inference
+    displayName: Azureml Tensorflow 2.4 Inference GPU Image
+    readme: README.tensorflow-2.4-ubuntu18.04-py37-cuda11.0.3-gpu-inference.md
+    description: Azure Machine Learning Tensorflow 2.4/Ubuntu 18.04/Python 3.7/Cuda 11.0.3 Inference CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/onnxruntime-1.6-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml ONNX Runtime 1.6 Inference CPU Image
+    readme: README.onnxruntime-1.6-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning ONNX Runtime 1.6/Ubuntu 18.04/Python 3.7 Inference CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/tritonserver-21.02-py38-inference
+    displayName: Azureml Image for Triton Server 21.02 Inference
+    readme: README.azureml-tritonserver.md
+    description: Azure Machine Learning Triton Server 21.02/Python 3.8 Inference Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/tritonserver-21.06-py38-inference
+    displayName: Azureml Image for Triton Server 21.06 Inference
+    readme: README.tritonserver-21.06-py38-inference.md
+    description: Azure Machine Learning Triton Server 21.06/Python 3.8 Inference Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/mlflow-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml MLFlow Inference CPU Image
+    readme: README.inference-system-images.md
+    description: Azure Machine Learning MLFlow/Ubuntu 18.04/Python 3.7 Inference CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+
+  - name: public/azureml/tritonserver-inference
+    displayName: Azureml Triton Server Inference Image
+    readme: README.inference-system-images.md
+    description: Azure Machine Learning Triton Server Inference image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    
+  - name: public/azureml/pytorch-1.9-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml Pytorch 1.9 Inference CPU Image
+    readme: README.pytorch-1.9-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning Pytorch 1.9/Ubuntu 18.04/Python 3.7 Inference CPU image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/pytorch-1.10-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml Pytorch 1.10 Inference CPU Image
+    readme: README.pytorch-1.10-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning Pytorch 1.10/Ubuntu 18.04/Python 3.7 Inference CPU image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azureml/lightgbm-3.2-ubuntu18.04-py37-cpu-inference
+    displayName: Azureml lightgbm 3.2 Inference CPU Image
+    readme: README.lightgbm-3.2-ubuntu18.04-py37-cpu-inference.md
+    description: Azure Machine Learning lightgbm 3.2/Ubuntu 18.04/Python 3.7 Inference CPU image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+        
+  - name: public/azureml/pytorch-1.9-ubuntu18.04-py37-cuda11.0.3-gpu-inference
+    displayName: Azureml pytorch 1.9 Inference GPU Image
+    readme: README.pytorch-1.9-ubuntu18.04-py37-cuda11.0.3-gpu-inference.md
+    description: Azure Machine Learning pytorch 1.9/Ubuntu 18.04/Python 3.7/Cuda 11.0.3 Inference CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+        
+  - name: public/azureml/minimal-ubuntu18.04-py37-cuda11.0.3-gpu-inference
+    displayName: Azureml minimal Inference GPU Image
+    readme: README.minimal-ubuntu18.04-py37-cuda11.0.3-gpu-inference.md
+    description: Azure Machine Learning minimal/Ubuntu 18.04/Python 3.7/Cuda 11.0.3 Inference CPU Image
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

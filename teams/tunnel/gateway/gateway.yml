@@ -1,0 +1,55 @@
+version: 2.0
+subscriptionId: bd59677e-67d2-4906-980f-2446d904fd4a
+resourceGroup: IntuneMobileAccess
+registry: MobileAccess
+onboardingNotification: imomcr
+dependencyNotification: imomcrdep
+
+productFamily:
+  name: Microsoft Tunnel Gateway
+  shortDescription: Official Docker images for Microsoft Tunnel Gateway
+  readMe: README.tunnel-gateway.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  supportLink: https://www.microsoft.com/intune
+  documentationLink: https://www.microsoft.com/intune
+  syndications:
+    - type: dockerhub
+      enabled: False
+
+repos:
+  - name: internal/tunnel/gateway/server
+    displayName: Microsoft Tunnel Gateway
+    readme: README.tunnel-gateway.md
+    description: Internal Docker images for Microsoft Tunnel Gateway for Linux
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://www.microsoft.com/intune
+    documentationLink: https://www.microsoft.com/intune
+    checkSyncStateBeforeContentUpdate: true
+
+    
+  - name: internal/tunnel/gateway/agent
+    displayName: Microsoft Tunnel Gateway Agent
+    readme: README.tunnel-gateway-agent.md
+    description: Internal Docker images for Microsoft Tunnel Gateway Agent for Linux
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://www.microsoft.com/intune
+    documentationLink: https://www.microsoft.com/intune
+    checkSyncStateBeforeContentUpdate: true
+
+  - name: public/tunnel/gateway/server
+    displayName: Microsoft Tunnel Gateway
+    readme: README.tunnel-gateway.md
+    description: Official Docker images for Microsoft Tunnel Gateway for Linux
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://www.microsoft.com/intune
+    documentationLink: https://www.microsoft.com/intune
+    checkSyncStateBeforeContentUpdate: true
+
+  - name: public/tunnel/gateway/agent
+    displayName: Microsoft Tunnel Gateway Agent
+    readme: README.tunnel-gateway-agent.md
+    description: Official Docker images for Microsoft Tunnel Gateway Agent for Linux
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://www.microsoft.com/intune
+    documentationLink: https://www.microsoft.com/intune
+    checkSyncStateBeforeContentUpdate: true

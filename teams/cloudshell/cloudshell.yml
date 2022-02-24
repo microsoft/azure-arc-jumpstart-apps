@@ -1,0 +1,16 @@
+  
+version: 2.0
+subscriptionId: b6b0be44-d5a2-4199-8349-eea78c0c9353
+resourceGroup: Cloud-Console-ContainerRegistry
+registry: cloudconregprd
+onboardingNotification: AzCloudConsole@microsoft.com
+dependencyNotification: AzCloudConsole@microsoft.com
+
+repos:
+    - name: public/azure-cloudshell
+      displayName: Azure-CloudShell
+      readme: README.md
+      description: A browser-based shell environment which enables customers to manage their Azure services
+      logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg 
+      supportLink: https://feedback.azure.com/forums/598699-azure-cloud-shell
+      documentationLink: https://github.com/Azure/CloudShell

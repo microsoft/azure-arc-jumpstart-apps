@@ -1,0 +1,57 @@
+version: 2.0
+subscriptionId: 94cf12ad-4fe9-490b-b281-0a260198a4e0
+resourceGroup: pscore_mcr
+registry: pwshmcr
+onboardingNotification: pwshmcronboarding
+dependencyNotification: pwshmcrdepnot
+
+ownership:
+  securityGroups:
+  - groupName: redmond\PowerShell_Docker_Admins
+    permissions:
+    - read
+    - write
+
+repos:
+
+  - name: internal/powershell
+    displayName: PowerShell
+    readme: README.powershell.md
+    description: PowerShell for every system!
+    logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+    supportLink: https://github.com/PowerShell/PowerShell/issues/new/choose
+    documentationLink: https://docs.microsoft.com/en-us/powershell/
+    
+  - name: internal/powershell/test-deps
+    displayName: PowerShell with Test Dependecies
+    readme: README.powershell-test-deps.md
+    description: PowerShell for every system with test dependencies for CI systems such as Azure Pipelines!
+    logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+    supportLink: https://github.com/PowerShell/PowerShell/issues/new/choose
+    documentationLink: https://docs.microsoft.com/en-us/powershell/
+        
+  - name: public/powershell
+    displayName: PowerShell
+    readme: README.powershell.md
+    description: PowerShell for every system!
+    logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+    supportLink: https://github.com/PowerShell/PowerShell/issues/new/choose
+    documentationLink: https://docs.microsoft.com/en-us/powershell/
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true 
+        repository: microsoft/powershell
+
+  - name: public/powershell/test-deps
+    displayName: PowerShell with Test Dependecies
+    readme: README.powershell-test-deps.md
+    description: PowerShell for every system with test dependencies for CI systems such as Azure Pipelines!
+    logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+    supportLink: https://github.com/PowerShell/PowerShell/issues/new/choose
+    documentationLink: https://docs.microsoft.com/en-us/powershell/
+    syndications:
+      - type: dockerhub
+        repository: microsoft/powershell-test-deps
+        imageUpdate: false
+        contentUpdate: true 

@@ -1,0 +1,33 @@
+version: 2.0
+subscriptionId: ddd7a042-2289-4f21-b731-daaeb0b11559
+resourceGroup: mcrofficial
+registry: pbiark
+onboardingNotification: rdlmcrnot
+dependencyNotification: rdlmcrdepnot
+disableOnboardingNotifications: false
+
+productFamily:
+  name: Power BI Report Server
+  shortDescription: Create, publish, and distribute Power BI reports 
+  readMe: README.pbirs.md
+  logoUrl: https://ssrsazuretemplates.blob.core.windows.net/pbilogo/pbilogo.png
+  documentationLink: https://powerbi.microsoft.com/en-us/report-server/
+  syndications:
+    - type: dockerhub
+      enabled: false
+
+repos:
+
+  - name: internal/powerbi/pbirs
+    displayName: Power BI Report Server
+    readme: README.pbirs.md
+    description: Power BI Report Server
+    logoUrl: https://ssrsazuretemplates.blob.core.windows.net/pbilogo/pbilogo.png
+    supportLink: https://powerbi.microsoft.com/en-us/report-server/
+    documentationLink: https://powerbi.microsoft.com/en-us/report-server/
+    syndications:
+      - type: dockerhub
+        repository: microsoft/powerbi
+        imageUpdate: false
+        contentUpdate: false
+

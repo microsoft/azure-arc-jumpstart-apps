@@ -1,0 +1,22 @@
+version: 2.0
+subscriptionId: 589c7ae9-223e-45e3-a191-98433e0821a9
+resourceGroup: ICE-BaseImage-Build-Resources
+registry: reg4onnx
+onboardingNotification: olive-team
+
+ownership:
+  securityGroups: 
+  - groupName: redmond\OLive-Team
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/olive/olive_conversion
+    displayName: OLive Converter for TensorFlow or PyTorch to ONNX
+    description: Docker image OLive model converter. 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/olive/olive_optimization
+    displayName: OLive Inference Optimizer for ONNX Model
+    description: Docker image with OLive model optimizer. 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

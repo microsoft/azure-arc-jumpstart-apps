@@ -1,0 +1,100 @@
+version: 2.0
+subscriptionId: d4d34678-c0d7-4d69-a257-366e3cb4a7d8
+resourceGroup: mir-vnext-vmagent
+registry: amlinferenceprodacr
+onboardingNotification: mir_mcr_onboarding
+dependencyNotification: mir_mcr_dependency
+
+ownership:
+  securityGroups:
+  - groupName: fareast\mir_mcr_contributor
+    permissions:
+    - read
+    - write
+  - groupName: fareast\mirbj
+    permissions:
+    - read
+
+repos:
+  - name: public/inference/mir-base-image
+    displayName: MIR Base Image
+    description: Base Image is based on Ubuntu and pre-installed with necessary libs.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-base-image-win1809
+    displayName: MIR Base Image For Windows
+    description: Base Image is based on Windows and pre-installed with necessary libs.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg    
+  - name: public/inference/mir-vmagent
+    displayName: MIR VM Agent
+    description: VMAgent is the agent running on VM instance.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-vmagent-win1809
+    displayName: MIR VM Agent For Windows
+    description: VMAgent is the agent running on VM instance.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-imagefetcher
+    displayName: MIR Image Fetcher
+    description: Image fetcher pull customer's images.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-imagefetcher-win1809
+    displayName: MIR Image Fetcher For Windows
+    description: Image fetcher pull customer's images.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-tokenrefresh
+    displayName: MIR Token Refresh
+    description: Sidecar for updating prometheus msi token.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-tokenrefresh-win1809
+    displayName: MIR Token Refresh For Windows
+    description: Sidecar for updating prometheus msi token.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-diagnostics
+    displayName: MIR Diagnostics
+    description: MIR diagnostics container, used for diagnositcs operation like tailing logs.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-diagnostics-win1809
+    displayName: MIR Diagnostics For Windows
+    description: MIR diagnostics container, used for diagnositcs operation like tailing logs.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-xdsproxyserver
+    displayName: MIR XDS Proxy Server
+    description: Proxy server on vm for aml compute xds server.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-xdsproxyserver-win1809
+    displayName: MIR XDS Proxy Server For Windows
+    description: Proxy server on vm for aml compute xds server.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-storageinitializer
+    displayName: MIR Storage Initializer
+    description: Init container used for downloading user models.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-storageinitializer-win1809
+    displayName: MIR Storage Initializer For Windows
+    description: Init container used for downloading user models.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-prom-token-refresher
+    displayName: MIR Prometheus Token Refresher
+    description: The refresher will periodically fetch new tokens for prometheus.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-prom-token-refresher-win1809
+    displayName: MIR Prometheus Token Refresher For Windows
+    description: The refresher will periodically fetch new tokens for prometheus.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-mdsd-cert-updater
+    displayName: MIR MDSD Certificate Updater
+    description: The updater will periodically fetch new certificate for mdsd.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/mir-mdsd-cert-updater-win1809
+    displayName: MIR MDSD Certificate Updater For Windows
+    description: The updater will periodically fetch new certificate for mdsd.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/inference/prometheus-win1809
+    displayName: Prometheus metrics server for Windows
+    description: Prometheus metrics server for Windows
+    supportLink: https://github.com/prometheus/prometheus/issues
+    documentationLink: https://github.com/prometheus/prometheus
+  - name: public/inference/fluent-bit-win1809
+    displayName: Fluent-bit
+    description: Fluent-bit log aggregator
+    supportLink: https://github.com/fluent/fluent-bit/issues
+    documentationLink: https://docs.fluentbit.io/manual/

@@ -1,0 +1,31 @@
+version: 2.0
+subscriptionId: 910d9cee-44b6-4242-ab71-ebe693ed8cc6
+resourceGroup: mcr-test-global-rg
+registry: mcrflowwus2
+onboardingNotification: mcrflowtestnot
+dependencyNotification: mcrflowtestnot
+disableOnboardingNotifications: true
+
+ownership:
+  securityGroups:
+  - groupName: redmond\mcrdev
+    permissions:
+    - read
+    - write
+
+repos:
+# This image is for our Ingestion test targeting the wus2 region pointed to by domain mcrflow-wus2.mscr.io
+  - name: public/mcr/hello-world-wus2
+    displayName: Mcr Hello World wus2 Image
+    description: MCR Hello World! (WUS2).
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+
+  - name: unlisted/mcr/hello-world-hidden-wus2
+    displayName: Mcr Hello World Hidden wus2 Image
+    description: Hello World! (an example of minimal Dockerization).
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

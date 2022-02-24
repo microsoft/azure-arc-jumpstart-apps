@@ -1,0 +1,31 @@
+version: 2.0
+subscriptionId: 85b3dbca-5974-4067-9669-67a141095a76
+resourceGroup: terramodtest
+registry: terramodtest
+onboardingNotification: tfazeng@microsoft.com
+
+repos:
+  - name: public/terraform-test
+    displayName: Terraform Module Test
+    readme: README.terraform-test.md
+    description: Terraform module test.
+    logoUrl: https://docs.microsoft.com/en-us/azure/media/index/azure_dev-7.svg
+    documentationLink: https://docs.microsoft.com/en-us/azure/terraform/terratest-in-terraform-modules
+    syndications:
+      - type: dockerhub
+        repository: microsoft/terraform-test
+        imageUpdate: true
+        contentUpdate: true
+        tags:
+          - source: latest
+            target: latest
+          - source: 0.11.7
+            target: 0.11.7
+          - source: 0.11.3
+            target: 0.11.3
+          - source: 0.11.2
+            target: 0.11.2
+          - source: 0.11.1
+            target: 0.11.1
+          - source: 0.10.8
+            target: 0.10.8

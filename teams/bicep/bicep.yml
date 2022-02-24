@@ -1,0 +1,21 @@
+version: 2.0
+subscriptionId: 22ec7257-9128-45a4-9751-69ef4f22a75b
+resourceGroup: bicep-public-registry-rg
+registry: biceppublic
+onboardingNotification: brmmcronboarding
+dependencyNotification: brmmcrdependency
+
+ownership:
+  securityGroups:
+    - groupName: redmond\bicepmcr
+      permissions:
+        - read
+        - write
+
+repos:
+  - name: public/bicep/samples/hello-world
+    displayName: Hello World
+    description: A "Hello World" sample Bicep registry module
+    logoUrl: https://raw.githubusercontent.com/Azure/bicep/main/src/vscode-bicep/icons/bicep-logo-256.png
+    supportLink: https://github.com/Azure/bicep-registry-modules/issues
+    documentationLink: https://github.com/Azure/bicep-registry-modules/blob/main/modules/samples/hello-world/README.md

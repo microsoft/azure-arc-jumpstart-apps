@@ -1,0 +1,167 @@
+version: 2.0
+subscriptionId: 69306f0e-d7f3-4f8f-aaa2-94a8e3c28a60
+resourceGroup: k8se-prod
+registry: k8seprod
+onboardingNotification: antk8sall
+dependencyNotification: antk8sall
+
+ownership:
+  securityGroups:
+  - groupName: redmond\ant-mcr
+    permissions:
+    - read
+    - write
+  - groupName: redmond\antartic-ci-owners
+    permissions:
+    - read
+    - write
+  - groupName: redmond\antr-dev
+    permissions:
+    - read
+
+repos:
+
+  - name: public/k8se/app-controller
+    displayName: K8SE App Controller
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/containerapp-controller
+    displayName: K8SE Container App Controller
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/workerapp-controller
+    displayName: K8SE Worker Apps Controller
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/containerapp-controller-api
+    displayName: K8SE Container App Controller API Server
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/workerapp-controller-api
+    displayName: K8SE Worker App Controller API Server
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/envoy-controller
+    displayName: K8SE Envoy Controller
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/build-tools
+    displayName: K8SE Build environment
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/build-server
+    displayName: K8SE Build environment
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/app-init
+    displayName: K8SE App Init Container
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/gocanary
+    displayName: K8SE Canary App
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/img-cacher
+    displayName: K8SE Image Cacher
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/envoy
+    displayName: K8SE envoyproxy image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/activator
+    displayName: K8SE activator image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/http-scaler
+    displayName: K8SE http scaler image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/mdsd
+    displayName: K8SE mdsd log exporter image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/fluent-bit
+    displayName: K8SE Fluent Bit Log Processor image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/metrics-exporter
+    displayName: K8SE Metrics Exporter image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/chart
+    displayName: Image with Default K8SE Helm Chart
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/stage1/preview/chart
+    displayName: Image with Stage 1 Preview Release Train K8SE Helm Chart
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/httpleader
+    displayName: K8SE Http Leader image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/dapr
+    displayName: K8SE dapr image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/daprd
+    displayName: K8SE daprd image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/placement
+    displayName: K8SE dapr placement image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/sentry
+    displayName: K8SE dapr sentry image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    
+  - name: public/k8se/billing
+    displayName: K8SE billing image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    
+  - name: public/k8se/envoy-access-log-service
+    displayName: K8SE Evnoy Access Log Service image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  
+  - name: public/k8se/probe-shim
+    displayName: K8SE probe shim for TCP probes when not supported
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/k8se/mdm-metrics
+    displayName: K8SE metrics to MDM image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    
+  - name: public/k8se/build-job
+    displayName: K8SE build job image
+    readme: README.k8se.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

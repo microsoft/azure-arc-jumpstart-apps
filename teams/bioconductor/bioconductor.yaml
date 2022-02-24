@@ -1,0 +1,40 @@
+version: 2.0
+subscriptionId: 45b4bed4-1b2d-4fc4-9849-ff1ff59bf5de
+resourceGroup: acr-genomics
+registry: msgen
+onboardingNotification: msgen-acr
+dependencyNotification: msgen-acr
+
+productFamily:
+  name: bioconductor
+  shortDescription: Bioconductor provides tools for the analysis and comprehension of high-throughput genomic data in the R statistical programming language
+  readMe: README.bioconductor.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  supportLink: http://bioconductor.org/help/support/        
+  documentationLink: http://bioconductor.org/help/
+  syndications:
+    - type: dockerhub
+      enabled: True                                               
+
+repos:
+  - name: public/bioconductor/bioconductor_docker
+    displayName: Official Bioconductor image mirror
+    description: This image is a mirror of the official Bioconductor docker image.
+    readme: README.bioconductor-docker.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:                                                                                    
+      - type: dockerhub                                                                             
+        repository: microsoft/bioconductor                                                           
+        imageUpdate: false                                                                            
+        contentUpdate: true   
+
+  - name: public/bioconductor/msgen_top30
+    displayName: Microsoft Genomics Top 30 Bioconductor packages
+    description: This image includes top 30 most used Bioconductor packages curated by the Microsoft Genomics team.
+    readme: README.msgen-top30.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:                                                                                    
+      - type: dockerhub                                                                             
+        repository: microsoft/bioconductor-msgentop30                                                             
+        imageUpdate: false                                                                            
+        contentUpdate: true                                                                         

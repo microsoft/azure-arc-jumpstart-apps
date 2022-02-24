@@ -1,0 +1,34 @@
+version: 2.0
+subscriptionId: f46be18e-65af-44b3-8188-2eed09c2d8fa
+resourceGroup: dapr-mcr
+registry: daprms
+onboardingNotification: dapr-mcr
+dependencyNotification: dapr-mcr
+
+ownership:
+  securityGroups:
+  - groupName: redmond\TM-Dapr-RW-f6a1
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/daprio/dapr
+    displayName: daprio/dapr image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/daprd
+    displayName: daprio/daprd image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/sentry
+    displayName: daprio/sentry image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/placement
+    displayName: daprio/placement image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/dashboard
+    displayName: daprio/dashboard image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/daprio/helmchart/dapr-aks-extension
+    displayName: Dapr ARC Extension on AKS
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

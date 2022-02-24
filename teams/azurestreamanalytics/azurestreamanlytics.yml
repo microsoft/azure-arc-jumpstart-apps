@@ -1,0 +1,35 @@
+version: 2.0
+subscriptionId: 7dfac3c6-1ad0-418e-86e6-6d069ebd4d91
+resourceGroup: asaedgeregistry
+registry: asaedge
+onboardingNotification: tnsbuilds
+dependencyNotification: tnsbuilds
+
+
+repos:
+
+  - name: public/azure-stream-analytics/azureiotedge
+    displayName: Azure Stream Analytics Azureiotedge
+    readme: README.azure-stream-analytics-azureiotedge.md
+    description: Azure Stream Analytics on Azure iotedge
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-stream-analytics-azureiotedge
+        imageUpdate: false
+
+  - name: public/azure-stream-analytics/simulated-sensor
+    displayName: Azure Stream Analytics Simulated Sensor
+    readme: README.azure-stream-analytics-simulated-sensor.md
+    description: A sample module that periodically sends simulated temperature readings
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azure-stream-analytics-simulated-sensor
+        imageUpdate: false
+
+

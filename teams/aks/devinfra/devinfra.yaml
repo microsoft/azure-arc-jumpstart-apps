@@ -1,0 +1,91 @@
+version: 2.0
+subscriptionId: 89954b57-27c4-4d64-8594-881007d7ade6
+resourceGroup: DevInfraGlobalResources-prod
+registry: aksdevinfraprodprod
+onboardingNotification: k8sdev
+dependencyNotification: k8sdev
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-Read_Write-CG-23637
+    permissions:
+    - read
+    - write
+
+repos:
+  # Unit Test
+  - name: public/aks/devinfra/unittest
+    displayName: aks base unittest images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  # Base Image (Build)
+  - name: public/aks/devinfra/base-os-builder
+    displayName: aks base builder images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-builder-cache
+    displayName: aks base builder images with go mod cache
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  # Base Image
+  - name: public/aks/devinfra/base-os-runtime
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-curl
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\.\d{1,2}$/
+
+  - name: public/aks/devinfra/base-os-runtime-nettools
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-nginx
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-openssh
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-openvpn
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-python3
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-static
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/

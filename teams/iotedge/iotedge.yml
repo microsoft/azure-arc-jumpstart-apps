@@ -1,0 +1,142 @@
+version: 2.0
+subscriptionId: 5ed2dcb6-29bb-40de-a855-8c24a8260343
+resourceGroup: EdgeRelease
+registry: EdgeRelease
+onboardingNotification: edgedevs
+dependencyNotification: edgedevs
+
+ownership:
+  securityGroups:
+  - groupName: redmond\iotedgedevs
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azureiotedge-agent
+    displayName: Azure IoT Edge Agent
+    readme: README.azureiotedge-agent.md
+    description: Azure IoT Edge agent is a core component of the IoT Edge runtime.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azureiotedge-agent
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /1.0.10(.)*/
+          - source: /1.1.[0-9]+(.)*/
+          - source: /1.2.[0-9]+(.)*/
+
+  - name: public/azureiotedge-hub
+    displayName: Azure IoT Edge Hub
+    readme: README.azureiotedge-hub.md
+    description: Azure IoT Edge hub is a core component of the IoT Edge runtime.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azureiotedge-hub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /1.0.10(.)*/
+          - source: /1.1.[0-9]+(.)*/
+          - source: /1.2.[0-9]+(.)*/
+
+  - name: public/azureiotedge-simulated-temperature-sensor
+    displayName: Azure IoT Edge Simulated Temperature Sensor
+    readme: README.azureiotedge-simulated-temperature-sensor.md
+    description: A sample Azure IoT Edge module that periodically sends simulated temperature readings.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azureiotedge-simulated-temperature-sensor
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /1.0.10(.)*/
+          - source: /1.1.[0-9]+(.)*/
+          - source: /1.2.[0-9]+(.)*/
+
+  - name: public/azureiotedge-functions-binding
+    displayName: Azure IoT Edge Functions Binding
+    readme: README.azureiotedge-functions-binding.md
+    description: The base image for running Azure Functions in Azure IoT Edge.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azureiotedge-functions-binding
+        imageUpdate: false
+
+  - name: public/azureiotedge-diagnostics
+    displayName: Azure IoT Edge Diagnostics
+    readme: README.azureiotedge-diagnostics.md
+    description: A set of tools to troubleshoot common IoT Edge issues.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azureiotedge-diagnostics
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /1.0.10(.)*/
+          - source: /1.1.[0-9]+(.)*/
+          - source: /1.2.[0-9]+(.)*/
+
+  - name: public/azureiotedge-api-proxy
+    displayName: Azure IoT Edge API Proxy
+    readme: README.azureiotedge-api-proxy.md
+    description: Proxy to route non messaging protocol for nested IoT Edge devices.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azureiotedge-api-proxy
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /1.0.[0-9]+(.)*/
+
+  - name: public/azureiotedge-metrics-collector
+    displayName: Azure IoT Edge Metrics Collector
+    readme: README.azureiotedge-metrics-collector.md
+    description: IoT Edge module facilitating metrics ingestion and upload.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/azureiotedge-metrics-collector
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /1.0.[0-9]+(.)*/

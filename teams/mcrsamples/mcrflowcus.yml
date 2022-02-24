@@ -1,0 +1,30 @@
+version: 2.0
+subscriptionId: 910d9cee-44b6-4242-ab71-ebe693ed8cc6
+resourceGroup: mcr-test-global-rg
+registry: mcrflowcus
+onboardingNotification: mcrflowtestnot
+dependencyNotification: mcrflowtestnot
+disableOnboardingNotifications: true
+
+ownership:
+  securityGroups:
+  - groupName: redmond\mcrdev
+    permissions:
+    - read
+    - write
+
+repos:
+# This image is for our Ingestion test targeting the cus region pointed to by domain mcrflow-cus.mscr.io
+  - name: public/mcr/hello-world-cus
+    displayName: Mcr Hello World cus Image
+    description: MCR Hello World! (CUS).
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    
+  - name: unlisted/mcr/hello-world-hidden-cus
+    displayName: Mcr Hello World Hidden cus Image
+    description: Hello World! (an example of minimal Dockerization).
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

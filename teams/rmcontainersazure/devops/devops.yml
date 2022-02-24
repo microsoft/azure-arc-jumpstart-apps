@@ -1,0 +1,16 @@
+version: 2.0
+subscriptionId: c00d16c7-6c1f-4c03-9be1-6934a4c49682
+resourceGroup: devops-rg
+registry: devopsmcr
+onboardingNotification: RMContainers-Azure@microsoft.com
+
+repos:
+  - name: public/devops/azure-pipelines/automated-analysis
+    displayName: Automated Analysis
+    description: Automated analysis of canary deployment.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/devops/azure-pipelines/task-logger-python
+    displayName: Azure Pipelines Task Logger - Python
+    description: Python based logger to push Azure pipelines task logs.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

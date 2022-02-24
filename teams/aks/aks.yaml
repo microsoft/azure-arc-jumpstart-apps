@@ -1,0 +1,46 @@
+version: 2.0
+subscriptionId: 70b66d46-132a-446b-ae4c-6502fe9bea3f
+resourceGroup: Repos4MCR
+registry: AKSMCRImagesCommon
+onboardingNotification: k8sdev
+dependencyNotification: k8sdev
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-Read_Write-CG-23637
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/aks/canipull
+    displayName: aks canipull images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+  - name: public/aks/msi-acrpull
+    displayName: aks msi-acrpull images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.1.0-alpha
+          - source: v0.1.0-beta
+          - source: latest
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-?[\w]*$/
+          - source: /^\d{8}\.\d{1,2}$/
+  - name: public/aks/mdm
+    displayName: aks mdm image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+  - name: public/aks/ip-masq-agent-v2
+    displayName: IP Masq Agent V2
+    description: IP Masq Agent V2
+    supportLink: https://github.com/Azure/ip-masq-agent-v2/issues
+    documentationLink: https://github.com/Azure/ip-masq-agent-v2

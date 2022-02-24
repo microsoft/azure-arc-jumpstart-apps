@@ -1,0 +1,21 @@
+version: 2.0
+subscriptionId: 53d910a7-f1f8-4b7a-8ee0-6e6b67bddd82
+resourceGroup: industrialiotedge-production-resources
+registry: industrialiotedgeprod
+onboardingNotification: azureiiot
+dependencyNotification: azureiiot
+
+ownership:
+  securityGroups:
+  - groupName: redmond\azureiiot
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/iotedge/omp-adapter
+    displayName: Azure Industrial IoT OMP Adapter module
+    description: This image contains the Azure Industrial IoT OMP Adapter IoT Edge module.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT

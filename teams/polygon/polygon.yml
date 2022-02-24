@@ -1,0 +1,254 @@
+version: 2.0
+subscriptionId: A9F4E502-9188-4E9C-857F-532DD66F5D0C
+resourceGroup: PolyEng
+registry: PolyEngCr
+onboardingNotification: polysre@microsoft.com
+dependencyNotification: polysre@microsoft.com
+
+ownership:                                                                                            
+  securityGroups:                                                                                     
+  - groupName: middleeast\uebaseneng
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: polygon
+  shortDescription: UEBA for Sentinel
+  readMe: README.polygon.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+repos:
+  - name: public/polygon/mic
+    displayName: Aad Pod Identity MIC
+    readme: README.polygon-mic.md
+    description: Aad Pod Identity Mic image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /v[1-9]\.[0-9]+\.[0-9]+/
+
+  - name: public/polygon/nmi
+    displayName: Aad Pod Identity NMI
+    readme: README.polygon-mic.md
+    description: Aad Pod Identity NMI image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /v[1-9]\.[0-9]+\.[0-9]+/
+
+  - name: public/polygon/configmap-reload
+    displayName: Prometheus Config Map Reload
+    readme: README.polygon-configmap-reload.md
+    description: Prometheus Config Map Reload Image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /v[0-9]\.[0-9]+\.[0-9]+/
+
+  - name: public/polygon/kured
+    displayName: Kured
+    readme: README.polygon-kured.md
+    description: Kured Image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /[1-9]\.[0-9]+\.[0-9]+/
+
+  - name: public/polygon/prometheus
+    displayName: Prometheus Server
+    readme: README.polygon-prometheus.md
+    description: Prometheus Server Image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /v[2-9]\.[0-9]+\.[0-9]+/
+
+  - name: public/polygon/node-exporter
+    displayName: Prometheus Node Exporter
+    readme: README.polygon-node-exporter.md
+    description: Prometheus Node Exporter Image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /v[0-9]\.[0-9]+\.[0-9]+/
+
+  - name: public/polygon/kube-state-metrics
+    displayName: Prometheus Kube State Metrics
+    readme: README.polygon-kube-state-metrics.md
+    description: Prometheus Kube State Metrics Image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /v[1-9]\.[0-9]+\.[0-9]+/
+
+  - name: public/polygon/debian
+    displayName: Debian
+    readme: README.polygon-debian.md
+    description: Debian Image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: buster-slim
+
+  - name: public/polygon/image-cleaner-auto-docker
+    displayName: Debian with Docker
+    readme: README.polygon-DebianWithDocker.md
+    description: Debian Image with Docker
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: latest
+
+
+  - name: public/polygon/genevamdsd
+    displayName: Geneva Mdsd
+    readme: README.polygon-genevamdsd.md
+    description: Geneva Mdsd Image
+    documentationLink: https://genevamondocs.azurewebsites.net/collect/references/linuxcontainers.html?q=Container
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /master_[0-9]+\.[0-9]+/
+  
+  - name: public/polygon/genevamdm
+    displayName: Geneva Mdm
+    readme: README.polygon-genevamdm.md
+    description: Geneva Mdm Image
+    documentationLink: https://genevamondocs.azurewebsites.net/collect/references/linuxcontainers.html?q=Container
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /master_[0-9]+\.[0-9]+/
+
+  - name: public/polygon/genevafluentd_td-agent
+    displayName: Geneva Fluentd Td Agent
+    readme: README.polygon-genevafluentd_td-agent.md
+    description: Geneva FluentD Td Agent Image
+    documentationLink: https://genevamondocs.azurewebsites.net/collect/references/linuxcontainers.html?q=Container
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /master_[0-9]+\.[0-9]+/
+
+  - name: public/polygon/genevasecpackinstall
+    displayName: Geneva Az Sec Pack Install
+    readme: README.polygon-genevasecpackinstall.md
+    description: Geneva Az Sec Pack Install Image
+    documentationLink: https://genevamondocs.azurewebsites.net/collect/references/linuxcontainers.html?q=Container
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /master_[0-9]+\.[0-9]+/
+
+  - name: public/polygon/acskeyvaultagent
+    displayName: Geneva Acs Key Vault Agent
+    readme: README.polygon-acskeyvaultagent.md
+    description: Geneva Acs Key Vault Agent Image
+    documentationLink: https://genevamondocs.azurewebsites.net/collect/references/linuxcontainers.html?q=Container
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /master_[0-9]+\.[0-9]+/
+
+  - name: public/polygon/prom-mdm-converter
+    displayName: Prom Mdm Converter
+    readme: README.polygon-prom-mdm-converter.md
+    description: Prom Mdm Converter Image
+    documentationLink: https://msazure.visualstudio.com/KubernetesSharedTools/_git/prom-mdm-converter?path=%2FREADME.md&_a=preview
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /[2-9]\.[0-9]+\.master\.[0-9]+\.[0-9]+/
+
+  - name: public/polygon/quinault
+    displayName: Cbld Protected images
+    readme: README.cbld.protected.images.md
+    description: Cbld Protected Image
+    documentationLink: https://microsoft.sharepoint.com/teams/AzLinux54/SitePages/CBL-D.aspx?originalPath=aHR0cHM6Ly9taWNyb3NvZnQuc2hhcmVwb2ludC5jb20vOnU6L3QvQXpMaW51eDU0L0VldnQ2YXZpdE9kSmlELUU5b21SNXZRQnBraEItOG1RZm9vWDB4ZTUzM3NWYWc_cnRpbWU9b2RIVDY5S1QyVWc
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /[2-9]\.[0-9]+\.master\.[0-9]+\.[0-9]+/
+        - source: latest
+
+  - name: public/polygon/agent_ub1804
+    displayName: Watson Agent Image
+    readme: README.watson.agent.md
+    description:  Watson Agent
+    documentationLink: https://azurewatson.microsoft.com/
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /[2-9]\.[0-9]+\.master\.[0-9]+\.[0-9]+/
+        - source: 20.13.21081317
+
+

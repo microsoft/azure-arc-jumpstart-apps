@@ -1,0 +1,19 @@
+version: 2.0
+subscriptionId: f242a1c9-3068-4c31-ad0f-bf7a6094f47f
+resourceGroup: rgAppServiceWinContainerQuickstarts
+registry: AppServiceWinContainerQuickstarts
+onboardingNotification: appsvcmcrsuccess
+dependencyNotification: appsvcmcrsuccess
+
+
+repos:
+
+  - name: public/azure-app-service/samples/aspnethelloworld
+    displayName: Azure App Service Samples Aspnethelloworld
+    readme: README.aspnet-helloworld.md
+    description: Azure App Service Windows Containers Quickstarts
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+

@@ -1,0 +1,84 @@
+version: 2.0
+subscriptionId: 983fca25-1e49-40c1-a7c1-210a044699fa
+resourceGroup: raft-acr
+registry: RestApiFuzzTesting
+onboardingNotification: nsvraftmcr
+dependencyNotification: nsvraftmcr
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: redmond\nsv-mcr-dev                                                                        # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+repos:                                                                                                
+  - name: public/restapifuzztesting/apiservice
+    displayName: REST API Fuzz Testing API Service
+    readme: README-ApiService.md
+    description: Rest API Fuzz Testing frontend REST API service
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   
+    supportLink: https://github.com/microsoft/rest-api-fuzz-testing/issues
+    documentationLink: https://github.com/microsoft/rest-api-fuzz-testing
+    checkSyncStateBeforeContentUpdate: false
+    syndications:
+      - type: dockerhub
+        repository: microsoft/rest-api-fuzz-testing
+        imageUpdate: false
+        contentUpdate: true
+
+  - name: public/restapifuzztesting/orchestrator
+    displayName: REST API Fuzz Testing Orchestrator
+    readme: README-Orchestrator.md
+    description: Rest API Fuzz Testing orchestrator Azure Function
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   
+    supportLink: https://github.com/microsoft/rest-api-fuzz-testing/issues
+    documentationLink: https://github.com/microsoft/rest-api-fuzz-testing
+    checkSyncStateBeforeContentUpdate: false
+    syndications:
+      - type: dockerhub
+        repository: microsoft/rest-api-fuzz-testing
+        imageUpdate: false
+        contentUpdate: true
+
+  - name: public/restapifuzztesting/restler-agent
+    displayName: REST API Fuzz Testing RESTler Agent
+    readme: ReadmeRestlerAgent.md
+    description: Rest API Fuzz Testing RESTler agent
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   
+    supportLink: https://github.com/microsoft/rest-api-fuzz-testing/issues
+    documentationLink: https://github.com/microsoft/rest-api-fuzz-testing
+    checkSyncStateBeforeContentUpdate: false
+    syndications:
+      - type: dockerhub
+        repository: microsoft/rest-api-fuzz-testing
+        imageUpdate: false
+        contentUpdate: true
+
+  - name: public/restapifuzztesting/agent-utilities
+    displayName: REST API Agent Utilities
+    readme: ReadmeAgentUtilities.md
+    description: Rest API Fuzz Testing Agent Utilities
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   
+    supportLink: https://github.com/microsoft/rest-api-fuzz-testing/issues
+    documentationLink: https://github.com/microsoft/rest-api-fuzz-testing
+    checkSyncStateBeforeContentUpdate: false
+    syndications:
+      - type: dockerhub
+        repository: microsoft/rest-api-fuzz-testing
+        imageUpdate: false
+        contentUpdate: true
+
+  - name: public/restapifuzztesting/test-infra
+    displayName: REST API Fuzz Testing Test Infrastructure
+    readme: README-TestInfra.md
+    description: Rest API Fuzz Testing Test Infrastructure required for running build validation tests
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   
+    supportLink: https://github.com/microsoft/rest-api-fuzz-testing/issues
+    documentationLink: https://github.com/microsoft/rest-api-fuzz-testing
+    checkSyncStateBeforeContentUpdate: false
+    syndications:
+      - type: dockerhub
+        repository: microsoft/rest-api-fuzz-testing
+        imageUpdate: false
+        contentUpdate: true

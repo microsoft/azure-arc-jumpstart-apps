@@ -1,0 +1,11 @@
+version: 2.0
+subscriptionId: 0129f91c-25cf-4abd-af30-931917aaed9e
+resourceGroup: InferSharpRG
+registry: infersharp
+onboardingNotification: devdiv-aiops
+
+repos:                                                                                                
+  - name: public/infersharp
+    displayName: Infer#
+    description: Infer# is an interprocedural static code analyzer for C# built on Facebook's Infer.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

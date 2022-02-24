@@ -1,0 +1,48 @@
+version: 2.0
+subscriptionId: e0031cb2-ea06-4d4e-8b99-e0f385569c09
+resourceGroup: AWImagePublishRes
+registry: AWImagePublish
+onboardingNotification: IISContainer
+dependencyNotification: IISContainer
+
+repos:
+
+  - name: public/windows/servercore/iis
+    displayName: Windows IIS
+    readme: README.iis.md
+    description: Microsoft IIS images
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/iis-docker/issues
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iis
+        contentUpdate: true
+        tags:
+          - source: latest
+            target: latest
+          - source: windowsservercore
+            target: windowsservercore
+          - source: windowsservercore-ltsc2016
+            target: windowsservercore-ltsc2016
+          - source: nanoserver
+            target: nanoserver
+          - source: nanoserver-sac2016
+            target: nanoserver-sac2016
+          - source: windowsservercore-1803
+            target: windowsservercore-1803
+          - source: windowsservercore-1709
+            target: windowsservercore-1709
+
+  - name: public/windows/servercore/iis/insider
+    displayName: Windows IIS Insider
+    readme: README.iis-insider.md
+    description: Microsoft IIS insider images
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/iis-docker/issues
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iis-insider
+        contentUpdate: true
+        imageUpdate: false

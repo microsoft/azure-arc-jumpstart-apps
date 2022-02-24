@@ -1,0 +1,67 @@
+version: 2.0
+subscriptionId: 200b8860-576c-45f1-89c2-eb79da677aba
+resourceGroup: azdsprod
+registry: azdsprod
+onboardingNotification: mindaro
+dependencyNotification: mindaro
+
+repos:
+    # the name  indicates that a) it is publicly available, and b) the repo name in mcr
+    # docker tag <imageID of local image> azdsrepo.azurecr.io/public/azuredevspaces/azds-build-service:20180889.4
+    # docker push azdsrepo.azurecr.io/public/azuredevspaces/azds-build-service:20180889.4
+    # docker pull mcr.microsoft.com/azuredevspaces/azds-build-service:20180889.4
+  - name: public/azuredevspaces/azds-build-service
+    displayName: Azure Dev Spaces Build Service
+    description: Azure Dev Spaces Build Service
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://aka.ms/azds-issues
+    documentationLink: https://aka.ms/azds-about
+
+  - name: public/azuredevspaces/azds-image-prepull
+    displayName: Azure Dev Spaces PrePull Images
+    description: Azure Dev Spaces PrePull Images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://aka.ms/azds-issues
+    documentationLink: https://aka.ms/azds-about
+
+  - name: public/azuredevspaces/azds-proxy
+    displayName: Azure Dev Spaces Proxy Service
+    description: Azure Dev Spaces Proxy Service
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://aka.ms/azds-issues
+    documentationLink: https://aka.ms/azds-about
+
+  - name: public/azuredevspaces/azds-proxy-init
+    displayName: Azure Dev Spaces Proxy Initializer Service
+    description: Azure Dev Spaces Proxy Initializer Service
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://aka.ms/azds-issues
+    documentationLink: https://aka.ms/azds-about
+
+  - name: public/azuredevspaces/azds-webhook-service
+    displayName: Azure Dev Spaces Webhook Service
+    description: Azure Dev Spaces Webhook Service
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://aka.ms/azds-issues
+    documentationLink: https://aka.ms/azds-about
+
+  - name: public/azuredevspaces/devhostagent
+    displayName: Azure Dev Spaces Container Connector Service
+    description: Azure Dev Spaces Container Connector Service
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://aka.ms/azds-issues
+    documentationLink: https://aka.ms/azds-about
+
+  - name: public/azuredevspaces/azds-vsdbg
+    displayName: Azure Dev Spaces C# Remote Debugger
+    description: Azure Dev Spaces C# Remote Debugger
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://aka.ms/azds-issues
+    documentationLink: https://aka.ms/azds-about
+
+  - name: public/azuredevspaces/javadebug
+    displayName: Azure Dev Spaces Java Remote Debugger
+    description: Azure Dev Spaces Java Remote Debugger
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://aka.ms/azds-issues
+    documentationLink: https://aka.ms/azds-about

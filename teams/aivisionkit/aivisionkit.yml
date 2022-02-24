@@ -1,0 +1,23 @@
+version: 2.0
+subscriptionId: 101f4e81-9947-4f50-b077-5f26665fdb30
+resourceGroup: IoTEdge
+registry: MyCapReg
+onboardingNotification: iot-edge-petw
+dependencyNotification: iot-edge-petw
+
+
+repos:
+
+  - name: public/aivision/visionsamplemodule
+    displayName: Aivision Visionsamplemodule
+    readme: README.aivisionkit.md
+    description: An AI vision module for Peabody.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/aivision
+        imageUpdate: false
+
+

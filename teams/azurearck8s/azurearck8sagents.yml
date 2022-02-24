@@ -1,0 +1,319 @@
+version: 2.0
+subscriptionId: 4207e8c7-aa0c-4447-8525-461ce58cdc25
+resourceGroup: azurearcfork8s
+registry: azurearcfork8s
+onboardingNotification: AKubeConfig
+dependencyNotification: AKubeConfig
+
+ownership:
+  securityGroups:
+  - groupName: redmond\clusterconfigteam
+    permissions:
+    - read
+    - write
+  - groupName: fareast\k8connect
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azurearck8s/batch1/stable/azure-arc-k8sagents
+    displayName: Azure Arc for Kubernetes Agents Helm Chart (Stable-batch1)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/batch1/stable/appliance/azure-arc-k8sagents
+    displayName: Azure Arc Appliance for Kubernetes Agents Helm Chart (Stable-batch1)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/batch1/preview/azure-arc-k8sagents
+    displayName: Azure Arc for Kubernetes Agents Helm Chart (Preview-batch1)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+  
+  - name: public/azurearck8s/batch2/stable/azure-arc-k8sagents
+    displayName: Azure Arc for Kubernetes Agents Helm Chart (Stable-batch2)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/batch2/preview/azure-arc-k8sagents
+    displayName: Azure Arc for Kubernetes Agents Helm Chart (Preview-batch2)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/westcentralus/stable/azure-arc-k8sagents
+    displayName: Azure Arc for Kubernetes Agents Helm Chart (westcentralus)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/canary/stable/azure-arc-k8sagents
+    displayName: Azure Arc for Kubernetes Agents Helm Chart (Canary)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/canary/stable/appliance/azure-arc-k8sagents
+    displayName: Azure Arc Appliance for Kubernetes Agents Helm Chart (Canary)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+     
+  - name: public/azurearck8s/fairfax/stable/azure-arc-k8sagents
+    displayName: Azure Arc for Kubernetes Agents Helm Chart for Fairfax
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+     
+  - name: public/azurearck8s/mooncake/stable/azure-arc-k8sagents
+    displayName: Azure Arc for Kubernetes Agents Helm Chart for Mooncake
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/batch1/stable/azure-arc-monitoring
+    displayName: Azure Arc for Kubernetes Monitoring Helm Chart (Stable-batch1)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/batch1/stable/appliance/azure-arc-monitoring
+    displayName: Azure Arc Appliance for Kubernetes Monitoring Helm Chart Stable-batch1
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/batch1/preview/azure-arc-monitoring
+    displayName: Azure Arc for Kubernetes Monitoring Helm Chart (Preview-batch1)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+  
+  - name: public/azurearck8s/batch2/stable/azure-arc-monitoring
+    displayName: Azure Arc for Kubernetes Monitoring Helm Chart (Stable-batch2)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/batch2/preview/azure-arc-monitoring
+    displayName: Azure Arc for Kubernetes Monitoring Helm Chart (Preview-batch2)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/westcentralus/stable/azure-arc-monitoring
+    displayName: Azure Arc for Kubernetes Monitoring Helm Chart (westcentralus)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/canary/stable/azure-arc-monitoring
+    displayName: Azure Arc for Kubernetes Monitoring Helm Chart (Canary)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/canary/stable/appliance/azure-arc-monitoring
+    displayName: Azure Arc Appliance for Kubernetes Monitoring Helm Chart (Canary)
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+     
+  - name: public/azurearck8s/fairfax/stable/azure-arc-monitoring
+    displayName: Azure Arc for Kubernetes Monitoring Helm Chart for Fairfax
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+  
+  - name: public/azurearck8s/agent-update-job
+    displayName: Azure Arc for Kubernetes Agent Auto Update
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/cluster-metadata-operator
+    displayName: Azure Arc for Kubernetes Cluster Metadata Operator
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+  
+  - name: public/azurearck8s/cluster-identity
+    displayName: Azure Arc for Kubernetes Cluster Identity
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc  
+    
+  - name: public/azurearck8s/config-agent
+    displayName: Azure Arc for Kubernetes Config Agent
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/kube-aad-proxy
+    displayName: Azure Arc for Kubernetes aad proxy
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/configoperator
+    displayName: Azure Arc for Kubernetes Config Operator
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/connect-agent
+    displayName: Azure Arc for Kubernetes Connect Agent
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/appliance-connect-agent
+    displayName: Azure Arc Appliance Connect Agent
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/prom-to-configdp
+    displayName: Azure Arc Prometheus to Config DP Agent
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/fluent-bit
+    displayName: Azure Arc for Kubernetes Fluent-Bit
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc  
+    
+  - name: public/azurearck8s/flux-logs-agent
+    displayName: Azure Arc for Kubernetes Flux Logs Agent
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/metrics-agent
+    displayName: Azure Arc for Kubernetes Metrics Agent
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/resource-sync
+    displayName: Azure Arc for Kubernetes Resource Sync
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/extensionoperator
+    displayName: Azure Arc for Kubernetes Extension Operator
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/clusterconnect-agent
+    displayName: Azure Arc for Kubernetes Cluster Connect Agent
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/arc-preview/fluxctl
+    displayName: Fluxctl client for fluxcd
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc 
+    
+  - name: public/azurearck8s/arc-preview/flux-init-container
+    displayName: Init container for fluxcd
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/aks/stable/config-agent
+    displayName: Azure Arc for Kubernetes Config Agent for AKS
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/aks/stable/fluent-bit
+    displayName: Azure Arc for Kubernetes Fluent with Custom Plugin for AKS
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/aks/stable/configoperator
+    displayName: Azure Arc for Kubernetes Config Operartor for AKS
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/aks/stable/extensionoperator
+    displayName: Azure Arc for Kubernetes Extension Controller for AKS
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+    
+  - name: public/azurearck8s/guardcontroller
+    displayName: RBAC controller for guard
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/guardinit-container
+    displayName: Init container for guard
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: public/azurearck8s/clusterconnectservice-operator
+    displayName: Azure Arc for Kubernetes Cluster Connect Service Operator
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc

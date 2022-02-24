@@ -1,0 +1,104 @@
+version: 2.0
+subscriptionId: 3f56da7f-5953-4018-8ca8-e20dbfa0a7e2
+resourceGroup: azdev-containers
+registry: azdev
+onboardingNotification: azdev-mcr
+dependencyNotification: azdev-mcr
+
+
+repos:
+
+  - name: public/azure-pipelines/node8-typescript
+    displayName: Azure Pipelines Node8 Typescript
+    readme: README.azure-pipelines-node8-typescript.md
+    description: Node.js environment for containerized builds in Azure Pipelines
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: public/azure-pipelines/vsts-agent
+    displayName: Azure Pipelines Agent
+    readme: README.vsts-agent.md
+    description: Containerized agent for Azure Pipelines
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/Microsoft/vsts-agent-docker
+    documentationLink: https://github.com/Microsoft/vsts-agent-docker
+    syndications: 
+      - type: dockerhub
+        repository: microsoft/vsts-agent
+        imageUpdate: true
+        contentUpdate: true
+        tags:
+          - source: latest
+            target: latest
+          - source: ubuntu-14.04
+            target: ubuntu-14.04
+          - source: ubuntu-14.04-standard
+            target: ubuntu-14.04-standard
+          - source: ubuntu-14.04-docker-17.12.0-ce
+            target: ubuntu-14.04-docker-17.12.0-ce
+          - source: ubuntu-14.04-docker-17.12.0-ce-standard
+            target: ubuntu-14.04-docker-17.12.0-ce-standard
+          - source: ubuntu-14.04-docker-18.06.1-ce
+            target: ubuntu-14.04-docker-18.06.1-ce
+          - source: ubuntu-14.04-docker-18.06.1-ce-standard
+            target: ubuntu-14.04-docker-18.06.1-ce-standard
+          - source: ubuntu-14.04-tfs-2018-u2
+            target: ubuntu-14.04-tfs-2018-u2
+          - source: ubuntu-14.04-tfs-2018-u2-standard
+            target: ubuntu-14.04-tfs-2018-u2-standard
+          - source: ubuntu-14.04-tfs-2018-u2-docker-17.12.0-ce
+            target: ubuntu-14.04-tfs-2018-u2-docker-17.12.0-ce
+          - source: ubuntu-14.04-tfs-2018-u2-docker-17.12.0-ce-standard
+            target: ubuntu-14.04-tfs-2018-u2-docker-17.12.0-ce-standard
+          - source: ubuntu-14.04-tfs-2018-u2-docker-18.06.1-ce
+            target: ubuntu-14.04-tfs-2018-u2-docker-18.06.1-ce
+          - source: ubuntu-14.04-tfs-2018-u2-docker-18.06.1-ce-standard
+            target: ubuntu-14.04-tfs-2018-u2-docker-18.06.1-ce-standard
+          - source: ubuntu-14.04-tfs-2018-u3
+            target: ubuntu-14.04-tfs-2018-u3
+          - source: ubuntu-14.04-tfs-2018-u3-standard
+            target: ubuntu-14.04-tfs-2018-u3-standard
+          - source: ubuntu-14.04-tfs-2018-u3-docker-17.12.0-ce
+            target: ubuntu-14.04-tfs-2018-u3-docker-17.12.0-ce
+          - source: ubuntu-14.04-tfs-2018-u3-docker-17.12.0-ce-standard
+            target: ubuntu-14.04-tfs-2018-u3-docker-17.12.0-ce-standard
+          - source: ubuntu-14.04-tfs-2018-u3-docker-18.06.1-ce
+            target: ubuntu-14.04-tfs-2018-u3-docker-18.06.1-ce
+          - source: ubuntu-14.04-tfs-2018-u3-docker-18.06.1-ce-standard
+            target: ubuntu-14.04-tfs-2018-u3-docker-18.06.1-ce-standard
+          - source: ubuntu-16.04
+            target: ubuntu-16.04
+          - source: ubuntu-16.04-standard
+            target: ubuntu-16.04-standard
+          - source: ubuntu-16.04-docker-17.12.0-ce
+            target: ubuntu-16.04-docker-17.12.0-ce
+          - source: ubuntu-16.04-docker-17.12.0-ce-standard
+            target: ubuntu-16.04-docker-17.12.0-ce-standard
+          - source: ubuntu-16.04-docker-18.06.1-ce
+            target: ubuntu-16.04-docker-18.06.1-ce
+          - source: ubuntu-16.04-docker-18.06.1-ce-standard
+            target: ubuntu-16.04-docker-18.06.1-ce-standard
+          - source: ubuntu-16.04-tfs-2018-u2
+            target: ubuntu-16.04-tfs-2018-u2
+          - source: ubuntu-16.04-tfs-2018-u2-standard
+            target: ubuntu-16.04-tfs-2018-u2-standard
+          - source: ubuntu-16.04-tfs-2018-u2-docker-17.12.0-ce
+            target: ubuntu-16.04-tfs-2018-u2-docker-17.12.0-ce
+          - source: ubuntu-16.04-tfs-2018-u2-docker-17.12.0-ce-standard
+            target: ubuntu-16.04-tfs-2018-u2-docker-17.12.0-ce-standard
+          - source: ubuntu-16.04-tfs-2018-u2-docker-18.06.1-ce
+            target: ubuntu-16.04-tfs-2018-u2-docker-18.06.1-ce
+          - source: ubuntu-16.04-tfs-2018-u2-docker-18.06.1-ce-standard
+            target: ubuntu-16.04-tfs-2018-u2-docker-18.06.1-ce-standard
+          - source: ubuntu-16.04-tfs-2018-u3
+            target: ubuntu-16.04-tfs-2018-u3
+          - source: ubuntu-16.04-tfs-2018-u3-standard
+            target: ubuntu-16.04-tfs-2018-u3-standard
+          - source: ubuntu-16.04-tfs-2018-u3-docker-17.12.0-ce
+            target: ubuntu-16.04-tfs-2018-u3-docker-17.12.0-ce
+          - source: ubuntu-16.04-tfs-2018-u3-docker-17.12.0-ce-standard
+            target: ubuntu-16.04-tfs-2018-u3-docker-17.12.0-ce-standard
+          - source: ubuntu-16.04-tfs-2018-u3-docker-18.06.1-ce
+            target: ubuntu-16.04-tfs-2018-u3-docker-18.06.1-ce
+          - source: ubuntu-16.04-tfs-2018-u3-docker-18.06.1-ce-standard
+            target: ubuntu-16.04-tfs-2018-u3-docker-18.06.1-ce-standard

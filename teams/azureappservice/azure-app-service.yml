@@ -1,0 +1,172 @@
+version: 2.0
+subscriptionId: f242a1c9-3068-4c31-ad0f-bf7a6094f47f
+resourceGroup: app-service-containers-rg
+registry: appservice
+onboardingNotification: appsvcmcrsuccess
+dependencyNotification: appsvcmcrsuccess
+
+ownership:
+  securityGroups:
+  - groupName: redmond\ant-mcr
+    permissions:
+    - read
+    - write
+  - groupName: redmond\antr-dev
+    permissions:
+    - read
+
+repos:
+
+  - name: public/azure-app-service/tomcat
+    displayName: Tomcat on Azure App Service
+    description: Tomcat images for Azure App Service
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 8.5-java11_190522230100
+          - source: 8.5-java11_200319054033
+          - source: 8.5-java11_200319054033
+          - source: 8.5-java11_200714234736
+          - source: 8.5-java11_210526002747
+          - source: 8.5-jre8_190522230100
+          - source: 8.5-jre8_200319054033
+          - source: 8.5-jre8_200319054033
+          - source: 8.5-jre8_200714234736
+          - source: 8.5-jre8_210526002747
+          - source: 9.0-java11_190522230100
+          - source: 9.0-java11_200319054033
+          - source: 9.0-java11_200319054033
+          - source: 9.0-java11_200714234736
+          - source: 9.0-java11_210526002747
+          - source: 9.0-jre8_190522230100
+          - source: 9.0-jre8_200319054033
+          - source: 9.0-jre8_200319054033
+          - source: 9.0-jre8_200714234736
+          - source: 9.0-jre8_210526002747
+          - source: /^\d{1,2}\.\d{1,2}-[\w]+[\d]*_[\d]+$/
+
+  - name: public/azure-app-service/java
+    displayName: Java SE on Azure App Service
+    description: Java SE images for Azure App Service
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 11-java11_191030025800
+          - source: 11-java11_200319054033
+          - source: 11-java11_200319054033
+          - source: 11-java11_200714234736
+          - source: 11-java11_210526002747
+          - source: 8-jre8_191030025800
+          - source: 8-jre8_200319054033
+          - source: 8-jre8_200319054033
+          - source: 8-jre8_200714234736
+          - source: 8-jre8_210526002747
+          - source: /^\d{1,2}-[\w]+[\d]*_[\d]+$/
+
+  - name: public/azure-app-service/wildfly
+    displayName: WildFly on Azure App Service (Preview)
+    description: WildFly images for Azure App Service (Preview)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/azure-app-service/jbosseap
+    displayName: JBoss EAP on Azure App Service (Preview)
+    description: JBoss EAP images for Azure App Service (Preview)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 7.2-java8_000000000000
+          - source: /^\d{1,2}\.\d{1,2}-[\w]+[\d]*_[\d]+$/
+
+  - name: internal/azure-app-service/tomcat
+    displayName: Tomcat on Azure App Service
+    description: Tomcat images for Azure App Service
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 8.5-java11_190522230100
+          - source: 8.5-java11_200319054033
+          - source: 8.5-java11_200319054033
+          - source: 8.5-java11_200714234736
+          - source: 8.5-java11_210526002747
+          - source: 8.5-jre8_190522230100
+          - source: 8.5-jre8_200319054033
+          - source: 8.5-jre8_200319054033
+          - source: 8.5-jre8_200714234736
+          - source: 8.5-jre8_210526002747
+          - source: 9.0-java11_190522230100
+          - source: 9.0-java11_200319054033
+          - source: 9.0-java11_200319054033
+          - source: 9.0-java11_200714234736
+          - source: 9.0-java11_210526002747
+          - source: 9.0-jre8_190522230100
+          - source: 9.0-jre8_200319054033
+          - source: 9.0-jre8_200319054033
+          - source: 9.0-jre8_200714234736
+          - source: 9.0-jre8_210526002747
+          - source: /^\d{1,2}\.\d{1,2}-[\w]+[\d]*_[\d]+$/
+
+  - name: internal/azure-app-service/java
+    displayName: Java SE on Azure App Service
+    description: Java SE images for Azure App Service
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 11-java11_191030025800
+          - source: 11-java11_200319054033
+          - source: 11-java11_200319054033
+          - source: 11-java11_200714234736
+          - source: 11-java11_210526002747
+          - source: 8-jre8_191030025800
+          - source: 8-jre8_200319054033
+          - source: 8-jre8_200319054033
+          - source: 8-jre8_200714234736
+          - source: 8-jre8_210526002747
+          - source: /^\d{1,2}-[\w]+[\d]*_[\d]+$/
+
+  - name: internal/azure-app-service/jbosseap
+    displayName: JBoss EAP on Azure App Service (Preview)
+    description: JBoss EAP images for Azure App Service (Preview)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 7.3-java8_210129000000
+          - source: 7.3-java11_210129000000
+          - source: /^\d{1,2}\.\d{1,2}-[\w]+[\d]*_[\d]+$/

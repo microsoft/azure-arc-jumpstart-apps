@@ -1,0 +1,147 @@
+version: 2.0
+subscriptionId: e342c2c0-f844-4b18-9208-52c8c234c30e                                              # REQUIRED. The id of the Azure subscription where the registry lives
+resourceGroup: marhamil-mmlspark                                                                  # REQUIRED. The Azure resource group where the registry lives
+registry: mmlsparkmcr                                                                             # REQUIRED. The private ACR where the container image lives
+onboardingNotification: mmlspark-mcr                                                              # REQUIRED. An @microsoft.com distribution alias for onboarding notifications that include image scanning results
+dependencyNotification: mmlspark-mcr                                                              # OPTIONAL. An @microsoft.com distribution alias for onboarding notifications without image scanning results
+
+productFamily:
+  name: mmlspark
+  displayName: MML Spark
+  shortDescription: Microsoft Machine Learning for Apache Spark  
+  readMe: README.mmlspark.md     
+  logoUrl: https://mmlspark.azureedge.net/icons/mmlspark.svg 
+  supportLink: https://github.com/Azure/mmlspark/issues
+  documentationLink: https://aka.ms/spark  
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+repos:                                                                                                # REQUIRED. The collection of onboarded repositories
+  - name: public/mmlspark/release                                                                            # REQUIRED. Repository name. Must include public/ or internal/ somewhere in the repository name
+    displayName: MMLSpark                                                                             # REQUIRED. The displayname of the product, will get displayed on syndicationtype i.e on docker store product name
+    readme: README.mmlspark.md                                                                        # OPTIONAL. Markdown file that describes how customers can use the image. Used only when contentUpdate = true for a syndication type. Should be a minimum of 140 char
+    description: Microsoft Machine Learning for Apache Spark                                          # OPTIONAL. Contents for the short description shown in the Docker Hub page. Used only when contentUpdate = true for a syndication type. Should be < 100 char
+    logoUrl: https://mmlspark.azureedge.net/icons/mmlspark.svg
+    supportLink: https://github.com/Azure/mmlspark/issues                                        # REQUIRED. Logo url
+    documentationLink: https://aka.ms/spark                                                           # OPTIONAL. Documentation link for product
+    syndications:                                                                                     # OPTIONAL. Used to enable syndication beyond MCR. Not available for internal images
+      - type: dockerhub                                                                               # REQUIRED. The type of syndication. Only dockerhub is currently allowed
+        repository: microsoft/mmlspark                                                                # REQUIRED. The Docker Hub repository to syndicate to
+        imageUpdate: true                                                                             # OPTIONAL. True, if container images should be syndicated; false, otherwise
+        contentUpdate: true                                                                           # OPTIONAL. True, if the README should be syndicated; false, otherwise
+        tags:                                                                                         # OPTIONAL. The tags to syndicate. Used only if imageUpdate = true. Only tags that already exist on the target can be syndicated.
+        - source: latest
+          target: latest
+        - source: gpu-0.16
+          target: gpu-0.16
+        - source: 0.16
+          target: 0.16
+        - source: gpu
+          target: gpu
+        - source: gpu-0.15
+          target: gpu-0.15
+        - source: 0.15
+          target: 0.15
+        - source: gpu-0.14
+          target: gpu-0.14
+        - source: 0.14
+          target: 0.14
+        - source: gpu-0.14.dev57
+          target: gpu-0.14.dev57
+        - source: 0.14.dev57
+          target: 0.14.dev57
+        - source: gpu-0.13.dev46_50.gd2e6b2bb
+          target: gpu-0.13.dev46_50.gd2e6b2bb
+        - source: 0.13.dev46_50.gd2e6b2bb
+          target: 0.13.dev46_50.gd2e6b2bb
+        - source: gpu-0.13
+          target: gpu-0.13
+        - source: 0.13
+          target: 0.13
+        - source: gpu-0.12
+          target: gpu-0.12
+        - source: 0.12
+          target: 0.12
+        - source: gpu-0.11
+          target: gpu-0.11
+        - source: 0.11
+          target: 0.11
+        - source: plus-gpu-0.10.9
+          target: plus-gpu-0.10.9
+        - source: plus-0.10.9
+          target: plus-0.10.9
+        - source: gpu-0.10
+          target: gpu-0.10
+        - source: 0.10
+          target: 0.10
+        - source: plus-gpu-0.9.9
+          target: plus-gpu-0.9.9
+        - source: plus-0.9.9
+          target: plus-0.9.9
+        - source: gpu-0.9
+          target: gpu-0.9
+        - source: 0.9
+          target: 0.9
+        - source: plus-gpu-0.8.9
+          target: plus-gpu-0.8.9
+        - source: plus-0.8.9
+          target: plus-0.8.9
+        - source: gpu-0.8
+          target: gpu-0.8
+        - source: 0.8
+          target: 0.8
+        - source: plus-gpu-0.7.91
+          target: plus-gpu-0.7.91
+        - source: plus-0.7.91
+          target: plus-0.7.91
+        - source: plus-gpu-0.7.9
+          target: plus-gpu-0.7.9
+        - source: plus-0.7.9
+          target: plus-0.7.9
+        - source: 0.7.1
+          target: 0.7.1
+        - source: gpu-0.7
+          target: gpu-0.7
+        - source: 0.7
+          target: 0.7
+        - source: 0.6
+          target: 0.6
+        - source: 0.5
+          target: 0.5
+        - source: 0.4.5
+          target: 0.4.5
+        - source: 0.4
+          target: 0.4
+        - source: 0.0.2.dev204
+          target: 0.0.2.dev204
+  - name: public/mmlspark/build-demo
+    description: Continuously released demo image for MMLSpark build
+    displayName: MMLSpark Demo Build
+    logoUrl: https://mmlspark.azureedge.net/icons/mmlspark.svg
+    readme: README.mmlspark.md
+  - name: public/mmlspark/build-minimal
+    description: Continuously released minimal image for MMLSpark build
+    displayName: MMLSpark Minimal Build
+    logoUrl: https://mmlspark.azureedge.net/icons/mmlspark.svg
+    readme: README.mmlspark.md
+  - name: public/mmlspark/spark2.4
+    description: Spark 2.4 docker image for helm chart
+    displayName: Spark 2.4
+    logoUrl: https://mmlspark.azureedge.net/icons/mmlspark.svg
+    readme: README.mmlspark.md
+  - name: public/mmlspark/spark
+    description: Spark docker image for helm chart
+    displayName: Spark 
+    logoUrl: https://mmlspark.azureedge.net/icons/mmlspark.svg
+    readme: README.mmlspark.md
+  - name: public/mmlspark/livy
+    description: livy docker image for helm chart
+    displayName: Livy 
+    logoUrl: https://mmlspark.azureedge.net/icons/mmlspark.svg
+    readme: README.mmlspark.md
+  - name: public/mmlspark/zeppelin
+    description: Zeppelin docker image for helm chart
+    displayName: Zeppelin 
+    logoUrl: https://mmlspark.azureedge.net/icons/mmlspark.svg
+    readme: README.mmlspark.md

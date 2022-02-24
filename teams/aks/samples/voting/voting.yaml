@@ -1,0 +1,34 @@
+version: 2.0
+subscriptionId: 5383262f-8b7d-4506-9079-65965e5583fe
+resourceGroup: mcr-registry
+registry: aksmcr
+onboardingNotification: aks-mcr-notification
+
+
+repos:
+
+  - name: public/aks/samples/voting/app
+    displayName: Aks Samples Voting App
+    readme: README.voting.md
+    description: No Description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/aks/samples/voting/analytics
+    displayName: Aks Samples Voting Analytics
+    readme: README.voting.md
+    description: No Description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/aks/samples/voting/storage
+    displayName: Aks Samples Voting Storage
+    readme: README.voting.md
+    description: No Description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+

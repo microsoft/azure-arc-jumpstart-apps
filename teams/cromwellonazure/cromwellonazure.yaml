@@ -1,0 +1,25 @@
+version: 2.0
+subscriptionId: 45b4bed4-1b2d-4fc4-9849-ff1ff59bf5de
+resourceGroup: acr-genomics
+registry: msgen
+onboardingNotification: msgen-acr@microsoft.com
+dependencyNotification: msgen-acr@microsoft.com
+
+productFamily:
+  name: cromwellonazure
+  shortDescription: A scalable implementation of the Cromwell workflow engine that leverages Azure Batch
+  readMe: README.cromwellonazure.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  supportLink: https://github.com/microsoft/CromwellOnAzure          
+  documentationLink: https://github.com/microsoft/CromwellOnAzure                                                   
+
+repos:
+  - name: public/cromwellonazure/tes
+    displayName: Cromwell On Azure - TES
+    description: Implementation of GA4GH's TES standard that integrates with Azure Batch
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/cromwellonazure/triggerservice
+    displayName: Cromwell On Azure - Trigger Service
+    description: An application that provides a file-based abstraction of the Cromwell API using Azure Block Blobs
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

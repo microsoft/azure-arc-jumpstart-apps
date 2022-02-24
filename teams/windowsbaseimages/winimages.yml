@@ -1,0 +1,295 @@
+version: 2.0
+subscriptionId: 43d61092-c528-4566-80d0-3bd678a1614a
+resourceGroup: OnePubAcrProd-rg
+registry: OnePubAcrProd
+onboardingNotification: wsbasenotifications
+dependencyNotification: wsbasenotifications
+
+ownership:
+  securityGroups:
+  - groupName: redmond\OnePubMCR-Onboarding
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: Windows base OS images
+  shortDescription: Product family for all Windows base OS container images
+  readMe: README.windowsbaseprodfamily.md
+  logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+  documentationLink: https://aka.ms/containers
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+
+repos:
+
+  - name: public/windows
+    displayName: Windows
+    readme: README.windows.md
+    description: The official Windows base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/windows
+
+  - name: public/windows/insider
+    displayName: Windows Insider
+    readme: README.windows-insider.md
+    description: The official Windows insider base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/windows-insider
+
+  - name: public/windows/iotcore
+    displayName: Windows IoT Core
+    readme: README.windowsiotcore.md
+    description: The official Windows IoT Core base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/windowsiotcore
+
+  - name: public/windows/iotcore/insider
+    displayName: Windows IoT Core Insider
+    readme: README.windowsiotcore-insider.md
+    description: The official Windows IoT Core insider base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/windowsiotcore-insider
+
+  - name: public/windows/nanoserver
+    displayName: Nano Server
+    readme: README.nanoserver.md
+    description: The official Nano Server base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/nanoserver
+        tags:
+          - source: 1607
+            target: 1607
+          - source: 1709
+            target: 1709
+          - source: 1803
+            target: 1803
+          - source: sac2016
+            target: sac2016
+      - type: cloud
+        destinations:
+            - ussec
+            - usnat
+        tags:
+            - source: 1809
+            - source: 2004
+
+  - name: public/windows/nanoserver/insider
+    displayName: Nano Server Insider
+    readme: README.nanoserver-insider.md
+    description: The official Nano Server insider base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/nanoserver-insider
+  
+  - name: public/windows/server/insider
+    displayName: Windows Server Insider
+    readme: README.windowsserver-insider.md
+    description: The official Windows Server insider base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/windowsserver-insider
+
+  - name: public/windows/servercore
+    displayName: Windows Server Core
+    readme: README.windowsservercore.md
+    description: The official Windows Server Core base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/windowsservercore
+        tags:
+          - source: 1607
+            target: 1607
+          - source: 1709
+            target: 1709
+          - source: 1803
+            target: 1803
+          - source: ltsc2016
+            target: ltsc2016
+      - type: cloud
+        destinations:
+            - usnat
+            - ussec
+        tags:
+            - source: 1809
+            - source: ltsc2019
+
+  - name: public/windows/server
+    displayName: Windows Server
+    readme: README.windowsserver.md
+    description: The official Windows Server base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers    
+    syndications:
+      - type: dockerhub
+        repository: microsoft/windowsserver
+        contentUpdate: true
+        imageUpdate: false
+
+  - name: public/windows/servercore/insider
+    displayName: Windows Server Core Insider
+    readme: README.windowsservercore-insider.md
+    description: The official Windows Server Core insider base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/windowsservercore-insider
+
+  - name: public/windows/ml/insider
+    displayName: Windows ML container Insider
+    readme: README.windowsml-insider.md
+    description: The official Windows ML container insider base image for containers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: dockerhub
+        repository: microsoft/windowsml-insider
+
+  - name: public/windows/layerstorage
+    displayName: Windows layer storage
+    readme: README.windows.md
+    description: Repo for storing windows base layers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: cloud
+        destinations:
+            - usnat
+            - ussec
+        tags:
+            - source: /servercore_10\.0\.17763\..*/ #this will match all Rs5 servercore layerstorage tags with prefix of servercore_10.0.17763 (Rs5 exclusively has 17763 has its version prefix for all releases)
+            - source: /nanoserver_10\.0\.17763\..*/ #this will match all Rs5 nanoserver layerstorage tags with prefix of nanoserver_10.0.17763 (Rs5 exclusively has 17763 as its version prefix for all releases)
+            - source: /nanoserver_10\.0\.19041\..*/ #this will match all 2004 nanoserver layerstorage tags with prefix of nanoserver_10.0.19041 (2004 exclusively has 19041 as its version prefix for all releases)
+
+  - name: internal/private/windows
+    displayName: Windows (internal only)
+    readme: README.windows.md
+    description: The official Windows base image for containers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: internal/private/windows/iotcore
+    displayName: Windows IoT Core (internal only)
+    readme: README.windowsiotcore.md
+    description: The official Windows IoT Core base image for containers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: internal/private/windows/nanoserver
+    displayName: Nano Server (internal only)
+    readme: README.nanoserver.md
+    description: The official Nano Server base image for containers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: internal/private/windows/servercore
+    displayName: Windows Server Core (internal only)
+    readme: README.windowsservercore.md
+    description: The official Windows Server Core base image for containers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: internal/private/windows/server
+    displayName: Windows Server (internal only)
+    readme: README.windowsserver.md
+    description: The official Windows Server base image for containers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: internal/private/windows/layerstorage
+    displayName: Windows layer storage (internal only)
+    readme: README.windows.md
+    description: Repo for storing windows base layers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: staging/windows
+    displayName: Windows (staging in mcrprod)
+    readme: README.windows.md
+    description: The official Windows base image for containers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: staging/windows/iotcore
+    displayName: Windows IoT Core (staging in mcrprod)
+    readme: README.windowsiotcore.md
+    description: The official Windows IoT Core base image for containers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: staging/windows/nanoserver
+    displayName: Nano Server (staging in mcrprod)
+    readme: README.nanoserver.md
+    description: The official Nano Server base image for containers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: staging/windows/servercore
+    displayName: Windows Server Core (staging in mcrprod)
+    readme: README.windowsservercore.md
+    description: The official Windows Server Core base image for containers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: staging/windows/server
+    displayName: Windows Server (staging in mcrprod)
+    readme: README.windowsserver.md
+    description: The official Windows Server base image for containers (staging in mcrprod)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+
+  - name: staging/windows/layerstorage
+    displayName: Windows layer storage (staging in mcrprod)
+    readme: README.windows.md
+    description: Repo for storing windows base layers (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers

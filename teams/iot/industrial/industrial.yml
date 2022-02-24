@@ -1,0 +1,265 @@
+version: 2.0
+subscriptionId: d355e77f-e625-4931-b133-445d3dcf12cb
+resourceGroup: mcr-iot-industrial-do-not-delete
+registry: industrialiotprod
+onboardingNotification: azureiiot
+dependencyNotification: azureiiot
+ownership:
+  securityGroups:
+  - groupName: redmond\azureiiot
+    permissions:
+    - read
+    - write
+repos:
+  - name: public/iotedge/opc-publisher
+    displayName: Azure Industrial IoT OPC Publisher module
+    readme: README.iotedge-opc-publisher.md
+    description: This image contains the Azure Industrial IoT OPC Publisher IoT Edge module.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-edge-opc-publisher
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iotedge/opc-twin
+    displayName: Azure Industrial IoT OPC Twin module
+    readme: README.iotedge-opc-twin.md
+    description: This image contains the Azure Industrial IoT OPC Twin Edge module.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-edge-opc-twin
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iotedge/discovery
+    displayName: Azure Industrial IoT discovery module
+    readme: README.iotedge-discovery.md
+    description: This image contains the Azure Industrial IoT Discovery Edge module.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iotedge-discovery
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/industrial-cli
+    displayName: Azure Industrial IoT Services command line interface
+    readme: README.iot-industrial-cli.md
+    description: This image contains the Azure Industrial IoT Services command line interface.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-industrial-cli
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/industrial-iot-frontend
+    displayName: Azure Industrial Frontend microservice
+    readme: README.iot-industrial-iot-frontend.md
+    description: This image contains the Azure Industrial IoT Fontend.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-industrial-iot-frontend
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/industrial-iot-services-all
+    displayName: Azure Industrial IoT all in one service
+    readme: README.iot-industrial-iot-services-all.md
+    description: This image contains the Azure Industrial all in one service.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-industrial-iot-services-all
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/opc-publisher-service
+    displayName: Azure Industrial OPC Publisher microservice
+    readme: README.iot-opc-publisher-service.md
+    description: This image contains the Azure Industrial IoT OPC Publisher microservice.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iiot-opc-publisher-service
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/opc-twin-service
+    displayName: Azure Industrial OPC Twin microservice
+    readme: README.iot-opc-twin-service.md
+    description: This image contains the Azure Industrial IoT OPC Twin microservice.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-opc-twin-service
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/opc-history-service
+    displayName: Azure Industrial OPC Historic Access microservice
+    readme: README.iot-opc-history-service.md
+    description: This image contains the Azure Industrial IoT OPC Historic Access microservice.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-opc-history-service
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/opc-onboarding-service
+    displayName: Azure Industrial OPC Onboarding microservice
+    readme: README.iot-opc-onboarding-service.md
+    description: This image contains the Azure Industrial IoT OPC Onboarding microservice.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-opc-onboarding-service
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/opc-registry-service
+    displayName: Azure Industrial OPC Registry microservice
+    readme: README.iot-opc-registry-service.md
+    description: This image contains the Azure Industrial IoT OPC Registry microservice.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-opc-registry-service
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/opc-gateway-service
+    displayName: Azure Industrial OPC Gateway microservice
+    readme: README.iot-opc-gateway-service.md
+    description: This image contains the Azure Industrial IoT OPC Gateway microservice.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-opc-gateway-service
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/industrial-iot-telemetry-processor
+    displayName: Azure Industrial IoT Hub Edge Telemetry processor
+    readme: README.iot-industrial-iot-telemetry-processor.md
+    description: This image contains the Azure Industrial IoT Edge Telemetry processor.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-industrial-iot-telemetry-processor
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/industrial-iot-telemetry-cdm-processor
+    displayName: Azure Industrial IoT Hub Telemetry CDM publisher
+    readme: README.iot-industrial-iot-telemetry-cdm-processor.md
+    description: This image contains the Azure Industrial IoT Telemetry CDM publisher.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-industrial-iot-telemetry-cdm-processor
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/industrial-iot-events-processor
+    displayName: Azure Industrial IoT Hub Edge Events processor
+    readme: README.iot-industrial-iot-events-processor.md
+    description: This image contains the Azure Industrial IoT Edge Events processor.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-industrial-iot-events-processor
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/opc-ua-test-server
+    displayName: IoT OPC UA test server
+    readme: README.iot-opc-ua-test-server.md
+    description: This image contains the Azure Industrial IoT OPC UA test server.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-opc-ua-test-server
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iotedge/opc-plc
+    displayName: IoT Edge OPC UA PLC
+    readme: README.iotedge-opc-plc.md
+    description: An OPC UA server with some nodes generating random data and data with anomalies
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure-Samples/iot-edge-opc-plc
+    documentationLink: https://github.com/Azure-Samples/iot-edge-opc-plc
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-edge-opc-plc
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/industrial-iot-tunnel-processor
+    displayName: Azure Industrial IoT Hub Edge Tunnel
+    readme: README.iot-industrial-iot-tunnel-processor.md
+    description: This image contains the Azure Industrial IoT Edge Tunnel.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-industrial-iot-tunnel-processor
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/opc-registry-sync-service
+    displayName: Azure Industrial IoT Registry sync service
+    readme: README.iot-opc-registry-sync-service.md
+    description: This image contains the Azure Industrial IoT Registry sync service.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-opc-registry-sync-service
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/opc-publisher-edge-service
+    displayName: Azure Industrial IoT OPC Publisher edge service
+    readme: README.iot-opc-publisher-edge-service.md
+    description: This image contains the Azure Industrial IoT OPC Publisher edge service.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-opc-publisher-edge-service
+        contentUpdate: true
+        imageUpdate: false
+  - name: public/iot/industrial-iot-events-service
+    displayName: Azure Industrial IoT UX Event service
+    readme: README.iot-industrial-iot-events-service.md
+    description: This image contains the Azure Industrial IoT UX Event service.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/Industrial-IoT
+    documentationLink: https://github.com/Azure/Industrial-IoT
+    syndications:
+      - type: dockerhub
+        repository: microsoft/iot-industrial-iot-events-service
+        contentUpdate: true
+        imageUpdate: false

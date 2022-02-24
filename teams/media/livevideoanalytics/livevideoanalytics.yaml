@@ -1,0 +1,40 @@
+version: 2.0
+subscriptionId: cab3336f-d421-4a94-82ee-89098d19b77d
+resourceGroup: azure-media-services-edge
+registry: azuremediaservicesedge
+onboardingNotification: lvaedgemcr@microsoft.com 
+dependencyNotification: lvaedgemcr@microsoft.com
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: redmond\lvaedgemcrsg                                                                         # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+productFamily:                                                                                        
+  name: Media                                                                                 
+  shortDescription: Media services is a cloud-based media workflow platform that enables you to build solutions that require encoding, packaging, content-protection, and live event broadcasting.
+  readMe: README.AzureMediaServices.md                                                                     
+  logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  supportLink: https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest
+  documentationLink: https://docs.microsoft.com/en-us/azure/media-services/
+  syndications:
+    - type: dockerhub
+      enabled: true
+
+repos:
+  - name: public/media/live-video-analytics
+    displayName: Live Video Analytics
+    readme: README.LiveVideoAnalytics.md
+    description: Live Video Analytics enables you to analyze live media using machine-learning models
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest
+    documentationLink: https://aka.ms/live-video-analytics
+  
+  - name: public/media/video-analyzer
+    displayName: Azure Video Analyzer
+    description: Azure Video Analyzer enables you to analyze live media using machine-learning models
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest
+    documentationLink: https://aka.ms/azure-video-analyzer

@@ -1,0 +1,25 @@
+version: 2.0
+subscriptionId: 570fa9b6-c460-4f06-8c3b-303f3060f9c9
+resourceGroup: OPS_EUW
+registry: mcaspublic
+onboardingNotification: mcaspublic
+
+productFamily:
+  name: mcas
+  shortDescription: Microsoft Cloud App Security
+  readMe: README.mcas.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+repos:
+
+  - name: public/mcas/logcollector
+    displayName: Microsoft Log Collector
+    readme: README.mcas-logcollector.md
+    description: Log collectors enable you to easily automate log upload from your network.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/cloud-app-security/discovery-docker
+    syndications:
+      - type: dockerhub
+        repository: microsoft/caslogcollector
+        imageUpdate: false

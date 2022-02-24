@@ -1,0 +1,72 @@
+version: 2.0
+subscriptionId: 910d9cee-44b6-4242-ab71-ebe693ed8cc6
+resourceGroup: mcr-test-global-rg
+registry: mcrflowtest
+onboardingNotification: mcrflowtestnot
+dependencyNotification: mcrflowtestnot
+disableOnboardingNotifications: true
+
+ownership:
+  securityGroups:
+  - groupName: redmond\mcrdev
+    permissions:
+    - read
+    - write
+
+repos:
+
+  - name: public/mcr/hello-world
+    displayName: Mcr Hello World
+    readme: README.hello-world.md
+    description: Hello World! (an example of minimal Dockerization).
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    categories: [Monitoring]
+    architectures: [ARM 64, x86-64, x86]
+    operatingSystems: [Windows, Linux]
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+# Cloud syndication destinations:
+# usnat: test1 ~ test12, latest (13 tags)
+# ussec: test1 ~ test5, latest (6 tags)
+# fairfax: test6 ~ test10, latest (6 tags)
+  - name: public/mcr/hello-world-export
+    displayName: MCR cloud syndication test
+    readme: README.hello-world.md
+    description: Hello World! (an example of minimal Dockerization).
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: test1
+          - source: test2
+          - source: test3
+          - source: test4
+          - source: test5
+          - source: latest
+      - type: cloud
+        destinations:
+          - usnat
+        tags:
+          - source: test6
+          - source: test7
+          - source: test8
+          - source: test9
+          - source: test10
+          - source: latest
+      - type: cloud
+        destinations:
+          - usnat
+        tags:
+          - source: test11
+          - source: test12
+          
+

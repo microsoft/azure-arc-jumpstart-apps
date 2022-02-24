@@ -1,0 +1,444 @@
+version: 2.0
+subscriptionId: 171912f7-0ed1-4fd6-aea4-f1aa9003ab21
+resourceGroup: azure-functions-container-registry-rg
+registry: azurefunctions
+onboardingNotification: azurefunctions
+disableOnboardingNotifications: true
+
+ownership:
+  securityGroups:
+  - groupName: redmond\ant-mcr
+    permissions:
+    - read
+    - write
+  - groupName: redmond\antr-dev
+    permissions:
+    - read
+
+productFamily:
+  name: azure-functions
+  displayName: Azure Functions
+  shortDescription: Official images for Azure Functions
+  readMe: README.md
+  logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  supportLink: https://github.com/Azure/azure-functions-docker/issues
+  documentationLink: https://github.com/Azure/azure-functions-docker/
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+repos:
+  - name: public/azure-functions/base
+    displayName: Azure Functions Base
+    readme: README.azure-functions-dotnet.md
+    description: Azure Functions base images
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/Azure/azure-functions-docker/issues
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-functions
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azure-functions/dotnet
+    displayName: Azure Functions Dotnet
+    readme: README.azure-functions-dotnet.md
+    description: Azure Functions dotnet image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/Azure/azure-functions-docker/issues
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-functions
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - ussec
+        tags:
+          - source: 3.0-appservice-ussec-stage0
+          - source: 3.0-appservice-ussec-stage1
+          - source: 3.0-appservice-ussec-stage2
+          - source: 3.0-dotnet3-appservice-ussec-stage0
+          - source: 3.0-dotnet3-appservice-ussec-stage1
+          - source: 3.0-dotnet3-appservice-ussec-stage2
+          - source: 4-appservice-ussec-stage0
+          - source: 4-appservice-ussec-stage1
+          - source: 4-appservice-ussec-stage2
+          - source: 4-dotnet6-appservice-ussec-stage0
+          - source: 4-dotnet6-appservice-ussec-stage1
+          - source: 4-dotnet6-appservice-ussec-stage2
+      - type: cloud
+        destinations:
+          - usnat
+        tags:
+          - source: 3.0-appservice-usnat-stage0
+          - source: 3.0-appservice-usnat-stage1
+          - source: 3.0-appservice-usnat-stage2
+          - source: 3.0-dotnet3-appservice-usnat-stage0
+          - source: 3.0-dotnet3-appservice-usnat-stage1
+          - source: 3.0-dotnet3-appservice-usnat-stage2
+          - source: 4-appservice-usnat-stage0
+          - source: 4-appservice-usnat-stage1
+          - source: 4-appservice-usnat-stage2
+          - source: 4-dotnet6-appservice-usnat-stage0
+          - source: 4-dotnet6-appservice-usnat-stage1
+          - source: 4-dotnet6-appservice-usnat-stage2
+
+  - name: public/azure-functions/dotnet-isolated
+    displayName: Azure Functions Dotnet (Isolated)
+    readme: README.azure-functions-dotnet-isolated.md
+    description: Azure Functions dotnet (Isolated) image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/azure-functions-docker/issues
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-functions
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - ussec
+        tags:
+          - source: 3.0-appservice-ussec-stage0
+          - source: 3.0-appservice-ussec-stage1
+          - source: 3.0-appservice-ussec-stage2
+          - source: 3.0-dotnet-isolated5.0-appservice-ussec-stage0
+          - source: 3.0-dotnet-isolated5.0-appservice-ussec-stage1
+          - source: 3.0-dotnet-isolated5.0-appservice-ussec-stage2
+          - source: 4-appservice-ussec-stage0
+          - source: 4-appservice-ussec-stage1
+          - source: 4-appservice-ussec-stage2
+          - source: 4-dotnet-isolated6.0-appservice-ussec-stage0
+          - source: 4-dotnet-isolated6.0-appservice-ussec-stage1
+          - source: 4-dotnet-isolated6.0-appservice-ussec-stage2
+      - type: cloud
+        destinations:
+          - usnat
+        tags:
+          - source: 3.0-appservice-usnat-stage0
+          - source: 3.0-appservice-usnat-stage1
+          - source: 3.0-appservice-usnat-stage2
+          - source: 3.0-dotnet-isolated5.0-appservice-usnat-stage0
+          - source: 3.0-dotnet-isolated5.0-appservice-usnat-stage1
+          - source: 3.0-dotnet-isolated5.0-appservice-usnat-stage2
+          - source: 4-appservice-usnat-stage0
+          - source: 4-appservice-usnat-stage1
+          - source: 4-appservice-usnat-stage2
+          - source: 4-dotnet-isolated6.0-appservice-usnat-stage0
+          - source: 4-dotnet-isolated6.0-appservice-usnat-stage1
+          - source: 4-dotnet-isolated6.0-appservice-usnat-stage2
+
+  - name: public/azure-functions/node
+    displayName: Azure Functions Node
+    readme: README.azure-functions-node.md
+    description: Azure Functions node image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/Azure/azure-functions-docker/issues
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-functions
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - ussec
+        tags:
+          - source: 3.0-appservice-ussec-stage0
+          - source: 3.0-appservice-ussec-stage1
+          - source: 3.0-appservice-ussec-stage2
+          - source: 3.0-node8-appservice-ussec-stage0
+          - source: 3.0-node8-appservice-ussec-stage1
+          - source: 3.0-node8-appservice-ussec-stage2
+          - source: 3.0-node10-appservice-ussec-stage0
+          - source: 3.0-node10-appservice-ussec-stage1
+          - source: 3.0-node10-appservice-ussec-stage2
+          - source: 3.0-node12-appservice-ussec-stage0
+          - source: 3.0-node12-appservice-ussec-stage1
+          - source: 3.0-node12-appservice-ussec-stage2
+          - source: 3.0-node14-appservice-ussec-stage0
+          - source: 3.0-node14-appservice-ussec-stage1
+          - source: 3.0-node14-appservice-ussec-stage2
+          - source: 4-appservice-ussec-stage0
+          - source: 4-appservice-ussec-stage1
+          - source: 4-appservice-ussec-stage2
+          - source: 4-node14-appservice-ussec-stage0
+          - source: 4-node14-appservice-ussec-stage1
+          - source: 4-node14-appservice-ussec-stage2
+      - type: cloud
+        destinations:
+          - usnat
+        tags:
+          - source: 3.0-appservice-usnat-stage0
+          - source: 3.0-appservice-usnat-stage1
+          - source: 3.0-appservice-usnat-stage2
+          - source: 3.0-node8-appservice-usnat-stage0
+          - source: 3.0-node8-appservice-usnat-stage1
+          - source: 3.0-node8-appservice-usnat-stage2
+          - source: 3.0-node10-appservice-usnat-stage0
+          - source: 3.0-node10-appservice-usnat-stage1
+          - source: 3.0-node10-appservice-usnat-stage2
+          - source: 3.0-node12-appservice-usnat-stage0
+          - source: 3.0-node12-appservice-usnat-stage1
+          - source: 3.0-node12-appservice-usnat-stage2
+          - source: 3.0-node14-appservice-usnat-stage0
+          - source: 3.0-node14-appservice-usnat-stage1
+          - source: 3.0-node14-appservice-usnat-stage2
+          - source: 4-appservice-usnat-stage0
+          - source: 4-appservice-usnat-stage1
+          - source: 4-appservice-usnat-stage2
+          - source: 4-node14-appservice-usnat-stage0
+          - source: 4-node14-appservice-usnat-stage1
+          - source: 4-node14-appservice-usnat-stage2
+
+  - name: public/azure-functions/python
+    displayName: Azure Functions Python
+    readme: README.azure-functions-python.md
+    description: Azure Functions python image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/Azure/azure-functions-docker/issues
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-functions
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - ussec
+        tags:
+          - source: 3.0-appservice-ussec-stage0
+          - source: 3.0-appservice-ussec-stage1
+          - source: 3.0-appservice-ussec-stage2
+          - source: 3.0-python3.6-appservice-ussec-stage0
+          - source: 3.0-python3.6-appservice-ussec-stage1
+          - source: 3.0-python3.6-appservice-ussec-stage2
+          - source: 3.0-python3.7-appservice-ussec-stage0
+          - source: 3.0-python3.7-appservice-ussec-stage1
+          - source: 3.0-python3.7-appservice-ussec-stage2
+          - source: 3.0-python3.8-appservice-ussec-stage0
+          - source: 3.0-python3.8-appservice-ussec-stage1
+          - source: 3.0-python3.8-appservice-ussec-stage2
+          - source: 3.0-python3.9-appservice-ussec-stage0
+          - source: 3.0-python3.9-appservice-ussec-stage1
+          - source: 3.0-python3.9-appservice-ussec-stage2
+          - source: 4-appservice-ussec-stage0
+          - source: 4-appservice-ussec-stage1
+          - source: 4-appservice-ussec-stage2
+          - source: 4-python3.7-appservice-ussec-stage0
+          - source: 4-python3.7-appservice-ussec-stage1
+          - source: 4-python3.7-appservice-ussec-stage2
+          - source: 4-python3.8-appservice-ussec-stage0
+          - source: 4-python3.8-appservice-ussec-stage1
+          - source: 4-python3.8-appservice-ussec-stage2
+          - source: 4-python3.9-appservice-ussec-stage0
+          - source: 4-python3.9-appservice-ussec-stage1
+          - source: 4-python3.9-appservice-ussec-stage2
+      - type: cloud
+        destinations:
+          - usnat
+        tags:
+          - source: 3.0-appservice-usnat-stage0
+          - source: 3.0-appservice-usnat-stage1
+          - source: 3.0-appservice-usnat-stage2
+          - source: 3.0-python3.6-appservice-usnat-stage0
+          - source: 3.0-python3.6-appservice-usnat-stage1
+          - source: 3.0-python3.6-appservice-usnat-stage2
+          - source: 3.0-python3.7-appservice-usnat-stage0
+          - source: 3.0-python3.7-appservice-usnat-stage1
+          - source: 3.0-python3.7-appservice-usnat-stage2
+          - source: 3.0-python3.8-appservice-usnat-stage0
+          - source: 3.0-python3.8-appservice-usnat-stage1
+          - source: 3.0-python3.8-appservice-usnat-stage2
+          - source: 3.0-python3.9-appservice-usnat-stage0
+          - source: 3.0-python3.9-appservice-usnat-stage1
+          - source: 3.0-python3.9-appservice-usnat-stage2
+          - source: 4-appservice-usnat-stage0
+          - source: 4-appservice-usnat-stage1
+          - source: 4-appservice-usnat-stage2
+          - source: 4-python3.7-appservice-usnat-stage0
+          - source: 4-python3.7-appservice-usnat-stage1
+          - source: 4-python3.7-appservice-usnat-stage2
+          - source: 4-python3.8-appservice-usnat-stage0
+          - source: 4-python3.8-appservice-usnat-stage1
+          - source: 4-python3.8-appservice-usnat-stage2
+          - source: 4-python3.9-appservice-usnat-stage0
+          - source: 4-python3.9-appservice-usnat-stage1
+          - source: 4-python3.9-appservice-usnat-stage2
+
+  - name: public/azure-functions/mesh
+    displayName: Azure Functions Mesh
+    readme: README.azure-functions-mesh.md
+    description: Azure Functions image for service fabric mesh
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+        - type: cloud
+          destinations:
+            - ussec
+          tags:
+            - source: 3.0.15828
+            - source: 3.0.15828-java8
+            - source: 3.0.15828-python3.7
+            - source: 3.0.15828-node12
+            - source: 3.0.15828-python3.8
+            - source: 3.0.15828-java11
+            - source: 3.0.15828-node14
+            - source: 3.0.15828-python3.9
+            - source: 4.0.0-preview.4.16394
+            - source: 4.0.0-preview.4.16394-python3.7
+            - source: 4.0.0-preview.4.16394-python3.8
+            - source: 4.0.0-preview.4.16394-python3.9
+            - source: 4.0.0-preview.4.16394-node14
+            - source: 4.0.0-preview.4.16394-java8
+            - source: 4.0.0-preview.4.16394-java11
+            - source: msi-2.0
+
+  - name: public/azure-functions/dotnet/core/runtime
+    displayName: Azure Functions Dotnet Core
+    readme: README.azure-functions-dotnet.md
+    description: Azure Functions image for dotnet core runtime
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/azure-functions/powershell
+    displayName: Azure Functions Powershell
+    readme: README.azure-functions-powershell.md
+    description: Azure Functions image for PowerShell
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/Azure/azure-functions-docker/issues
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-functions
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - ussec
+        tags:
+          - source: 3.0-appservice-ussec-stage0
+          - source: 3.0-appservice-ussec-stage1
+          - source: 3.0-appservice-ussec-stage2
+          - source: 3.0-powershell6-appservice-ussec-stage0
+          - source: 3.0-powershell6-appservice-ussec-stage1
+          - source: 3.0-powershell6-appservice-ussec-stage2
+          - source: 3.0-powershell7-appservice-ussec-stage0
+          - source: 3.0-powershell7-appservice-ussec-stage1
+          - source: 3.0-powershell7-appservice-ussec-stage2
+          - source: 4-appservice-ussec-stage0
+          - source: 4-appservice-ussec-stage1
+          - source: 4-appservice-ussec-stage2
+          - source: 4-powershell7-appservice-ussec-stage0
+          - source: 4-powershell7-appservice-ussec-stage1
+          - source: 4-powershell7-appservice-ussec-stage2
+      - type: cloud
+        destinations:
+          - usnat
+        tags:
+          - source: 3.0-appservice-usnat-stage0
+          - source: 3.0-appservice-usnat-stage1
+          - source: 3.0-appservice-usnat-stage2
+          - source: 3.0-powershell6-appservice-usnat-stage0
+          - source: 3.0-powershell6-appservice-usnat-stage1
+          - source: 3.0-powershell6-appservice-usnat-stage2
+          - source: 3.0-powershell7-appservice-usnat-stage0
+          - source: 3.0-powershell7-appservice-usnat-stage1
+          - source: 3.0-powershell7-appservice-usnat-stage2
+          - source: 4-appservice-usnat-stage0
+          - source: 4-appservice-usnat-stage1
+          - source: 4-appservice-usnat-stage2
+          - source: 4-powershell7-appservice-usnat-stage0
+          - source: 4-powershell7-appservice-usnat-stage1
+          - source: 4-powershell7-appservice-usnat-stage2
+
+  - name: public/azure-functions/java
+    displayName: Azure Functions Java
+    readme: README.azure-functions-java.md
+    description: Azure Functions image for java
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/Azure/azure-functions-docker/issues
+    documentationLink: https://docs.microsoft.com/en-us/azure/azure-functions
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - ussec
+        tags:
+          - source: 3.0-appservice-ussec-stage0
+          - source: 3.0-appservice-ussec-stage1
+          - source: 3.0-appservice-ussec-stage2
+          - source: 3.0-java8-appservice-ussec-stage0
+          - source: 3.0-java8-appservice-ussec-stage1
+          - source: 3.0-java8-appservice-ussec-stage2
+          - source: 3.0-java11-appservice-ussec-stage0
+          - source: 3.0-java11-appservice-ussec-stage1
+          - source: 3.0-java11-appservice-ussec-stage2
+          - source: 4-appservice-ussec-stage0
+          - source: 4-appservice-ussec-stage1
+          - source: 4-appservice-ussec-stage2
+          - source: 4-java8-appservice-ussec-stage0
+          - source: 4-java8-appservice-ussec-stage1
+          - source: 4-java8-appservice-ussec-stage2
+          - source: 4-java11-appservice-ussec-stage0
+          - source: 4-java11-appservice-ussec-stage1
+          - source: 4-java11-appservice-ussec-stage2
+      - type: cloud
+        destinations:
+          - usnat
+        tags:
+          - source: 3.0-appservice-usnat-stage0
+          - source: 3.0-appservice-usnat-stage1
+          - source: 3.0-appservice-usnat-stage2
+          - source: 3.0-java8-appservice-usnat-stage0
+          - source: 3.0-java8-appservice-usnat-stage1
+          - source: 3.0-java8-appservice-usnat-stage2
+          - source: 3.0-java11-appservice-usnat-stage0
+          - source: 3.0-java11-appservice-usnat-stage1
+          - source: 3.0-java11-appservice-usnat-stage2
+          - source: 4-appservice-usnat-stage0
+          - source: 4-appservice-usnat-stage1
+          - source: 4-appservice-usnat-stage2
+          - source: 4-java8-appservice-usnat-stage0
+          - source: 4-java8-appservice-usnat-stage1
+          - source: 4-java8-appservice-usnat-stage2
+          - source: 4-java11-appservice-usnat-stage0
+          - source: 4-java11-appservice-usnat-stage1
+          - source: 4-java11-appservice-usnat-stage2
+
+  - name: public/azure-functions/kudulite
+    displayName: Azure Functions KuduLite
+    readme: README.azure-functions-kudulite.md
+    description: Azure functions image for kudulite
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+        - type: cloud
+          destinations:
+            - ussec
+          tags:
+            - source: kudu-2.14
+
+  - name: public/azure-functions/meshtest
+    displayName: Azure Functions Mesh Test
+    readme: README.azure-functions-meshtest.md
+    description: Azure functions image for nightly mesh integration test
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/azure-functions/kedacore/keda
+    displayName: Keda Operator
+    readme: README.azure-functions-kedacore.md
+    description: Image for keda operator
+    logoUrl: https://keda.sh/img/logos/keda-icon-color.png
+    supportLink: https://keda.sh/
+    documentationLink: https://keda.sh/
+
+  - name: public/azure-functions/kedacore/keda-metrics-apiserver
+    displayName: Keda Metrics ApiServer Adapter
+    readme: README.azure-functions-kedacore.md
+    description: Image for keda operator
+    logoUrl: https://keda.sh/img/logos/keda-icon-color.png
+    supportLink: https://keda.sh/
+    documentationLink: https://keda.sh/
+
+  - name: public/oss/kedacore/external-scaler-azure-cosmos-db
+    displayName: KEDA External Scaler for Azure Cosmos DB
+    logoUrl: https://keda.sh/img/logos/keda-icon-color.png
+    documentationLink: https://github.com/kedacore/external-scaler-azure-cosmos-db#readme

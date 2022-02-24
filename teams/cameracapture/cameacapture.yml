@@ -1,0 +1,23 @@
+version: 2.0
+subscriptionId: 6a51d66e-1cb2-44bb-a4a9-8e97a785f0e0
+resourceGroup: IoTEdgeRepros
+registry: CameraCapture
+onboardingNotification: iot-edge-petw
+dependencyNotification: iot-edge-petw
+
+
+repos:
+
+  - name: public/edge-camera-capture
+    displayName: Edge Camera Capture
+    readme: README.edge-camera-capture.md
+    description: IoT Edge module for camera capture.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        repository: microsoft/edge-camera-capture
+        imageUpdate: false
+
+

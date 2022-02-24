@@ -1,0 +1,55 @@
+version: 2.0
+subscriptionId: 589c7ae9-223e-45e3-a191-98433e0821a9
+resourceGroup: ICE-BaseImage-Build-Resources
+registry: reg4onnx
+onboardingNotification: mcr-onnxaml
+
+repos:
+  - name: public/onnx-aml/onnx-converter-tensorflow
+    displayName: Converter for tensorflow to ONNX
+    description: Docker image with tensorflow to ONNX converter for ONNX AML. 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-converter-scikitlearn
+    displayName: Converter for scikit-learn to ONNX
+    description: Docker image with scikit-learn to ONNX converter for ONNX AML. 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-converter-pytorch
+    displayName: Converter for pytorch to ONNX
+    description: Docker image with pytorch to ONNX converter for ONNX AML. 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-converter-onnx
+    displayName: Converter for ONNX to ONNX
+    description: Docker image with ONNX to ONNX converter for ONNX AML. 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-perftuning
+    displayName: Onnx Perftuning in Azure
+    description: Docker image of Onnx Perftuning
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-perftuning-gpu
+    displayName: Onnx Perftuning with GPU in Azure
+    description: Docker image of Onnx Perftuning with GPU
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-package
+    displayName: Onnx Package Image in Azure
+    description: Docker image of Onnx Package
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-runtime-server
+    displayName: Onnx Runtimer Server Image in Azure, only used for onnx in aml
+    description: Docker image of Onnx Runtime Server
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-optimization-gpu
+    displayName: Onnx optimizaiton service base GPU, only used for onnx in aml
+    description: Docker image of Onnx optimizaiton service base GPU
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg    
+  - name: public/onnx-aml/onnx-converter-tensorflow-gpu
+    displayName: Converter for tensorflow to ONNX
+    description: Docker image(gpu version) with tensorflow to ONNX converter for ONNX AML. 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-converter-pytorch-gpu
+    displayName: Converter for pytorch to ONNX
+    description: Docker image(gpu version) with pytorch to ONNX converter for ONNX AML. 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/onnx-aml/onnx-converter-onnx-gpu
+    displayName: Converter for ONNX to ONNX
+    description: Docker image(gpu version) with ONNX to ONNX converter for ONNX AML. 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

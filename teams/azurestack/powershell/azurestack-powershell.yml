@@ -1,0 +1,20 @@
+version: 2.0
+subscriptionId: d34bd6cc-8d7e-451b-ace3-cd05c69f82d0
+resourceGroup: azurestack-devexp
+registry: azurestackpowershell
+onboardingNotification: azsdevexp@microsoft.com
+dependencyNotification: azsdevexp@microsoft.com
+
+repos:
+    - name: public/azurestack/powershell
+      displayName: AzureStack-PowerShell
+      readme: README.azurestack-powershell.md
+      description: AzureStack Hub supported powershell cmdlets for managing azurestack resources as user/operator
+      logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+      supportLink: https://github.com/Azure/azurestack-powershell/issues
+      documentationLink: http://aka.ms/azspsdocker
+      syndications:
+        - type: dockerhub
+          repository: microsoft/azurestack/powershell
+          imageUpdate: false
+          contentUpdate: true 

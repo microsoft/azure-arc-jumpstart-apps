@@ -1,0 +1,132 @@
+# These images are maintained by the Azure Container Upstream team
+# If you need more information on how they are built or would like to have us look into building
+# an image for your team please contact us at azurecontainerupstream@service.microsoft.com.
+
+# WARNING WARNING WARNING WARNING WARNING WARNING  WARNING WARNING WARNING
+# PLEASE READ!!!!!
+# This file is only for publishing images to the PUBLIC mcr endpoint.
+# The various paths for osm-arc is to adhere to Arc extension requirements following SDP: 
+# e.g. mcrbaserul/[extension]]/[deploymentRing]/[releaseTrain/[helmchart]
+
+version: 2.0
+subscriptionId: 6afb2934-8db2-4493-bb19-e951f1158868
+resourceGroup: kubernetes
+registry: k8supstream
+onboardingNotification: az-upstream-k8s-rel
+dependencyNotification: az-upstream-k8s-rel
+
+ownership:                                                                                            
+  securityGroups:                                                                                     
+  - groupName: northamerica\azcu-approvers
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/oss/openservicemesh/batch1/pilot/osm-arc
+    displayName: Open Service Mesh Arc Helm Chart
+    description: Open Service Mesh helm chart for Arc
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm
+
+  - name: public/oss/openservicemesh/canary/pilot/osm-arc
+    displayName: Open Service Mesh Arc Helm Chart - Canary
+    description: Open Service Mesh helm chart for Arc
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm
+
+  - name: public/oss/openservicemesh/osm-controller
+    displayName: Open Service Mesh Controller
+    description: Open Service Mesh controller container
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\.\d{1,2}$/
+
+  - name: public/oss/openservicemesh/init-osm-controller
+    displayName: Open Service Mesh Controller Init
+    description: Open Service Mesh controller init container
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\.\d{1,2}$/
+
+  - name: public/oss/openservicemesh/init
+    displayName: Open Service Mesh Init 
+    description: Open Service Mesh init container
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\.\d{1,2}$/
+
+  - name: public/oss/openservicemesh/osm-injector
+    displayName: Open Service Mesh Injector
+    description: Open Service Mesh injector container
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\.\d{1,2}$/
+
+  - name: public/oss/openservicemesh/osm-chart
+    displayName: Open Service Mesh Helm Charts
+    description: Open Service Mesh helm chart
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm
+
+  - name: public/oss/openservicemesh/osm-bootstrap
+    displayName: Open Service Mesh Bootstrap
+    description: Open Service Mesh bootstrap container
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\.\d{1,2}$/
+
+  - name: public/oss/openservicemesh/osm-crds
+    displayName: Open Service Mesh CRDs 
+    description: Open Service Mesh crds container
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\.\d{1,2}$/
+
+  - name: public/oss/openservicemesh/osm-arc/tools/osm-helm-cli
+    displayName: Open Service Mesh Helm CLI Image
+    description: Open Service Mesh image with Helm CLI and jq
+    supportLink: https://github.com/openservicemesh/osm/issues
+    documentationLink: https://github.com/openservicemesh/osm

@@ -1,0 +1,172 @@
+version: 2.0
+subscriptionId: ca5f4aa0-bf57-4ffa-a0fd-686dbd1298f1                                                 
+resourceGroup: vso-container-images
+registry: devcon
+onboardingNotification: devcontainers                                                                 
+dependencyNotification: devcontainers
+
+# Note: README files referenced here are housed at https://github.com/microsoft/mcrdocs/tree/master/teams/vscode
+# Development Containers (for VS Code Remote - Containers, Codespaces)
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: redmond\vscr-ci                                                                         # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+productFamily:
+  name: vscode/devcontainers
+  displayName: VS Code Remote / GitHub Codespaces Development Container Images
+  shortDescription: Development container images for use with VS Code Remote - Containers and GitHub Codespaces.
+  readMe: README.vscode-dev-containers.md
+  logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+  supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+  documentationLink: https://aka.ms/vscode-remote
+  architectures: [ARM 64, x86-64]
+  operatingSystems: [Linux]
+  syndications:
+    - type: dockerhub
+      enabled: true
+
+repos:
+  - name: public/vscode/devcontainers/base
+    displayName: Base Development Container Images
+    description: A set of base image for use with VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/javascript-node
+    displayName: Node.js Development Container Images
+    description: JavaScript focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/typescript-node
+    displayName: Node.js & Typescript Development Container Images
+    description: TypeScript focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/universal
+    displayName: GitHub Codespaces Universal Development Container Image
+    description: A universal, multi-language image for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/python
+    displayName: Python Development Container Images
+    description: Python focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/cpp
+    displayName: C++ Development Container Images
+    description: C++ focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/php
+    displayName: PHP Development Container Images
+    description: PHP focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/rust
+    displayName: Rust Development Container Images
+    description: Rust focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/ruby
+    displayName: Ruby Development Container Images
+    description: Ruby focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/go
+    displayName: Go Development Container Images
+    description: Go focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/java
+    displayName: Java Development Container Images
+    description: Java focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/dotnetcore
+    displayName: .NET Core Development Container Images
+    description: .NET focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/dotnet
+    displayName: .NET Development Container Images
+    description: .NET focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/powershell
+    displayName: PowerShell Development Container Images
+    description: PowerShell focused development images for VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/dart
+    displayName: Dart Development Container Images
+    description: An image for working with Dart in VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/swift
+    displayName: Swift Development Container Images
+    description: An image for working with Swift in VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/anaconda
+    displayName: Anaconda Development Container Images
+    description: An image for working with Anaconda in VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/miniconda
+    displayName: Miniconda Development Container Images
+    description: An image for working with Miniconda in VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/repos/microsoft/vscode
+    displayName: VS Code Repository Development Container Image (microsoft/vscode)
+    description: An image for developing microsoft/vscode using VS Code Remote - Containers or GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+
+  - name: public/vscode/devcontainers/jekyll
+    displayName: Jekyll Development Container Images
+    description: An image for working with Jekyll in VS Code Remote - Containers and GitHub Codespaces.
+    logoUrl: https://microsoft.github.io/vscode-remote-release/images/remote-containers-blue.svg
+    supportLink: https://github.com/microsoft/vscode-dev-containers/issues
+    documentationLink: https://aka.ms/vscode-remote
+

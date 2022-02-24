@@ -1,0 +1,145 @@
+version: 2.0
+subscriptionId: 5d5f0ef0-d0a1-4f94-83db-deb0a2d1a292
+resourceGroup: oryxmcrimages
+registry: oryxprodmcr
+onboardingNotification: oryxnoti
+dependencyNotification: oryxnoti
+
+productFamily:
+  name: Oryx images
+  shortDescription: Product family for all the Oryx images (base images, build image and runtime images)
+  readMe: README.oryx.md
+  logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  supportLink: https://github.com/microsoft/Oryx/issues
+  documentationLink: https://github.com/microsoft/Oryx
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+repos:
+
+  - name: public/oryx/build
+    displayName: Oryx Build
+    readme: README.oryx-build.md
+    description: Build tools and script generator
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+
+  - name: public/oryx/pack
+    displayName: Oryx buildpack
+    readme: README.oryx-pack.md
+    description: CloudNative's `pack` tool, with an Oryx-based buildpack included.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+  - name: public/oryx/pack-builder
+    displayName: Oryx buildpack builder
+    readme: README.oryx-packbuilder.md
+    description: Builder image for CloudNative's `pack` tool.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+  - name: public/oryx/pack-stack-base
+    displayName: Oryx stack base image
+    readme: README.oryx-packastackbase.md
+    description: Base image for the default stack used with CloudNative's `pack` tool.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+
+  - name: public/oryx/python-build-base
+    displayName: Python Build Base
+    readme: README.oryx-pythonbasebuild.md
+    description: Python base images to be included in the oryx build image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+  
+  - name: public/oryx/php-build-base
+    displayName: PHP Build Base
+    readme: README.oryx-phpbasebuild.md
+    description: PHP base images to be included in the oryx build image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+
+  - name: public/oryx/build-yarn-cache
+    displayName: Yarn package cache
+    readme: README.oryx-buildyarncache.md
+    description: Yarn package cache for inclusion in the main build image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+
+  - name: public/oryx/php-base
+    displayName: PHP Runtime base images
+    readme: README.oryx-phpbaseruntime.md
+    description: PHP images to be used as base image for runtime image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+
+  - name: public/oryx/node-base
+    displayName: Node Runtime base image
+    readme: README.oryx-nodebaseruntime.md
+    description: Node base images to be used as a base for node runtime image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+ 
+  - name: public/oryx/dotnetcore-base
+    displayName: Base images for .NET Core runtime images in Oryx
+    readme: README.oryx-dotnetcorebaseruntime.md
+    description: Base images for .NET Core runtime images in Oryx
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+
+  - name: public/oryx/dotnetcore
+    displayName: Dotnetcore Runtime images
+    readme: README.oryx-dotnetcore.md 
+    description: dotnetcore  runtime images to host built web artifacts.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+
+  - name: public/oryx/node
+    displayName: Node Runtime images
+    readme: README.oryx-node.md 
+    description: nodejs  runtime images to host built web artifacts that includes an entry point.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx 
+
+  - name: public/oryx/python
+    displayName: Python Runtime images
+    readme: README.oryx-python.md 
+    description: python runtime images to host built web artifacts that includes an entry point.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+
+  - name: public/oryx/php
+    displayName: PHP Runtime images
+    readme: README.oryx-php.md 
+    description: Runs built PHP apps.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+
+  - name: public/oryx/base
+    displayName: Base images used by Oryx to create it's build and runtime images
+    readme: README.oryx-baseimages.md
+    description: Base images used by Oryx to create it's build and runtime images
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+    
+  - name: public/oryx/cli
+    displayName: Oryx CLI
+    readme: README.oryx-cli.md
+    description: Image containing just the Oryx CLI
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
