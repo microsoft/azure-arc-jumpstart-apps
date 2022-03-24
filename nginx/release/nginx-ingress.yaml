@@ -1,0 +1,19 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ingress-nginx
+  namespace: ingress-nginx
+  annotations:
+    clusterconfig.azure.com/use-managed-source: "true"
+spec:
+  interval: 1m
+  releaseName: ingress-nginx
+  chart:
+    spec:
+      chart: ./nginx/chart
+  values:
+    controller:
+      image:
+        repository: k8s.gcr.io/ingress-nginx/controller
+        tag: "v1.1.1"
+      replicaCount: 2
