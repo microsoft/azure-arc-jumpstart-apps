@@ -18,4 +18,4 @@ spec:
     replicaCount: 3
     env:
       name: MESSAGE
-      value: Welcome to Hybrid Champs Community!
+      value: Welcome to Hybrid Champs Community GitOps Demo!
