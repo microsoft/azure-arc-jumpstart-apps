@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-arc
-        image: zcbicepacr001/zaid-arc:latest
+        image: liorkamrat/hello-arc:latest
         ports:
         - containerPort: 8080
         env:
