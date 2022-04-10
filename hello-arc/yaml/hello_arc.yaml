@@ -17,7 +17,7 @@ metadata:
   name: hello-arc
   namespace: hello-arc
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: hello-arc
