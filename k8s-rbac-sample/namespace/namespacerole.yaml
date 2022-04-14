@@ -11,7 +11,7 @@ rules:
 ---
 
 apiVersion: rbac.authorization.k8s.io/v1
-# This role binding allows "jane" to read pods in the "default" namespace.
+# This role binding allows "jane" to read pods in the "hello-arc" namespace.
 kind: RoleBinding
 metadata:
   name: read-pods
