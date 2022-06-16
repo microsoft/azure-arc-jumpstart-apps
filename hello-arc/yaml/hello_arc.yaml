@@ -33,4 +33,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: Welcome to Our PoC for MAN ES!
+          value: Welcome double deployment via GitOps
