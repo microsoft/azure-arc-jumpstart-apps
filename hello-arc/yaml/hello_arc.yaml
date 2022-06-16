@@ -33,4 +33,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: Welcome to the next Release v3
+          value: Welcome to the next Release v4 beta
