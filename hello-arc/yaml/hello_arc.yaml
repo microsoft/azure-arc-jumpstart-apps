@@ -33,4 +33,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: This is Application Release 1.1 Beta
+          value: This is Application Release 1.2 Beta
