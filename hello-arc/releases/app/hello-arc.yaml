@@ -15,7 +15,7 @@ spec:
     image:
       repository: azurearcjumpstart.azurecr.io/hello-arc-gitops
       tag: latest
-    replicaCount: 3
+    replicaCount: 5
     env:
       name: MESSAGE
       value: Welcome to Azure Arc GitOps Demo!
