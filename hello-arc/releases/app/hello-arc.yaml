@@ -18,4 +18,4 @@ spec:
     replicaCount: 5
     env:
       name: MESSAGE
-      value: Deploying to AKS on Windows IOT GitOps by SWAPNIL!!
+      value: Deploying to AKS on Windows IOT GitOps by SWAPNIL demo!!
