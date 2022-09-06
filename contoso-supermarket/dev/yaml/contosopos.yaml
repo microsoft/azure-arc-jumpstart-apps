@@ -27,12 +27,12 @@ spec:
               value: ""
             - name: SQL_DATABASE
               value: ""
-            - name : NEW_LAYOUT
-              value : "False"
             - name: HEAD_TITLE
-              value : "Contoso Supermarket AKS-IoT"
-            - name: RTSP_BASEURL
-              value: "rtsp://localhost:554/media/"
+              value : "Contoso Supermarket"
+            - name: CAMERAS_ENABLED
+              value: "False"
+            - name: CAMERAS_BASEURL
+              value: ""
           ports:
             - containerPort: 5000
         - name: contosocameras
