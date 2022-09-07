@@ -1,8 +1,26 @@
+# Create Contoso Supermarket Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: contosopos
+  namespace: supermarket-dev
+  labels:
+    app: contosopos
+spec:
+  selector:
+    app: contosopos
+  ports:
+  - name: http
+    port: 80
+    targetPort: 5000
+  type: ClusterIP
+---  
 # Create Contoso Supermarket Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: contosopos
+  namespace: supermarket-dev  
   labels:
     app: contosopos
 spec:
@@ -37,24 +55,3 @@ spec:
             - containerPort: 5000
         - name: contosocameras
           image: azurearcjumpstart.azurecr.io/contoso-supermarket-cameras:latest
-          
-
----
-
-# Create Contoso Supermarket Service
-apiVersion: v1
-kind: Service
-metadata:
-  name: contosopos
-  namespace: supermarket-dev
-  labels:
-    app: contosopos
-spec:
-  selector:
-    app: contosopos
-  ports:
-  - name: http
-    port: 80
-    targetPort: 5000
-  type: NodePort
-  
