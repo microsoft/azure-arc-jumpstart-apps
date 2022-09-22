@@ -1,0 +1,62 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edgeai
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: edgeai
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: edgeai
+    spec:
+      containers:
+      - name: edgeai
+        image: "rgleanndeepstream.azurecr.io/edgeai:007"
+        ports:
+        - containerPort: 8554
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+        securityContext:
+            privileged: true
+        env:
+        - name: DISPLAY
+          value: $DISPLAY
+      imagePullSecrets:
+        - name: rgleanndeepstream
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: NodePort
+  selector:
+    app: edgeai
+  ports:
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - port: 8554
+      targetPort: 8554
+      # Optional field
+      # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
+      nodePort: 30007
+
+# https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+
+# --create an image pull secrete--
+# kubectl create secret docker-registry <secret-name> \
+#     --namespace <namespace> \
+#     --docker-server=<container-registry-name>.azurecr.io \
+#     --docker-username=<service-principal-ID> \
+#     --docker-password=<service-principal-password>
+# https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes
