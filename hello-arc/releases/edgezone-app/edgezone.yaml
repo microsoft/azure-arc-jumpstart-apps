@@ -1,0 +1,61 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mqtt-pub-client
+  labels:
+    app: mqtt-pub-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mqtt-pub-client
+  template: 
+    metadata:
+      labels:
+        app: mqtt-pub-client
+    spec:
+      containers:
+      - name: publisher
+        image: containerregistryswapnil.azurecr.io/publisher:v1
+      imagePullSecrets:
+      - name: acr-secret-edgezone
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels: 
+    app: webapp
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers: 
+      - name: webapp
+        image: containerregistryswapnil.azurecr.io/flaskapp-mqtt:v2
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: acr-secret-edgezone
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-service
+spec:
+  type: NodePort
+  selector:
+    app: webapp
+  ports:
+  - port: 5000
+    targetPort: 5000
+    nodePort: 30010
