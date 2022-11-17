@@ -55,10 +55,10 @@ metadata:
   name: webapp-service
   namespace: default
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: webapp
   ports:
   - port: 5000
     targetPort: 5000
-    nodePort: 30010
+    protocol: TCP
