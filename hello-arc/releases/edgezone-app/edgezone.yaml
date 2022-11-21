@@ -2,8 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mqtt-pub-client
-  namespace: default
+  name: contoso-mqtt-pub-client
+  namespace: contoso
   labels:
     app: mqtt-pub-client
 spec:
@@ -26,8 +26,8 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
-  namespace: default
+  name: contoso-webapp
+  namespace: contoso
   labels: 
     app: webapp
 spec:
@@ -42,7 +42,7 @@ spec:
     spec:
       containers: 
       - name: webapp
-        image: containerregistryswapnil.azurecr.io/flaskapp-mqtt:v1
+        image: containerregistryswapnil.azurecr.io/flaskapp-mqtt:v2
         ports:
         - containerPort: 5000
       imagePullSecrets:
@@ -52,8 +52,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: webapp-service
-  namespace: default
+  name: contoso-webapp-service
+  namespace: contoso
 spec:
   type: LoadBalancer
   selector:
@@ -62,3 +62,49 @@ spec:
   - port: 5000
     targetPort: 5000
     protocol: TCP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contoso-video-ai-inferencing
+  namespace: contoso
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contoso-pos
+  namespace: contoso
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
