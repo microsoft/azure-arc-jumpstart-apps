@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: publisher
-        image: containerregistryswapnil.azurecr.io/publisher:v1
+        image: containerregistryswapnil.azurecr.io/publisher:v2
       imagePullSecrets:
       - name: acr-secret-edgezone
 
@@ -42,7 +42,7 @@ spec:
     spec:
       containers: 
       - name: webapp
-        image: containerregistryswapnil.azurecr.io/flaskapp-mqtt:v2
+        image: containerregistryswapnil.azurecr.io/flaskapp-mqtt:v3
         ports:
         - containerPort: 5000
       imagePullSecrets:
