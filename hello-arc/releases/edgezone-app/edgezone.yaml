@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: publisher
-        image: containerregistryswapnil.azurecr.io/publisher:v1
+        image: containerregistryswapnil.azurecr.io/publisher:v2
       imagePullSecrets:
       - name: acr-secret-edgezone
 
