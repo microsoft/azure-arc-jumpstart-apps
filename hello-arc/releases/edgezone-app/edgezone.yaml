@@ -42,7 +42,7 @@ spec:
     spec:
       containers: 
       - name: webapp
-        image: containerregistryswapnil.azurecr.io/flaskapp-mqtt:v3
+        image: containerregistryswapnil.azurecr.io/flaskapp-mqtt:v2
         ports:
         - containerPort: 5000
       imagePullSecrets:
