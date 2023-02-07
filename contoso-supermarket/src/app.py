@@ -1,11 +1,8 @@
 #!/usr/bin/env python
-from importlib import import_module
 import os
 import cv2
 from flask import Flask, render_template, Response, request
 from sqlConnector import SqlConnector
-
-# charris touch v0.2
 
 app = Flask(__name__)
 
