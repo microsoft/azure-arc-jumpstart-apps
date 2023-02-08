@@ -1,4 +1,4 @@
-FROM janegilring/node-windows-servercore:ltsc2019
+FROM azurearcjumpstart.azurecr.io/node-windows-servercore:ltsc2019
 
 ARG IMAGE_CREATE_DATE
 ARG IMAGE_VERSION

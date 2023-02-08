@@ -4,9 +4,9 @@ git clone https://github.com/microsoft/azure-arc-jumpstart-apps.git
 cd /workspaces/azure-arc-jumpstart-apps/hello-arc-windows/src
 
 # Build Windows Server container image with Node installed, needed as Node does not have an official Windows image per 2023-02-08: https://github.com/nodejs/docker-node/pull/362
-docker build ./node -t janegilring/node-windows/servercore:ltsc2019
+docker build ./node -t azurearcjumpstart.azurecr.io/node-windows-servercore:ltsc2019
 
-docker push janegilring/node-windows-servercore:ltsc2019
+docker push azurearcjumpstart.azurecr.io/node-windows-servercore:ltsc2019
 
 # Build node application
 docker build ./app -t azurearcjumpstart.azurecr.io/hello-arc:windows
