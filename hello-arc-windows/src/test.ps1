@@ -1,0 +1,33 @@
+cd /workspaces
+git clone git@github.com:janegilring/azure-arc-jumpstart-apps.git
+
+cd /workspaces/azure-arc-jumpstart-apps/hello-arc-windows/src
+
+# Build Windows Server container image with Node installed, needed as Node does not have an official Windows image per 2023-02-08: https://github.com/nodejs/docker-node/pull/362
+docker build ./node -t janegilring/node-windows/servercore:ltsc2019
+
+docker push janegilring/node-windows-servercore:ltsc2019
+
+# Build node application
+docker build ./app -t janegilring/hello-arc-windows
+
+docker push janegilring/hello-arc-windows
+
+# Test locally
+docker run -d -p 8080:8080 janegilring/hello-arc-windows
+
+# AKS
+az login
+az aks get-credentials --resource-group aks-demo-rg --name aks-demo
+
+# Test Linux image on AKS Linux node
+kubectl run hello-arc-linux --image liorkamrat/hello-arc --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "linux" }}}'
+
+# Verify app is working
+kubectl port-forward hello-arc-linux 8080:8080
+
+# Test Windows image on AKS Windows node
+kubectl run hello-arc-windows --image janegilring/hello-arc-windows --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "windows" }}}'
+
+# Verify app is working
+kubectl port-forward hello-arc-windows 8080:8080
