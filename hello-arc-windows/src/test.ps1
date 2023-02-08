@@ -1,5 +1,5 @@
 cd /workspaces
-git clone git@github.com:janegilring/azure-arc-jumpstart-apps.git
+git clone https://github.com/microsoft/azure-arc-jumpstart-apps.git
 
 cd /workspaces/azure-arc-jumpstart-apps/hello-arc-windows/src
 
@@ -9,12 +9,12 @@ docker build ./node -t janegilring/node-windows/servercore:ltsc2019
 docker push janegilring/node-windows-servercore:ltsc2019
 
 # Build node application
-docker build ./app -t janegilring/hello-arc-windows
+docker build ./app -t azurearcjumpstart.azurecr.io/hello-arc:windows
 
-docker push janegilring/hello-arc-windows
+docker push azurearcjumpstart.azurecr.io/hello-arc:windows
 
 # Test locally
-docker run -d -p 8080:8080 janegilring/hello-arc-windows
+docker run -d -p 8080:8080 azurearcjumpstart.azurecr.io/hello-arc:windows
 
 # AKS
 az login
@@ -27,7 +27,7 @@ kubectl run hello-arc-linux --image liorkamrat/hello-arc --overrides='{"apiVersi
 kubectl port-forward hello-arc-linux 8080:8080
 
 # Test Windows image on AKS Windows node
-kubectl run hello-arc-windows --image janegilring/hello-arc-windows --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "windows" }}}'
+kubectl run hello-arc-windows --image azurearcjumpstart.azurecr.io/hello-arc:windows --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "windows" }}}'
 
 # Verify app is working
 kubectl port-forward hello-arc-windows 8080:8080
