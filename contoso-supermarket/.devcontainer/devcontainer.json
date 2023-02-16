@@ -4,9 +4,8 @@
 	"name": "Contoso Supermarket",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"build": {
-		"dockerfile": "Dockerfile"
+		"dockerfile": "../src/Dockerfile"
 	},
-    
 	"customizations": {
         "vscode": {
             "extensions": [
@@ -16,7 +15,7 @@
                 "python.testing.pytestArgs": [
                     "."
                 ],
-                "python.testing.unittestEnabled": false,
+                "python.testing.unittestEnabled": true,
                 "python.testing.pytestEnabled": true,
                 "python.formatting.provider": "black",
                 "python.linting.mypyEnabled": true,
