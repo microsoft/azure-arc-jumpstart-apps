@@ -31,3 +31,11 @@ kubectl run hello-arc-windows --image azurearcjumpstart.azurecr.io/hello-arc-win
 
 # Verify app is working
 kubectl port-forward hello-arc-windows 8080:8080
+
+# Test Helm chart
+cd /workspaces/azure-arc-jumpstart-apps
+helm install --create-namespace --namespace hello-arc hello-arc-windows ./hello-arc-windows/charts/hello-arc
+
+kubectl get deployments --namespace hello-arc
+
+helm delete hello-arc-windows --namespace hello-arc
