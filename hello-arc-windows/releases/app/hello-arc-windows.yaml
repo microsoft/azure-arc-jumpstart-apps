@@ -13,7 +13,7 @@ spec:
       chart: ./hello-arc-windows/charts/hello-arc
   values:
     image:
-      repository: azurearcjumpstart.azurecr.io/hello-arc:windows
+      repository: azurearcjumpstart.azurecr.io/hello-arc-windows:latest
       tag: latest
     replicaCount: 3
     env:
