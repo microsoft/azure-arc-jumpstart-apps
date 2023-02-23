@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: azurearcjumpstart.azurecr.io/hello-arc:windows
+  repository: azurearcjumpstart.azurecr.io/hello-arc-windows
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
