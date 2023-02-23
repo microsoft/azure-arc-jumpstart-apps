@@ -87,7 +87,9 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-nodeSelector: {}
+nodeSelector: {
+ kubernetes.io/os: linux
+}
 
 tolerations: []
 
