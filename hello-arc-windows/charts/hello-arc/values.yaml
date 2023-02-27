@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: liorkamrat/hello-arc
+  repository: azurearcjumpstart.azurecr.io/hello-arc-windows
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -60,7 +60,7 @@ ingress:
           pathType: ImplementationSpecific
           backend:
              service:
-                name: hello-arc
+                name: hello-arc-windows
                 port:
                   number: 8080
   # tls: []
@@ -88,7 +88,7 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {
- kubernetes.io/os: linux
+ kubernetes.io/os: windows
 }
 
 tolerations: []

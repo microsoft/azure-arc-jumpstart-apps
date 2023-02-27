@@ -9,12 +9,12 @@ docker build ./node -t azurearcjumpstart.azurecr.io/node-windows-servercore:ltsc
 docker push azurearcjumpstart.azurecr.io/node-windows-servercore:ltsc2019
 
 # Build node application
-docker build ./app -t azurearcjumpstart.azurecr.io/hello-arc:windows
+docker build ./app -t azurearcjumpstart.azurecr.io/hello-arc-windows:latest
 
-docker push azurearcjumpstart.azurecr.io/hello-arc:windows
+docker push azurearcjumpstart.azurecr.io/hello-arc-windows:latest
 
 # Test locally
-docker run -d -p 8080:8080 azurearcjumpstart.azurecr.io/hello-arc:windows
+docker run -d -p 8080:8080 azurearcjumpstart.azurecr.io/hello-arc-windows:latest
 
 # AKS
 az login
@@ -27,7 +27,15 @@ kubectl run hello-arc-linux --image liorkamrat/hello-arc --overrides='{"apiVersi
 kubectl port-forward hello-arc-linux 8080:8080
 
 # Test Windows image on AKS Windows node
-kubectl run hello-arc-windows --image azurearcjumpstart.azurecr.io/hello-arc:windows --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "windows" }}}'
+kubectl run hello-arc-windows --image azurearcjumpstart.azurecr.io/hello-arc-windows:latest --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "windows" }}}'
 
 # Verify app is working
 kubectl port-forward hello-arc-windows 8080:8080
+
+# Test Helm chart
+cd /workspaces/azure-arc-jumpstart-apps
+helm install --create-namespace --namespace hello-arc hello-arc-windows ./hello-arc-windows/charts/hello-arc
+
+kubectl get deployments --namespace hello-arc
+
+helm delete hello-arc-windows --namespace hello-arc
