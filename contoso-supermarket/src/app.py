@@ -4,8 +4,23 @@ import os
 import cv2
 from flask import Flask, render_template, Response, request
 from sqlConnector import SqlConnector
+import psycopg2
 
 app = Flask(__name__)
+
+dbconfig = {
+    #"host": os.environ.get('PGHOST'),
+    #"user": os.environ.get('PGUSER'),
+    #"password": os.environ.get('PGSECRET'),
+    #"database": os.environ.get('PGNAME')
+    "host": "localhost",
+    "user": "postgres",
+    "password": "admin123",
+    "database": "contoso"
+}
+
+conn = psycopg2.connect(**dbconfig)
+cursor = conn.cursor()
 
 @app.route('/')
 def index():
@@ -22,7 +37,20 @@ def index():
     if os.environ.get('NEW_CATEGORY'):
         new_category = os.environ.get('NEW_CATEGORY') == 'True'
 
-    return render_template('index2.html' if new_category else 'index.html', head_title = head_title, cameras_enabled = cameras_enabled)
+    query = "SELECT * FROM contoso.products"
+    productlist = []
+    cursor.execute(query)
+    for item in cursor.fetchall():
+        productlist.append({
+        'produtctid': item[0],
+        'name': item[1],
+        'price': item[2],
+        'currentInventory': item[3],
+        'photolocation': item[4]
+    })
+    #cursor.close()
+
+    return render_template('index2.html' if new_category else 'index.html', head_title = head_title, cameras_enabled = cameras_enabled, productlist=productlist)
 
 @app.route('/addPurchase',methods = ['POST'])
 def addPurchase():
