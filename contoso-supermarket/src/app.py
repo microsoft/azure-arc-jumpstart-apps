@@ -47,7 +47,7 @@ def index():
     if os.environ.get('NEW_CATEGORY'):
         new_category = os.environ.get('NEW_CATEGORY') == 'True'
 
-    query = "SELECT * FROM contoso.products"
+    query = "SELECT * FROM contoso.products ORDER BY productId"
     productlist = []
     cursor.execute(query)
     for item in cursor.fetchall():
