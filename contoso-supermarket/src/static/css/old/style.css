@@ -7,9 +7,9 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font-family: 'Tenorite', sans-serif;
+  font-family: 'Poppins', sans-serif;
   height: 100vh;
-  background: #EFE4D4; }
+  background: #fff; }
 
 h5, p, span, a, .btn, th, td, label {
   font-size: 13px; }
@@ -28,8 +28,8 @@ span {
 }
 
 .titleDiv{
-  border: 1px solid #B17946; 
-  background-color: #B17946;
+  border: 1px solid #2d7eda; 
+  background-color: #2d7eda;
   height: 40px;
   margin-bottom: 5px;
   text-align: center;
@@ -127,68 +127,61 @@ table thead {
   background: #fff;
   border: 1px solid #e3e3e3;
   border-radius: 3px;
-  transition: .3s;
+  transition: .4s;
   font-weight: 500;
   padding: 12px 24px;
-  color: #EFE4D4; }
-
-.btn-seasonal {
-  background: #F13E44 !important;
-  border: 1px solid #fff !important;
-  color: #FFF !important;
-  font-weight: bold !important;
-}
+  color: #fff; }
 
 .btn-yellow {
-  background: #49281A;
-  border: 1px solid #fff;
+  background: #fabd03;
+  border: 1px solid #fabd03;
   color: #000; }
   .btn-yellow .fa {
     color: #000; }
 
 .btn-blue {
-  background: #000;
-  border: 1px solid #fff; }
+  background: #45c2de;
+  border: 1px solid #45c2de; }
 
 .btn-green {
-  background: #49281A;
-  border: 1px solid #fff; }
+  background: #0EA61A;
+  border: 1px solid #0EA61A; }
 
 .btn-1 {
-  background: #49281A;
-  border: 1px solid #49281A; }
+  background: #c64e2c;
+  border: 1px solid #c64e2c; }
 
 .btn-2 {
-  background: #000;
-  border: 1px solid #fff; }
+  background: #048e03;
+  border: 1px solid #048e03; }
 
 .btn-3 {
-  background: #000;
-  border: 1px solid #fff; }
+  background: #a01b3d;
+  border: 1px solid #a01b3d; }
 
 .btn-4 {
-  background: #000;
-  border: 1px solid #fff; }
+  background: #048d9d;
+  border: 1px solid #048d9d; }
 
 .btn-5 {
-  background: #000;
-  border: 1px solid #fff; }
+  background: #e69c1b;
+  border: 1px solid #e69c1b; }
 
 .btn-6 {
-  background: #556B2F;
-  border: 1px solid #fff; }
+  background: black;
+  border: 1px solid black; }
 
 .btn-7 {
-  background: #A9A454;
-  border: 1px solid #fff; }
+  background: #5638a9;
+  border: 1px solid #5638a9; }
 
 .btn-8 {
-  background: #49281A;
-  border: 1px solid #fff; }
+  background: #444444;
+  border: 1px solid #444444; }
 
 .btn:hover {
-  background: #B17946;
-  border: 1px solid #fff;
+  background: #45c2de;
+  border: 1px solid #45c2de;
   color: #fff; }
   .btn:hover .fa {
     color: #fff; }
@@ -198,11 +191,11 @@ table thead {
   width: 39px;
   padding: 9px; }
   .fa-btn .fa {
-    color: #fff; }
+    color: #0EA61A; }
 
 .fa-btn:hover {
-  background: #B17946;
-  border: 1px solid #fff;
+  background: #45c2de;
+  border: 1px solid #45c2de;
   color: #fff; }
   .fa-btn:hover .fa {
     color: #fff; }
@@ -539,9 +532,9 @@ table thead {
       overflow: hidden;
       font-weight: 500;
       font-size: 18px;
-      color:#EFE4D4;
-      background: #B17946;
-      border: 1px solid #fff; }
+      color:black;
+      background: #fabd03;
+      border: 1px solid #fabd03; }
     #mainSection .side-indicator .btn-7 {
         width: 100%;
         margin: 1.5px 0;
@@ -565,8 +558,8 @@ table thead {
     #mainSection .side-indicator .btn:hover,
     #mainSection .side-indicator .btn.active-btn {
       color: #fff;
-      background: #49281A;
-      border: 1px solid #fff; }
+      background: #45c2de;
+      border: 1px solid #45c2de; }
   #mainSection .item-area {
     position: relative;
     width: calc(100% - 15%); }
@@ -831,3 +824,34 @@ table thead {
     .item-area .col-6.full-width-col {
       flex: 100%;
       max-width: 100%; } }
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #e04141; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}

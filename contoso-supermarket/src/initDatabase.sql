@@ -1,7 +1,7 @@
 USE contoso;
 
  CREATE TABLE contoso.products (
-    productId int PRIMARY KEY,
+    productId SERIAL PRIMARY KEY,
     name text,
     price MONEY,
     stock int,
