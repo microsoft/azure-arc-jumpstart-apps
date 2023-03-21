@@ -1,6 +1,5 @@
 USE contoso;
 
-
 CREATE TABLE contoso.products ( productId SERIAL PRIMARY KEY, name text, price MONEY, stock int, photopath text, category text );
 
 CREATE TABLE contoso.Orders ( orderID SERIAL PRIMARY KEY, orderDate timestamp, orderdetails JSON, storeId INT);

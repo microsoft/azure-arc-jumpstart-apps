@@ -1,3 +1,9 @@
+#Creat a Contoso Namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: contosopos
+---
 # Create Contoso Supermarket Service
 apiVersion: v1
 kind: Service
@@ -54,12 +60,12 @@ spec:
             - name: NEW_CATEGORY
               value: "True"
             - name: STORE_ID
-              value: 1
+              value: "1"
           ports:
             - containerPort: 5000
 ---
 # Create PostgreSQL Database Container with local storage
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: contosodb
