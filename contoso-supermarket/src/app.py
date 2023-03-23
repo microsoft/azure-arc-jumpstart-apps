@@ -12,20 +12,21 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
-app.config["SESSION PERMANENT"] = False
+
+app.config["SESSION_PERMANENT"] = False
 app.config['SESSION_TYPE'] = "filesystem"
 Session(app)
-storeid = 1
-
+#storeid = 1
+storeid = os.environ.get('STORE_ID')
 dbconfig = {
-    #"host": os.environ.get('PGHOST'),
-    #"user": os.environ.get('PGUSER'),
-    #"password": os.environ.get('PGSECRET'),
-    #"database": os.environ.get('PGNAME')
-    "host": "localhost",
-    "user": "postgres",
-    "password": "admin123",
-    "database": "contoso"
+    "host": os.environ.get('SQL_HOST'),
+    "user": os.environ.get('SQL_USERNAME'),
+    "password": os.environ.get('SQL_PASSWORD'),
+    "database": os.environ.get('SQL_DATABASE')
+    #"host": "localhost",
+    #"user": "postgres",
+    #"password": "admin123",
+    #"database": "contoso"
 }
 
 conn = psycopg2.connect(**dbconfig)
@@ -46,7 +47,7 @@ def index():
     if os.environ.get('NEW_CATEGORY'):
         new_category = os.environ.get('NEW_CATEGORY') == 'True'
 
-    query = "SELECT * FROM contoso.products"
+    query = "SELECT * FROM contoso.products ORDER BY productId"
     productlist = []
     cursor.execute(query)
     for item in cursor.fetchall():
@@ -59,7 +60,8 @@ def index():
     })
     #cursor.close()
 
-    return render_template('index2.html' if new_category else 'index.html', head_title = head_title, cameras_enabled = cameras_enabled, productlist=productlist)
+    #return render_template('index2.html' if new_category else 'index.html', head_title = head_title, cameras_enabled = cameras_enabled, productlist=productlist)
+    return render_template('index.html', head_title = head_title, cameras_enabled = cameras_enabled, productlist=productlist)
 
 @app.route('/inventory')
 def inventory():
