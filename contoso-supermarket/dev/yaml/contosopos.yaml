@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
         - name: contosopos
-          image: bcacr.azurecr.io/contosopos:latest
+          image: azurearcjumpstart.azurecr.io/contosopos:latest
           env:
             - name: SQL_HOST
               value: "contosodb"
