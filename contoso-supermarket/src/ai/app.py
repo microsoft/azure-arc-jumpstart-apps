@@ -15,6 +15,7 @@ app = Flask(__name__)
 
 model_xml = './models/person-detection-retail-0013.xml'
 model_bin = './models/person-detection-retail-0013.bin'
+video_path = 'https://agoravideos.blob.core.windows.net/videos/supermarket.mp4'
 
 # Load OpenVino model
 ie = IECore()
@@ -44,7 +45,7 @@ def people_count():
 def get_frame():
     # replace 'video.mp4' with your video file name
     global person_count
-    cap = cv2.VideoCapture('videos/supermarket.mp4')
+    cap = cv2.VideoCapture(video_path)
     while cap.isOpened():
         frame_count = 0
         total_fps = 0   

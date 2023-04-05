@@ -132,3 +132,6 @@ dmypy.json
 virtual/
 flask_session/
 helpers.txt
+
+#Video files
+*.mp4
