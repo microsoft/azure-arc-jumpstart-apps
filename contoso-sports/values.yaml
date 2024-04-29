@@ -1,0 +1,8 @@
+mssql:
+  acceptEula: Y
+  saPassword: Test123!
+  port: 1433
+sportsweb:
+  catalogConnection: "Server=mssql-service;User Id=sa;Password=Test123!;Integrated Security=false;Initial Catalog=Microsoft.eShopOnWeb.CatalogDb;TrustServerCertificate=True"
+  identityConnection: "Server=mssql-service;User Id=sa;Password=Test123!;Integrated Security=false;Initial Catalog=Microsoft.eShopOnWeb.Identity;TrustServerCertificate=True"
+  collectionEdition: "2023"
