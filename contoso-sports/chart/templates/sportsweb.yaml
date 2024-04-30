@@ -13,6 +13,10 @@ spec:
       labels:
         app: sportsweb
     spec:
+      initContainers:
+      - name: wait-for-mssql
+        image: busybox
+        command: ['sh', '-c', 'until nc -z mssql-service 1433; do echo waiting for mssql; sleep 2; done;']
       containers:
       - name: sportsweb
         image: jumpstartprod.azurecr.io/web:latest
