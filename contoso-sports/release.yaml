@@ -10,4 +10,4 @@ spec:
   releaseName: contoso-sports
   chart:
     spec:
-      chart: ./chart
+      chart: ./contoso-sports/chart
