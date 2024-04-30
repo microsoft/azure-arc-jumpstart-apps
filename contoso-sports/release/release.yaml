@@ -1,0 +1,13 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: contoso-sports
+  namespace: contoso-sports
+  annotations:
+    clusterconfig.azure.com/use-managed-source: "true"
+spec:
+  interval: 1m
+  releaseName: contoso-sports
+  chart:
+    spec:
+      chart: ./contoso-sports/chart

@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sportsweb-deployment
+  namespace: contoso-sports
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sportsweb
+  template:
+    metadata:
+      labels:
+        app: sportsweb
+    spec:
+      containers:
+      - name: sportsweb
+        image: jumpstartprod.azurecr.io/web:latest
+        env:
+        - name: CATALOG_CONNECTION
+          value: "{{ .Values.sportsweb.catalogConnection }}"
+        - name: IDENTITY_CONNECTION
+          value: "{{ .Values.sportsweb.identityConnection }}"
+        - name: COLLECTION_EDITION
+          value: "{{ .Values.sportsweb.collectionEdition }}"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sportsweb-service
+  namespace: contoso-sports
+spec:
+  type: LoadBalancer
+  selector:
+    app: sportsweb
+  ports:
+    - protocol: TCP
+      port: 80

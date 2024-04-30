@@ -1,0 +1,20 @@
+apiVersion: v2
+kind: Chart
+metadata:
+  name: contoso-sports-chart
+name: contoso-sports-chart
+description: A Helm chart to deploy Contoso Sports infrastructure (MSSQL Server and .NET Web)
+version: 0.1.0
+home: https://github.com/microsoft/azure-arc-jumpstart-apps/tree/main/contoso-sports
+description: AKS on Arc and GitOps demo based on https://github.com/dotnet/eShop sample app.
+keywords:
+  - aks
+  - k3s
+  - gitops
+  - eShop
+sources:
+  - https://github.com/microsoft/azure-arc-jumpstart-apps/tree/main/contoso-sports
+type: application
+maintainers:
+  - name: fcabrera23
+kubeVersion: ">=1.19.0-0"
