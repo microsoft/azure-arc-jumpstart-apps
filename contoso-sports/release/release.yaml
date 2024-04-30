@@ -11,3 +11,5 @@ spec:
   chart:
     spec:
       chart: ./contoso-sports/chart
+      valuesFiles:
+        - ./contoso-sports/chart/values.yaml
