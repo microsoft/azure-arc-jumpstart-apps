@@ -9,6 +9,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mysqldb
+  namespace: default
   labels:
     app: mysqldb
     service: mysqldb
