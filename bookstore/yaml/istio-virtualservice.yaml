@@ -11,8 +11,8 @@ spec:
     - destination:
         host: bookstore
         subset: v1
-      weight: 0
+      weight: 50
     - destination:
         host: bookstore
         subset: v2
-      weight: 100
+      weight: 50
