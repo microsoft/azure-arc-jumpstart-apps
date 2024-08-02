@@ -1,3 +1,4 @@
+---
 # Create bookstore Service
 apiVersion: v1
 kind: Service
@@ -8,13 +9,12 @@ metadata:
     app: bookstore
 spec:
   ports:
-  - port: 14001
-    name: bookstore-port
+    - port: 14001
+      name: bookstore-port
   selector:
     app: bookstore
 
 ---
-
 # Create bookstore Service Account
 apiVersion: v1
 kind: ServiceAccount
@@ -23,22 +23,23 @@ metadata:
   namespace: bookstore
 
 ---
-
-# Create bookstore Deployment
+# Create bookstore-v1 Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bookstore
+  name: bookstore-v1
   namespace: bookstore
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: bookstore
+      version: v1
   template:
     metadata:
       labels:
         app: bookstore
+        version: v1
     spec:
       serviceAccountName: bookstore
       nodeSelector:
@@ -46,7 +47,7 @@ spec:
         kubernetes.io/os: linux
       containers:
         - name: bookstore
-          image: openservicemesh/bookstore:v1.0.0
+          image: openservicemesh/bookstore:latest-main
           imagePullPolicy: Always
           ports:
             - containerPort: 14001
