@@ -16,3 +16,20 @@ spec:
         host: bookstore
         subset: v2
       weight: 50
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: bookstore-destination
+  namespace: bookstore
+spec:
+  host: bookstore
+  subsets:
+  - name: v1
+    labels:
+      app: bookstore
+      version: v1
+  - name: v2
+    labels:
+      app: bookstore
+      version: v2
