@@ -1,0 +1,35 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: bookstore-virtualservice
+  namespace: bookstore
+spec:
+  hosts:
+  - bookstore
+  http:
+  - route:
+    - destination:
+        host: bookstore
+        subset: v1
+      weight: 100
+    - destination:
+        host: bookstore
+        subset: v2
+      weight: 0
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: bookstore-destination
+  namespace: bookstore
+spec:
+  host: bookstore
+  subsets:
+  - name: v1
+    labels:
+      app: bookstore
+      version: v1
+  - name: v2
+    labels:
+      app: bookstore
+      version: v2
