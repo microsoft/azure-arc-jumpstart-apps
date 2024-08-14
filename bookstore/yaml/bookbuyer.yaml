@@ -1,29 +1,14 @@
-# Create bookbuyer Service
-apiVersion: v1
-kind: Service
-metadata:
-  name: bookbuyer
-  namespace: bookbuyer
-  labels:
-    app: bookbuyer
-spec:
-  ports:
-  - port: 14001
-    name: bookbuyer-port
-  selector:
-    app: bookbuyer
-
+##################################################################################################
+# bookbuyer service
+##################################################################################################
 ---
-
 # Create bookbuyer Service Account
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: bookbuyer
   namespace: bookbuyer
-
 ---
-
 # Create bookbuyer Deployment
 apiVersion: apps/v1
 kind: Deployment
@@ -48,7 +33,7 @@ spec:
         kubernetes.io/os: linux
       containers:
         - name: bookbuyer
-          image: openservicemesh/bookbuyer:v1.0.0
+          image: openservicemesh/bookbuyer:latest-main
           imagePullPolicy: Always
           command: ["/bookbuyer"]
           env:

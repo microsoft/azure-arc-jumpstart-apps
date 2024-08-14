@@ -1,12 +1,11 @@
+---
 # Create bookwarehouse Service Account
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: bookwarehouse
   namespace: bookwarehouse
-
 ---
-
 # Create bookwarehouse Service
 apiVersion: v1
 kind: Service
@@ -21,9 +20,7 @@ spec:
     name: bookwarehouse-port
   selector:
     app: bookwarehouse
-
 ---
-
 # Create bookwarehouse Deployment
 apiVersion: apps/v1
 kind: Deployment
@@ -47,6 +44,6 @@ spec:
         kubernetes.io/os: linux
       containers:
         - name: bookwarehouse
-          image: openservicemesh/bookwarehouse:v1.0.0
+          image: openservicemesh/bookwarehouse:latest-main
           imagePullPolicy: Always
           command: ["/bookwarehouse"]
