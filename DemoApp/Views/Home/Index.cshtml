@@ -1,0 +1,19 @@
+﻿@using Microsoft.Extensions.Configuration;
+@inject IConfiguration Configuration;
+
+@{
+    ViewData["Title"] = "Home";
+
+}
+
+<div class="jumbotron">
+    <h1>@Configuration["DisplayStrings:AppTitle"]</h1>
+</div>
+<div class="jumbotron">
+    <div class="col-md-4">
+        <h2>@Configuration["DisplayStrings:AppSubTitle"]</h2>
+    </div>
+    <div class="col-md-4">
+        <img src="images/@Configuration["Images:HomePageBranding"]" style="height:auto;width:300%"/><!-- Sourced from Wikipedia https://commons.wikimedia.org/wiki/Category:Handling_of_books#/media/File:Nekrasov_library_Moscow_(Interiors)_36.jpg -->
+    </div>
+</div>

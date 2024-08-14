@@ -1,0 +1,128 @@
+﻿@model DemoApp.Models.TurbineTelemetrySample
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TurbineTelemetrySample</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GearboxOilLevel" class="control-label"></label>
+                <input asp-for="GearboxOilLevel" class="form-control" />
+                <span asp-validation-for="GearboxOilLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GearboxOilTemp" class="control-label"></label>
+                <input asp-for="GearboxOilTemp" class="form-control" />
+                <span asp-validation-for="GearboxOilTemp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GeneratorActivePower" class="control-label"></label>
+                <input asp-for="GeneratorActivePower" class="form-control" />
+                <span asp-validation-for="GeneratorActivePower" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GeneratorSpeed" class="control-label"></label>
+                <input asp-for="GeneratorSpeed" class="form-control" />
+                <span asp-validation-for="GeneratorSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GeneratorTorque" class="control-label"></label>
+                <input asp-for="GeneratorTorque" class="form-control" />
+                <span asp-validation-for="GeneratorTorque" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GridFrequency" class="control-label"></label>
+                <input asp-for="GridFrequency" class="form-control" />
+                <span asp-validation-for="GridFrequency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GridVoltage" class="control-label"></label>
+                <input asp-for="GridVoltage" class="form-control" />
+                <span asp-validation-for="GridVoltage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HydraulicOilPressure" class="control-label"></label>
+                <input asp-for="HydraulicOilPressure" class="form-control" />
+                <span asp-validation-for="HydraulicOilPressure" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NacelleAngle" class="control-label"></label>
+                <input asp-for="NacelleAngle" class="form-control" />
+                <span asp-validation-for="NacelleAngle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OverallWindDirection" class="control-label"></label>
+                <input asp-for="OverallWindDirection" class="form-control" />
+                <span asp-validation-for="OverallWindDirection" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WindSpeedStdDev" class="control-label"></label>
+                <input asp-for="WindSpeedStdDev" class="form-control" />
+                <span asp-validation-for="WindSpeedStdDev" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Precipitation" /> @Html.DisplayNameFor(model => model.Precipitation)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TurbineWindDirection" class="control-label"></label>
+                <input asp-for="TurbineWindDirection" class="form-control" />
+                <span asp-validation-for="TurbineWindDirection" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TurbineSpeedStdDev" class="control-label"></label>
+                <input asp-for="TurbineSpeedStdDev" class="form-control" />
+                <span asp-validation-for="TurbineSpeedStdDev" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WindSpeedAverage" class="control-label"></label>
+                <input asp-for="WindSpeedAverage" class="form-control" />
+                <span asp-validation-for="WindSpeedAverage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WindTempAverage" class="control-label"></label>
+                <input asp-for="WindTempAverage" class="form-control" />
+                <span asp-validation-for="WindTempAverage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PitchAngle" class="control-label"></label>
+                <input asp-for="PitchAngle" class="form-control" />
+                <span asp-validation-for="PitchAngle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vibration" class="control-label"></label>
+                <input asp-for="Vibration" class="form-control" />
+                <span asp-validation-for="Vibration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TurbineSpeedAverage" class="control-label"></label>
+                <input asp-for="TurbineSpeedAverage" class="form-control" />
+                <span asp-validation-for="TurbineSpeedAverage" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AlterBlades" /> @Html.DisplayNameFor(model => model.AlterBlades)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
