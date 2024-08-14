@@ -1,0 +1,149 @@
+﻿@model IEnumerable<DemoApp.Models.TurbineTelemetrySample>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GearboxOilLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GearboxOilTemp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeneratorActivePower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeneratorSpeed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeneratorTorque)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GridFrequency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GridVoltage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HydraulicOilPressure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NacelleAngle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OverallWindDirection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindSpeedStdDev)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precipitation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TurbineWindDirection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TurbineSpeedStdDev)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindSpeedAverage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindTempAverage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PitchAngle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vibration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TurbineSpeedAverage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlterBlades)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GearboxOilLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GearboxOilTemp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeneratorActivePower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeneratorSpeed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeneratorTorque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GridFrequency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GridVoltage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HydraulicOilPressure)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NacelleAngle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OverallWindDirection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindSpeedStdDev)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precipitation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TurbineWindDirection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TurbineSpeedStdDev)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindSpeedAverage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindTempAverage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PitchAngle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vibration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TurbineSpeedAverage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlterBlades)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

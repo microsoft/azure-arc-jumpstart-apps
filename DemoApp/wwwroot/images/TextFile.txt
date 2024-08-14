@@ -1,0 +1,2 @@
+﻿/images/Windfarm.jpg: Sourced from Wikipedia https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wind_turbines_in_southern_California_2016.jpg/1200px-Wind_turbines_in_southern_California_2016.jpg
+/images/RareBook.jpg: Sourced from Wikipedia https://commons.wikimedia.org/wiki/Category:Handling_of_books#/media/File:Nekrasov_library_Moscow_(Interiors)_36.jpg
