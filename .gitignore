@@ -131,4 +131,8 @@ dmypy.json
 #Python virtual envs
 virtual/
 flask_session/
-helpers.txt
+*.cache
+/DemoApp/obj
+/dbconnecttest/DatabaseConnectionTest/bin
+/dbconnecttest/DatabaseConnectionTest/obj
+/dbconnecttest/.vs
