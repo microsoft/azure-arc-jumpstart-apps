@@ -3,6 +3,8 @@ Generic headless dotnet core app that can be easily rebranded for demos.  Connec
 
 This is a fork from: https://github.com/twright-msft/DatabaseConnectionTest/tree/master
 
+To build it locally, run it from the DatabaseConnecitonTest: `docker build -t test -f .\DatabaseConnectionTest\Dockerfile .`
+
 ## To Build
 - Just click the DatabaseConnectionTest button in the Build toolbar
 

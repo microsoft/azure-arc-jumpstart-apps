@@ -49,7 +49,7 @@ namespace DatabaseConnectionTest
                 connectionStringBuilder.UserID = username;
                 connectionStringBuilder.Password = password;
                 connectionStringBuilder.IntegratedSecurity = false;
-                connectionStringBuilder.DataSource = "db-external-svc";
+                connectionStringBuilder.DataSource = Environment.GetEnvironmentVariable("DB_DATASOURCE") ?? "k3s-sql-external-svc,11433";
                 connectionStringBuilder.InitialCatalog = "master";
                 connectionStringBuilder.Encrypt = false; //Demo hack.  Don't do this at home kids!
 

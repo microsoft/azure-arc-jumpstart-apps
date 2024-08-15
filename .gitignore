@@ -133,3 +133,6 @@ virtual/
 flask_session/
 *.cache
 /DemoApp/obj
+/dbconnecttest/DatabaseConnectionTest/bin
+/dbconnecttest/DatabaseConnectionTest/obj
+/dbconnecttest/.vs
