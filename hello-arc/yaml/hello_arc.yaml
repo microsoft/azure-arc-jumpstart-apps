@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-arc
-        image: azurearcjumpstart.azurecr.io/hello-arc-gitops:latest
+        image: jumpstartprod.azurecr.io/hello-arc:latest
         ports:
         - containerPort: 8080
         env:
