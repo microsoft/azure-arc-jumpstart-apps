@@ -11,11 +11,11 @@ spec:
     - destination:
         host: bookstore
         subset: v1
-      weight: 100
+      weight: 75
     - destination:
         host: bookstore
         subset: v2
-      weight: 0
+      weight: 25
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
