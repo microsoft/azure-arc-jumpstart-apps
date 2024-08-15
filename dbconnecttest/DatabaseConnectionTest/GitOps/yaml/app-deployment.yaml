@@ -1,0 +1,25 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dbconnecttest-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dbconnecttest
+  template:
+    metadata:
+      labels:
+        app: dbconnecttest
+    spec:
+      containers:
+      - name: dbconnecttest
+        image: databaseconnectiontest.azurecr.io/databaseconnectiontest:20220512195037
+        volumeMounts:
+        - name: secrets
+          mountPath: /app/secrets
+          readOnly: true
+      volumes:
+      - name: secrets
+        secret:
+          secretName: db-login-secret
