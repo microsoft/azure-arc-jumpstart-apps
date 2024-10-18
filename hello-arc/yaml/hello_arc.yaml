@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-arc
-        image: jumpstartprod.azurecr.io/hello-arc
+        image: mcr.microsoft.com/jumpstart/arcbox/hello_arc:1.0.0
         ports:
         - containerPort: 8080
         env:
