@@ -4,7 +4,7 @@ metadata:
   name: hello-arc
   namespace: hello-arc
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080
