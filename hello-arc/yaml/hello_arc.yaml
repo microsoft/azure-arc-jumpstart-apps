@@ -28,9 +28,9 @@ spec:
     spec:
       containers:
       - name: hello-arc
-        image: jumpstartprod.azurecr.io/hello-arc:updated
+        image: azurearcjumpstart.azurecr.io/hello-arc
         ports:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: Welcome to Azure Arc GitOps new image Demo!
+          value: Welcome to Ignite 2023!
