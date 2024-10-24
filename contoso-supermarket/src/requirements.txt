@@ -6,6 +6,6 @@ MarkupSafe==2.1.1
 Werkzeug==3.0.1
 numpy==1.22.0
 opencv-python==4.6.0.66
-mysql-connector-python==8.0.30
+mysql-connector-python==9.1.0
 psycopg2-binary==2.9.5
 Flask-Session==0.4.0
