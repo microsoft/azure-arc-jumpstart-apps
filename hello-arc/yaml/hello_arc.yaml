@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hello-arc
-  namespace: hello-arc
+  namespace: flux-system
 spec:
   type: LoadBalancer
   ports:
@@ -15,7 +15,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-arc
-  namespace: hello-arc
+  namespace: flux-system
 spec:
   replicas: 3
   selector:
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-arc
-        image: mcr.microsoft.com/jumpstart/arcbox/hello_arc:1.0.0
+        image: zmacrignite.azurecr.io/twt-app:latest
         ports:
         - containerPort: 8080
         env:
