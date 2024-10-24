@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: hello-arc
   namespace: flux-system
+  labels:
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
 spec:
   type: LoadBalancer
   ports:
@@ -16,6 +18,8 @@ kind: Deployment
 metadata:
   name: hello-arc
   namespace: flux-system
+  labels:
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
 spec:
   replicas: 3
   selector:
