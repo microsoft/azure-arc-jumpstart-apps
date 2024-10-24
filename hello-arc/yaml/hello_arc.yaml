@@ -37,4 +37,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: Welcome to Ignite 2024!
+          value: Welcome to Contoso Traders!
