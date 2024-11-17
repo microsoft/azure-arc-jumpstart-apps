@@ -37,4 +37,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: Welcome to Tailwind Traders!
+          value: Welcome to Contoso Traders2!
