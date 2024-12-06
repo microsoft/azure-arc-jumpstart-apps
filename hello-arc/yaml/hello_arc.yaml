@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hello-arc
-  namespace: hello-arc 
+  namespace: hello-arc
 spec:
   type: ClusterIP
   ports:
